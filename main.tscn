@@ -29,7 +29,7 @@ text = "Exit"
 offset_left = 282.0
 offset_right = 858.0
 offset_bottom = 157.0
-text = "TITLE"
+text = "this is a new title"
 horizontal_alignment = 1
 vertical_alignment = 1
 
