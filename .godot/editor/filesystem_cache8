@@ -1,0 +1,10 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1706582948
+icon.svg::CompressedTexture2D::8560366895652429881::1706025097::1706025103::1::::<><>::
+main.gd::GDScript::-1::1706026050::0::1::::<>Node2D<>::
+main.tscn::PackedScene::5359070057873671201::1706582148::0::1::::<><>::res://main.gd
+PepeThink.png::CompressedTexture2D::391664074372608722::1706026806::1706026806::1::::<><>::
+world.tscn::PackedScene::6076120517974655956::1706582148::0::1::::<><>::uid://dmy6rxghroiwn::::res://Player/player(scene).tscn
+::res://Player/::1706582148
+player(scene).gd::GDScript::-1::1706026917::0::1::::<>CharacterBody2D<>::
+player(scene).tscn::PackedScene::8052987043752475769::1706582148::0::1::::<><>::res://Player/player(scene).gd<>uid://ftywdq3c6dug::::res://PepeThink.png

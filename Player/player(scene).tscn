@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://dmy6rxghroiwn"]
+
+[ext_resource type="Script" path="res://Player/player(scene).gd" id="1_tif46"]
+[ext_resource type="Texture2D" uid="uid://ftywdq3c6dug" path="res://PepeThink.png" id="2_lwycw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_45xec"]
+size = Vector2(130, 124)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p0nvq"]
+atlas = ExtResource("2_lwycw")
+region = Rect2(0, 0, 128, 122)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8r6vl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p0nvq")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Run",
+"speed": 5.0
+}]
+
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1_tif46")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_45xec")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0.5, -0.5)
+scale = Vector2(1.02344, 1.0082)
+sprite_frames = SubResource("SpriteFrames_8r6vl")
+animation = &"Idle"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.2, 1.2)
