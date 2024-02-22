@@ -1,1 +1,17 @@
+extends KinematicBody2D
 
+# Variables
+var speed = 100  # Adjust as needed
+var player
+
+# Called when the node enters the scene tree for the first time
+func _ready():
+    player = get_node("/root/MainScene/Player")  # Path to your player node
+
+# Called every frame
+func _process(delta):
+    # Calculate the direction towards the player
+    var direction = (player.global_position - global_position).normalized()
+
+    # Move towards the player
+    move_and_slide(direction * speed)
