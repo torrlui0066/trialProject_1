@@ -1,0 +1,24 @@
+enum BossState {
+    CHASE_PLAYER,
+    ATTACK,
+    DEFEND
+}
+
+var state = BossState.CHASE_PLAYER
+
+func _physics_process(delta):
+    match state:
+        BossState.CHASE_PLAYER:
+            # Code to chase the player (from boss movement)
+            if player_in_attack_range():
+                state = BossState.ATTACK
+        BossState.ATTACK:
+            perform_attack()
+            if !player_in_attack_range():
+                state = BossState.CHASE_PLAYER
+        BossState.DEFEND:
+            # Code to defend or perform defensive actions
+            pass
+
+func player_in_attack_range():
+    return player_position.distance_to(position) < 200
