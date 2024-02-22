@@ -1,0 +1,10 @@
+extends KinematicBody2D
+
+var speed = 100  # Adjust speed as needed
+var velocity = Vector2()
+
+func _physics_process(delta):
+    # Move towards the player (assuming player position is known)
+    var player_position = Vector2(100, 100)  # Replace with actual player position
+    velocity = (player_position - position).normalized() * speed * delta
+    move_and_slide(velocity)
