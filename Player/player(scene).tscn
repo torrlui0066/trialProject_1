@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://dm3xcpurib2uo" path="res://KnightSprite/Colour1/Outline/120x80_PNGSheets/_Run.png" id="7_h02vi"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5wspj"]
-radius = 7.0
 height = 38.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dx86n"]
@@ -327,7 +326,7 @@ size = Vector2(30.2656, 5.31641)
 
 [sub_resource type="Animation" id="Animation_52mdp"]
 resource_name = "Attack"
-length = 0.475
+length = 0.34
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -359,7 +358,7 @@ tracks/2/path = NodePath("../AnimatedSprite2D/SwordSwing/firstFrame:disabled")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.0173634, 0.108029),
+"times": PackedFloat32Array(0, 0.0100979, 0.102701),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [true, false, true]
@@ -371,7 +370,7 @@ tracks/3/path = NodePath("../AnimatedSprite2D/SwordSwing/secondFrame:disabled")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.101767, 0.209309),
+"times": PackedFloat32Array(0, 0.102736, 0.201075),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [true, false, true]
@@ -383,7 +382,7 @@ tracks/4/path = NodePath("../AnimatedSprite2D/SwordSwing/thirdFrame:disabled")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.21114, 0.31513),
+"times": PackedFloat32Array(0, 0.201453, 0.301083),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [true, false, true]
@@ -395,7 +394,7 @@ tracks/5/path = NodePath("../AnimatedSprite2D/SwordSwing/fourthFrame:disabled")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.317385, 0.382335),
+"times": PackedFloat32Array(0, 0.301885, 0.335835),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [true, false, true]
@@ -406,6 +405,7 @@ resource_name = "Death"
 
 [sub_resource type="Animation" id="Animation_mn1b5"]
 resource_name = "Fall"
+length = 0.13
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -433,6 +433,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_04qcq"]
 resource_name = "Idle"
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -457,10 +458,22 @@ tracks/1/keys = {
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../playerHitbox:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4, 16)]
+}
 
 [sub_resource type="Animation" id="Animation_ghli4"]
 resource_name = "Jump"
-length = 0.25
+length = 0.23
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -560,6 +573,18 @@ tracks/5/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../playerHitbox:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4, 16)]
+}
 
 [sub_resource type="Animation" id="Animation_aawtg"]
 resource_name = "Run"
@@ -601,15 +626,14 @@ _data = {
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_tif46")
+speed = 300.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-5, 17)
+[node name="playerHitbox" type="CollisionShape2D" parent="."]
+position = Vector2(4, 16)
 shape = SubResource("CapsuleShape2D_5wspj")
-metadata/_edit_lock_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-5.96046e-08, -5)
-scale = Vector2(1.02344, 1.0082)
+position = Vector2(0, -5)
 sprite_frames = SubResource("SpriteFrames_3pxo0")
 animation = &"Idle"
 
@@ -636,7 +660,7 @@ rotation = 0.447981
 shape = SubResource("RectangleShape2D_mfj04")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.2, 1.2)
+zoom = Vector2(2, 2)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Camera2D")

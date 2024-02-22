@@ -1,62 +1,108 @@
 extends CharacterBody2D
 
+var input
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+@export var speed = 100.0
+@export var gravity = 10
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+# variable for jumping
+var jump_count = 0
+@export var max_jump = 2
+@export var jump_force = 700
+@export var midjump_multiplier = 1.7
 
-@onready var anim = get_node("AnimationPlayer")
-
+# variable for attacking
+var attack_count = 0
+var max_attacks = 1
 var isAttacking: bool = false
 
-func _physics_process(delta):
-	# Add the gravity.
-	if not is_on_floor():
-		velocity.y += gravity * delta
+
+@onready var sprite = $AnimatedSprite2D
+@onready var anim = $AnimationPlayer
+
+func _ready():
+	pass
 	
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-		anim.play("Jump")
-		
-	if Input.is_action_just_pressed("attack"):
-		isAttacking = true
-		
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction = Input.get_axis("ui_left", "ui_right")
-	if direction == -1:
-		get_node("AnimatedSprite2D").flip_h = true
-	elif direction == 1:
-		get_node("AnimatedSprite2D").flip_h = false
-	if direction:
-		velocity.x = direction * SPEED
-		if isAttacking == false:
-			if velocity.y == 0:
+	
+func _process(delta):
+	movement(delta)
+	
+	
+func movement(delta):
+	input = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
+	attack_count = 0
+	
+	# attacking part of code
+	attacking()
+	
+	# attacking part of movement
+	if isAttacking == false:
+	# actual movement code
+		if input != 0:
+			if input > 0:
+				velocity.x += speed * delta
+				velocity.x = clamp(speed, 100, speed)
+				sprite.scale.x = 1
+				sprite.position.x = 8
 				anim.play("Run")
-		elif isAttacking == true:
-				anim.play("Attack")
-				isAttacking = false
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		#if isAttacking == false:
-		if velocity.y == 0:
-			if isAttacking == false:
-				anim.play("Idle")
-			elif isAttacking == true:
-				anim.play("Attack")
-				await anim.animation_finished
-				isAttacking = false
-			#isAttacking = false
-	if velocity.y > 0:
-		anim.play("Fall")
-		
-	#isAttacking = false
-	move_and_slide()
+			if input < 0:
+				velocity.x -= speed * delta
+				velocity.x = clamp(-speed, 100, -speed)
+				sprite.position.x = 0
+				sprite.scale.x = -1
+				anim.play("Run")
 	
+		if input == 0:
+			velocity.x = 0
+			anim.play("Idle")
 		
-func _on_sword_swing_area_entered(area):
-	if area.is_in_group("hurtbox"):
-		area.take_damage()
+		
+	# Jump Code
+	if is_on_floor():
+		jump_count = 0
+		
+	if !is_on_floor():
+		if isAttacking == false:
+			if velocity.y < 0:
+				anim.play("Jump")
+			if velocity.y > 0:
+				anim.play("Fall")
+		elif isAttacking == true:
+			attacking()
+			
+	if Input.is_action_pressed("ui_accept") && is_on_floor() && jump_count < max_jump:
+		jump_count += 1
+		velocity.y -= jump_force
+		velocity.x = input
+	if !is_on_floor() && Input.is_action_just_pressed("ui_accept") && jump_count < max_jump:
+		jump_count += 1
+		velocity.y -= jump_force * midjump_multiplier
+		velocity.x = input
+	if !is_on_floor() && Input.is_action_just_released("ui_accept") && jump_count < max_jump:
+		velocity.y = gravity
+		velocity.x = input
+	# allows the second jump to be multiplied to change heights from first jump
+	else:
+		gravity_force()
+	
+	
+	gravity_force()
+	move_and_slide()
+
+func gravity_force():
+	velocity.y += gravity
+	
+func attacking():
+	if Input.is_action_just_pressed("attack") && attack_count < max_attacks:
+		isAttacking = true
+		if isAttacking == true:
+			attack_count += 1
+			if sprite.scale.x == 1 && input > 0:
+				velocity.x = 10
+			elif sprite.scale.x == -1 && input < 0:
+				velocity.x = -10
+			elif input == 0:
+				velocity.x = 0
+			anim.play("Attack")
+		await anim.animation_finished
+		isAttacking = false
