@@ -1,1 +1,29 @@
+extends KinematicBody2D
 
+var speed = 100
+var player
+var projectile_scene = preload("res://Path/To/Projectile.tscn")
+var attack_range = 200
+var attack_cooldown = 1  # Cooldown between attacks
+var can_attack = true
+
+func _ready():
+    player = get_node("/root/MainScene/Player")
+
+func _process(delta):
+    var distance_to_player = global_position.distance_to(player.global_position)
+    
+    if distance_to_player < attack_range and can_attack:
+        attack()
+        can_attack = false
+        $AttackCooldownTimer.start()
+
+func attack():
+    var direction = (player.global_position - global_position).normalized()
+    var projectile = projectile_scene.instance()
+    projectile.global_position = global_position
+    projectile.set_linear_velocity(direction * speed)
+    get_parent().add_child(projectile)
+
+func _on_AttackCooldownTimer_timeout():
+    can_attack = true
