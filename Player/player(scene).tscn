@@ -1,12 +1,15 @@
-[gd_scene load_steps=61 format=3 uid="uid://dmy6rxghroiwn"]
+[gd_scene load_steps=65 format=3 uid="uid://dmy6rxghroiwn"]
 
-[ext_resource type="Script" path="res://Player/player(scene).gd" id="1_tif46"]
+[ext_resource type="Script" path="res://Player/player(script).gd" id="1_tif46"]
 [ext_resource type="Texture2D" uid="uid://cx6ud3g37xwff" path="res://KnightSprite/Colour1/Outline/120x80_PNGSheets/_Attack.png" id="2_ojwuk"]
 [ext_resource type="Texture2D" uid="uid://qcjdntrwjmcr" path="res://KnightSprite/Colour1/Outline/120x80_PNGSheets/_Death.png" id="3_bop87"]
 [ext_resource type="Texture2D" uid="uid://5p41c6kig2d8" path="res://KnightSprite/Colour1/Outline/120x80_PNGSheets/_Idle.png" id="4_u7cfd"]
 [ext_resource type="Texture2D" uid="uid://bcb2pkxh3hmia" path="res://KnightSprite/Colour1/Outline/120x80_PNGSheets/_Jump.png" id="5_int16"]
 [ext_resource type="Texture2D" uid="uid://dgvcip662umo4" path="res://KnightSprite/Colour1/Outline/120x80_PNGSheets/_JumpFallInbetween.png" id="6_u1geh"]
 [ext_resource type="Texture2D" uid="uid://dm3xcpurib2uo" path="res://KnightSprite/Colour1/Outline/120x80_PNGSheets/_Run.png" id="7_h02vi"]
+[ext_resource type="Script" path="res://RangedAttack/PlayerAbilities/player_use_abilities.gd" id="8_pexrf"]
+[ext_resource type="PackedScene" uid="uid://duy2vecuglch6" path="res://RangedAttack/PlayerAbilities/Fireball.tscn" id="9_pbxv7"]
+[ext_resource type="Script" path="res://RangedAttack/PlayerAbilities/scripts/projectile_launch_ability.gd" id="10_y3j5f"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5wspj"]
 height = 38.0
@@ -400,9 +403,6 @@ tracks/5/keys = {
 "values": [true, false, true]
 }
 
-[sub_resource type="Animation" id="Animation_1wsi6"]
-resource_name = "Death"
-
 [sub_resource type="Animation" id="Animation_mn1b5"]
 resource_name = "Fall"
 length = 0.13
@@ -613,16 +613,24 @@ tracks/1/keys = {
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 }
 
+[sub_resource type="Animation" id="Animation_l211q"]
+resource_name = "Die"
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6rjby"]
 _data = {
 "Attack": SubResource("Animation_52mdp"),
-"Death": SubResource("Animation_1wsi6"),
+"Die": SubResource("Animation_l211q"),
 "Fall": SubResource("Animation_mn1b5"),
 "Idle": SubResource("Animation_04qcq"),
 "Jump": SubResource("Animation_ghli4"),
 "RESET": SubResource("Animation_mecg4"),
 "Run": SubResource("Animation_aawtg")
 }
+
+[sub_resource type="Resource" id="Resource_gum72"]
+script = ExtResource("10_y3j5f")
+projectile_scene = ExtResource("9_pbxv7")
+instancing_offset = Vector2(0, 0)
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_tif46")
@@ -668,5 +676,10 @@ libraries = {
 "": SubResource("AnimationLibrary_6rjby")
 }
 autoplay = "Idle"
+
+[node name="PlayerUseAbilities" type="Node2D" parent="." node_paths=PackedStringArray("user")]
+script = ExtResource("8_pexrf")
+ability = SubResource("Resource_gum72")
+user = NodePath("..")
 
 [connection signal="area_entered" from="AnimatedSprite2D/SwordSwing" to="." method="_on_sword_swing_area_entered"]

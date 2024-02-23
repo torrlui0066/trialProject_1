@@ -1,21 +1,26 @@
 extends CharacterBody2D
 
 var input
+var direction : Vector2 = Vector2.ZERO
 
+# variables for movement
 @export var speed = 100.0
-@export var gravity = 10
 
-# variable for jumping
+# variables for jumping
+@export var gravity = 10
 var jump_count = 0
 @export var max_jump = 2
 @export var jump_force = 700
 @export var midjump_multiplier = 1.7
 
+# variables for life/ hp
+var health = 100.0
+var is_dead: bool = false
+
 # variable for attacking
 var attack_count = 0
 var max_attacks = 1
 var isAttacking: bool = false
-
 
 @onready var sprite = $AnimatedSprite2D
 @onready var anim = $AnimationPlayer
@@ -26,6 +31,7 @@ func _ready():
 	
 func _process(delta):
 	movement(delta)
+	direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	
 	
 func movement(delta):
@@ -85,7 +91,6 @@ func movement(delta):
 	else:
 		gravity_force()
 	
-	
 	gravity_force()
 	move_and_slide()
 
@@ -106,3 +111,8 @@ func attacking():
 			anim.play("Attack")
 		await anim.animation_finished
 		isAttacking = false
+	
+func _on_body_entered(body):
+	if body.is_in_group("Enemy"):
+		body.take_damage(100)
+		queue_free()

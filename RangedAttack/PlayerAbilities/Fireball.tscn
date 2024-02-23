@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://duy2vecuglch6"]
+
+[ext_resource type="Script" path="res://RangedAttack/PlayerAbilities/scripts/projectile.gd" id="1_mpnav"]
+[ext_resource type="SpriteFrames" uid="uid://dahb5mfutiru0" path="res://RangedAttack/PlayerAbilities/PixelSpecialEffects.tres" id="2_nicdl"]
+[ext_resource type="Script" path="res://RangedAttack/PlayerAbilities/scripts/replace_on_timeout.gd" id="3_yaf6i"]
+[ext_resource type="Script" path="res://RangedAttack/PlayerAbilities/scripts/replace_on_area_entered.gd" id="4_53ebj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rhs6j"]
+radius = 4.0
+height = 26.0
+
+[node name="Fireball" type="Node2D"]
+position = Vector2(5, 10)
+script = ExtResource("1_mpnav")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2_nicdl")
+animation = &"Fireball"
+autoplay = "Fireball"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_rhs6j")
+
+[node name="ReplaceOnTimeout" type="Node" parent="." node_paths=PackedStringArray("replace_timer", "replace_target")]
+script = ExtResource("3_yaf6i")
+replace_timer = NodePath("Timer")
+replace_target = NodePath("..")
+replacement_scene_path = "res://RangedAttack/PlayerAbilities/FireExplosion.tscn"
+
+[node name="Timer" type="Timer" parent="ReplaceOnTimeout"]
+wait_time = 1.25
+autostart = true
+
+[node name="ReplaceOnAreaEntered" type="Node" parent="." node_paths=PackedStringArray("enter_area", "replace_target")]
+script = ExtResource("4_53ebj")
+enter_area = NodePath("../Area2D")
+replace_target = NodePath("..")
+replacement_scene_path = "res://RangedAttack/PlayerAbilities/FireExplosion.tscn"

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hxftj6uhfbwa"
-path="res://.godot/imported/RandomLevelGenTileset.png-7dfecd914f483c4872cbb239693e27d6.ctex"
+uid="uid://jvmwn56vudy0"
+path="res://.godot/imported/10.png-a3cc42ddc20fad63d2afe4cb7cc6f536.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://RandomLevelGenTileset.png"
-dest_files=["res://.godot/imported/RandomLevelGenTileset.png-7dfecd914f483c4872cbb239693e27d6.ctex"]
+source_file="res://RangedAttack/VFX/10.png"
+dest_files=["res://.godot/imported/10.png-a3cc42ddc20fad63d2afe4cb7cc6f536.ctex"]
 
 [params]
 

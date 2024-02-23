@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ftywdq3c6dug"
-path="res://.godot/imported/PepeThink.png-a5ad3627251c1b6fdb2fbd5db68a9097.ctex"
+uid="uid://cde6bl20mejy1"
+path="res://.godot/imported/08.png-ca6c136a69ae381d43f4da91783378b2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PepeThink.png"
-dest_files=["res://.godot/imported/PepeThink.png-a5ad3627251c1b6fdb2fbd5db68a9097.ctex"]
+source_file="res://RangedAttack/VFX/08.png"
+dest_files=["res://.godot/imported/08.png-ca6c136a69ae381d43f4da91783378b2.ctex"]
 
 [params]
 
