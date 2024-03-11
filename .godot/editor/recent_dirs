@@ -1,7 +1,6 @@
-res://RangedAttack/PlayerAbilities/scripts
-res://RangedAttack/PlayerAbilities
-res://RangedAttack/VFX
-res://RangedAttack
+res://Player/MagicScenes
+res://Assets/VFX
+res://Scenes/Interactables/Scripts
+res://Scenes/Interactables
 res://
-res://KnightSprite/Colour1/Outline/120x80_PNGSheets
 res://Player
