@@ -731,7 +731,6 @@ sprite_frames = SubResource("SpriteFrames_3pxo0")
 animation = &"Idle"
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)
 
 [node name="sword" type="Area2D" parent="."]
 position = Vector2(29, 16)
