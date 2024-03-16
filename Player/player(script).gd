@@ -38,9 +38,13 @@ const MAGIC_FIREBALL = preload("res://Player/MagicScenes/fireball.tscn")
 
 @onready var sprite = $AnimatedSprite2D
 @onready var anim = $AnimationPlayer
+@onready var muzzle : Marker2D = $fbStart
+
+var muzzle_position
 
 func _ready():
 	$sword/sword_collider.disabled = true
+	muzzle_position = muzzle.position
 	#$fireball/fireball_collider.disabled = true
 	#$fireball/fireball_sprite.visible = false
 	
@@ -52,6 +56,7 @@ func _physics_process(delta):
 		player_states.SWORD:
 			sword(delta)
 		player_states.MAGIC:
+			print("magic shooting")
 			fire(delta)
 	
 func movement(delta):
@@ -140,34 +145,29 @@ func sword(delta):
 
 func fire(delta):
 	# const MAGIC_FIREBALL = preload("res://Player/MagicScenes/fireball.tscn")
-	var new_fireball = MAGIC_FIREBALL.instantiate()
-	new_fireball.global_position = $fbStart.global_position
-	$fbStart.add_child(new_fireball)
+	var direction = player_direction()
 	
-"""
-func fireball(delta):
-	anim.play("Fireball")
-	magic_input_movment(delta)
-	fireball_physics(delta)
+	if Input.is_action_pressed("use_ability"):
+		var new_fireball = MAGIC_FIREBALL.instantiate() as Node2D
+		if input < 0:
+			new_fireball.scale.x = -1
+			new_fireball.global_position = muzzle.global_position
+			get_parent().add_child(new_fireball)
+		elif input > 0:
+			new_fireball.scale.x = 1
+			new_fireball.global_position = muzzle.global_position
+			get_parent().add_child(new_fireball)
+		elif input == 0:
+			new_fireball.scale.x = sprite.scale.x
+			new_fireball.global_position = muzzle.global_position
+			get_parent().add_child(new_fireball)
+	# hard codes state to move state after fireball is used
+	current_state = player_states.MOVE
+
+func player_direction():
+	var direction = Input.get_axis("ui_left", "ui_right")
 	
-func fireball_physics(delta):
-	if $fireball.scale.x == 1:
-		$fireball/fireball_sprite.visible = true
-		if attack_count != 1:
-			$fireball.position.x += fireball_speed * delta
-			await anim.animation_finished
-			attack_count += 1
-		$fireball.position.x = 29
-		$fireball/fireball_sprite.visible = false
-	if $fireball.scale.x == -1:
-		$fireball/fireball_sprite.visible = true
-		if attack_count != 1:
-			$fireball.position.x += -fireball_speed * delta
-			await anim.animation_finished
-			attack_count += 1
-		$fireball.position.x = -20
-		$fireball/fireball_sprite.visible = false
-"""
+	return direction
 			
 func input_movment(delta):
 	input = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
@@ -189,29 +189,6 @@ func input_movment(delta):
 	
 	gravity_force()
 	move_and_slide()
-	
-"""
-func magic_input_movment(delta):
-	input = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
-	
-	if input != 0:
-		if input > 0:
-			velocity.x += atk_mov_spd * delta
-			velocity.x = clamp(speed, 100, speed)
-			velocity.y = clamp(0, 0, 0)
-			sprite.scale.x = 1
-		if input < 0:
-			velocity.x -= atk_mov_spd * delta
-			velocity.x = clamp(-speed, 100, -speed)
-			velocity.y = clamp(0, 0, 0)
-			sprite.scale.x = -1
-			
-	if input == 0:
-		velocity.x = 0
-	
-	gravity_force()
-	move_and_slide()
-"""
 
 func wall_collider():
 	return wall.is_colliding()
