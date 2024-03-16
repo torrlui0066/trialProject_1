@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1710549541
+::res://::1710631809
 README.md::TextFile::-1::1706587637::0::1::::<><>::
 ::res://Assets/::1710473770
 ::res://Assets/16x16 Fantasy Platformer Pack/::1710462028
@@ -280,26 +280,26 @@ sky.png::CompressedTexture2D::4991310897378813896::1710473770::1710473772::1::::
 54.png::CompressedTexture2D::359166649905131361::1710206608::1710206608::1::::<><>::
 55.png::CompressedTexture2D::9136537081114892939::1710206608::1710206608::1::::<><>::
 56.png::CompressedTexture2D::8727920736044949037::1710206608::1710206608::1::::<><>::
-::res://Player/::1710549353
-player(scene).tscn::PackedScene::8052987043752475769::1710549353::0::1::::<><>::res://Player/player(script).gd<>uid://cx6ud3g37xwff::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_Attack.png<>uid://qcjdntrwjmcr::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_Death.png<>uid://5p41c6kig2d8::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_Idle.png<>uid://bcb2pkxh3hmia::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_Jump.png<>uid://dgvcip662umo4::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_JumpFallInbetween.png<>uid://dm3xcpurib2uo::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_Run.png
-player(script).gd::GDScript::-1::1710549216::0::1::::<>CharacterBody2D<>::
-::res://Player/MagicScenes/::1710549353
-fireball.gd::GDScript::-1::1710547811::0::1::::<>Node2D<>::
-fireball.tscn::PackedScene::1273327662914414144::1710549353::0::1::::<><>::uid://b1aq2kcwr50y3::::res://Assets/VFX/42.png<>res://Player/MagicScenes/fireball.gd
+::res://Player/::1710551961
+player(scene).tscn::PackedScene::8052987043752475769::1710551961::0::1::::<><>::res://Player/player(script).gd<>uid://cx6ud3g37xwff::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_Attack.png<>uid://qcjdntrwjmcr::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_Death.png<>uid://5p41c6kig2d8::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_Idle.png<>uid://bcb2pkxh3hmia::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_Jump.png<>uid://dgvcip662umo4::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_JumpFallInbetween.png<>uid://dm3xcpurib2uo::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_Run.png
+player(script).gd::GDScript::-1::1710551930::0::1::::<>CharacterBody2D<>::
+::res://Player/MagicScenes/::1710551932
+fireball.gd::GDScript::-1::1710549850::0::1::::<>Node2D<>::
+fireball.tscn::PackedScene::1273327662914414144::1710551932::0::1::::<><>::uid://b1aq2kcwr50y3::::res://Assets/VFX/42.png<>res://Player/MagicScenes/fireball.gd
 ::res://Scenes/::1710206608
-::res://Scenes/Interactables/::1710549353
-crate.tscn::PackedScene::9024410887269776289::1710549353::0::1::::<><>::uid://b8nvc5eudfetn::::res://Assets/metroid_asset_1_2/Sprites/Interactables/Crate-animated.png<>res://Scenes/Interactables/Scripts/crate.gd
+::res://Scenes/Interactables/::1710551932
+crate.tscn::PackedScene::9024410887269776289::1710551932::0::1::::<><>::uid://b8nvc5eudfetn::::res://Assets/metroid_asset_1_2/Sprites/Interactables/Crate-animated.png<>res://Scenes/Interactables/Scripts/crate.gd
 ::res://Scenes/Interactables/Scripts/::1710206608
 crate.gd::GDScript::-1::1710206608::0::1::::<>StaticBody2D<>::
-::res://Scenes/Main_Menu/::1710549353
+::res://Scenes/Main_Menu/::1710551932
 main_menu.gd::GDScript::-1::1710547811::0::1::::<>Node2D<>::
-main_menu.tscn::PackedScene::5359070057873671201::1710549353::0::1::::<><>::res://Scenes/Main_Menu/main_menu.gd
+main_menu.tscn::PackedScene::5359070057873671201::1710551932::0::1::::<><>::res://Scenes/Main_Menu/main_menu.gd
 ::res://Scenes/Worlds/::1710547004
 RandomLevelGenTileset.png::CompressedTexture2D::643022032305242582::1710206608::1710547004::1::::<><>::
-::res://Scenes/Worlds/Scenes/::1710549478
-house_1.tscn::PackedScene::5554553626324036433::1710549354::0::1::::<><>::uid://cyij7kdttmctn::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Inside) Tileset.png<>uid://d0ob3mq1bvx15::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Outside) Tileset.png<>uid://d2xfenexruq2v::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Outside And Inside) Tileset.png<>res://Scenes/Worlds/Scripts/HouseDoor.gd
-Test_Area.tscn::PackedScene::6076120517974655956::1710549478::0::1::::<><>::res://Scenes/Worlds/Scripts/WorldCave.gd<>uid://jfqqjvxhmwh7::::res://Scenes/Worlds/RandomLevelGenTileset.png<>uid://dmy6rxghroiwn::::res://Player/player(scene).tscn<>uid://d1tqy1r7klfrt::::res://Scenes/Interactables/crate.tscn
-town.tscn::PackedScene::5129655472074501604::1710549353::0::1::::<><>::uid://d1c8g1t8rtng0::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/Terrain Tileset.png<>uid://d0ob3mq1bvx15::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Outside) Tileset.png<>uid://d2xfenexruq2v::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Outside And Inside) Tileset.png<>uid://dmy6rxghroiwn::::res://Player/player(scene).tscn
+::res://Scenes/Worlds/Scenes/::1710551933
+house_1.tscn::PackedScene::5554553626324036433::1710551933::0::1::::<><>::uid://cyij7kdttmctn::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Inside) Tileset.png<>uid://d0ob3mq1bvx15::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Outside) Tileset.png<>uid://d2xfenexruq2v::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Outside And Inside) Tileset.png<>res://Scenes/Worlds/Scripts/HouseDoor.gd
+Test_Area.tscn::PackedScene::6076120517974655956::1710551932::0::1::::<><>::res://Scenes/Worlds/Scripts/WorldCave.gd<>uid://jfqqjvxhmwh7::::res://Scenes/Worlds/RandomLevelGenTileset.png<>uid://dmy6rxghroiwn::::res://Player/player(scene).tscn<>uid://d1tqy1r7klfrt::::res://Scenes/Interactables/crate.tscn
+town.tscn::PackedScene::5129655472074501604::1710551932::0::1::::<><>::uid://d1c8g1t8rtng0::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/Terrain Tileset.png<>uid://d0ob3mq1bvx15::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Outside) Tileset.png<>uid://d2xfenexruq2v::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Outside And Inside) Tileset.png<>uid://dmy6rxghroiwn::::res://Player/player(scene).tscn
 ::res://Scenes/Worlds/Scripts/::1710548870
 HouseDoor.gd::GDScript::-1::1710546804::0::1::::<>Area2D<>::
 Walker.gd::GDScript::-1::1710206608::0::1::::Walker<>Node<>::

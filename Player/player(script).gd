@@ -6,6 +6,7 @@ var direction : Vector2 = Vector2.ZERO
 # variables for movement
 @export var speed = 100.0
 @export var atk_mov_spd = 50
+@export var dash_distance = 4000
 
 # variables for jumping
 @export var gravity = 10
@@ -19,7 +20,7 @@ var jump_count = 0
 
 # everything related to state machine
 var current_state = player_states.MOVE
-enum player_states {MOVE, SWORD, MAGIC, DEAD}
+enum player_states {MOVE, SWORD, MAGIC, DEAD, DASH}
 
 # variables for life/ hp
 var health = 100.0
@@ -58,6 +59,8 @@ func _physics_process(delta):
 		player_states.MAGIC:
 			print("magic shooting")
 			fire(delta)
+		player_states.DASH:
+			dashing()
 	
 func movement(delta):
 	input = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
@@ -129,7 +132,10 @@ func movement(delta):
 	
 	if Input.is_action_just_pressed("use_ability"):
 		current_state = player_states.MAGIC
-		
+	
+	if Input.is_action_just_pressed("dash"):
+		current_state = player_states.DASH
+	
 	gravity_force()
 	move_and_slide()
 
@@ -163,6 +169,27 @@ func fire(delta):
 			get_parent().add_child(new_fireball)
 	# hard codes state to move state after fireball is used
 	current_state = player_states.MOVE
+
+func dashing():
+	if velocity.x > 0:
+		velocity.x += dash_distance
+		await get_tree().create_timer(0.1).timeout
+		current_state = player_states.MOVE
+	elif velocity.x < 0:
+		velocity.x -= dash_distance
+		await get_tree().create_timer(0.1).timeout
+		current_state = player_states.MOVE
+	else:
+		if sprite.scale.x == 1:
+			velocity.x += dash_distance
+			await get_tree().create_timer(0.1).timeout
+			current_state = player_states.MOVE
+		if sprite.scale.x == -1:
+			velocity.x -= dash_distance
+			await get_tree().create_timer(0.1).timeout
+			current_state = player_states.MOVE
+			
+	move_and_slide()
 
 func player_direction():
 	var direction = Input.get_axis("ui_left", "ui_right")
