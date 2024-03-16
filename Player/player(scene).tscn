@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=3 uid="uid://dmy6rxghroiwn"]
+[gd_scene load_steps=58 format=3 uid="uid://dmy6rxghroiwn"]
 
 [ext_resource type="Script" path="res://Player/player(script).gd" id="1_tif46"]
 [ext_resource type="Texture2D" uid="uid://cx6ud3g37xwff" path="res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_Attack.png" id="2_muy8b"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://bcb2pkxh3hmia" path="res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_Jump.png" id="5_2qnty"]
 [ext_resource type="Texture2D" uid="uid://dgvcip662umo4" path="res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_JumpFallInbetween.png" id="6_s7kt6"]
 [ext_resource type="Texture2D" uid="uid://dm3xcpurib2uo" path="res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_Run.png" id="7_qq878"]
-[ext_resource type="Texture2D" uid="uid://b1aq2kcwr50y3" path="res://Assets/VFX/42.png" id="8_qlxqf"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5wspj"]
 height = 38.0
@@ -316,94 +315,6 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0oucn"]
 size = Vector2(29, 26)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_67skx"]
-atlas = ExtResource("8_qlxqf")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kovr4"]
-atlas = ExtResource("8_qlxqf")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7ovk4"]
-atlas = ExtResource("8_qlxqf")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vhjhu"]
-atlas = ExtResource("8_qlxqf")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3qauy"]
-atlas = ExtResource("8_qlxqf")
-region = Rect2(128, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ybfri"]
-atlas = ExtResource("8_qlxqf")
-region = Rect2(160, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yntol"]
-atlas = ExtResource("8_qlxqf")
-region = Rect2(0, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3b6ar"]
-atlas = ExtResource("8_qlxqf")
-region = Rect2(32, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ukvt3"]
-atlas = ExtResource("8_qlxqf")
-region = Rect2(64, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_iytlj"]
-atlas = ExtResource("8_qlxqf")
-region = Rect2(96, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6ep47"]
-atlas = ExtResource("8_qlxqf")
-region = Rect2(128, 32, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_fw8hd"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_67skx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kovr4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7ovk4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vhjhu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3qauy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ybfri")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yntol")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3b6ar")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ukvt3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_iytlj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6ep47")
-}],
-"loop": true,
-"name": &"default",
-"speed": 10.0
-}]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_efsdo"]
-radius = 7.0
-
 [sub_resource type="Animation" id="Animation_52mdp"]
 resource_name = "Attack"
 length = 0.34
@@ -487,48 +398,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [3, 4]
-}
-
-[sub_resource type="Animation" id="Animation_7ihqy"]
-resource_name = "Fireball"
-length = 1.04
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../fireball/fireball_sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../fireball/fireball_collider:disabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.000742136, 1.01738, 1.04),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [true, false, false, true]
-}
-tracks/2/type = "method"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("..")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(1.03956),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"reset_states"
-}]
 }
 
 [sub_resource type="Animation" id="Animation_04qcq"]
@@ -649,30 +518,6 @@ tracks/3/keys = {
 "update": 1,
 "values": [true]
 }
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("../fireball/fireball_sprite:frame")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("../fireball/fireball_collider:disabled")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
 
 [sub_resource type="Animation" id="Animation_aawtg"]
 resource_name = "Run"
@@ -706,7 +551,6 @@ _data = {
 "Attack": SubResource("Animation_52mdp"),
 "Die": SubResource("Animation_l211q"),
 "Fall": SubResource("Animation_mn1b5"),
-"Fireball": SubResource("Animation_7ihqy"),
 "Idle": SubResource("Animation_04qcq"),
 "Jump": SubResource("Animation_ghli4"),
 "RESET": SubResource("Animation_mecg4"),
@@ -719,7 +563,6 @@ script = ExtResource("1_tif46")
 speed = 300.0
 jump_force = 500
 midjump_multiplier = 1.2
-fireball_speed = 50
 
 [node name="playerHitbox" type="CollisionShape2D" parent="."]
 position = Vector2(4, 16)
@@ -741,24 +584,18 @@ collision_mask = 8
 shape = SubResource("RectangleShape2D_0oucn")
 disabled = true
 
-[node name="fireball" type="Area2D" parent="."]
-visible = false
+[node name="fbStart" type="Marker2D" parent="."]
 position = Vector2(29, 16)
-collision_layer = 4
-collision_mask = 8
-
-[node name="fireball_sprite" type="AnimatedSprite2D" parent="fireball"]
-sprite_frames = SubResource("SpriteFrames_fw8hd")
-
-[node name="fireball_collider" type="CollisionShape2D" parent="fireball"]
-position = Vector2(6, 0)
-shape = SubResource("CircleShape2D_efsdo")
-disabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Camera2D")
 libraries = {
 "": SubResource("AnimationLibrary_6rjby")
 }
+
+[node name="wall_ray" type="RayCast2D" parent="."]
+position = Vector2(4, 16)
+target_position = Vector2(11, 0)
+collision_mask = 2
 
 [connection signal="area_entered" from="sword" to="." method="_on_sword_swing_area_entered"]

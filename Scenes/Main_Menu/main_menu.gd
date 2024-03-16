@@ -7,4 +7,4 @@ func _on_exit_pressed():
 
 
 func _on_play_pressed():
-	get_tree().change_scene_to_file("res://Scenes/Worlds/Test_Area.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Worlds/Scenes/Test_Area.tscn")

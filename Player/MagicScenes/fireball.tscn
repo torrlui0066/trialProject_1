@@ -1,18 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://se2rx1ubm001"]
+[gd_scene load_steps=4 format=3 uid="uid://se2rx1ubm001"]
 
 [ext_resource type="Texture2D" uid="uid://b1aq2kcwr50y3" path="res://Assets/VFX/42.png" id="1_7j4de"]
+[ext_resource type="Script" path="res://Player/MagicScenes/fireball.gd" id="1_kn40v"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pe0br"]
 radius = 6.0
 
-[node name="Fireball" type="Node2D"]
+[node name="fireball" type="Node2D"]
+top_level = true
+script = ExtResource("1_kn40v")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="fireball_area" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+[node name="Sprite2D" type="Sprite2D" parent="fireball_area"]
 texture = ExtResource("1_7j4de")
 hframes = 6
 vframes = 2
+frame = 10
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="fireball_collider" type="CollisionShape2D" parent="fireball_area"]
+position = Vector2(7, 0)
 shape = SubResource("CircleShape2D_pe0br")

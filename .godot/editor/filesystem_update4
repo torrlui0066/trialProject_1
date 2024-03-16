@@ -3,3 +3,9 @@ res://Scenes/Worlds/Test_Area.tscn
 res://Player/player(scene).tscn
 res://Scenes/Interactables/crate.tscn
 res://Player/MagicScenes/fireball.tscn
+res://Scenes/Worlds/town.tscn
+res://Scenes/Worlds/house_1.tscn
+res://Scenes/Worlds/Scenes/house_1.tscn
+res://Scenes/Worlds/Scenes/Test_Area.tscn
+res://Scenes/Worlds/Scenes/town.tscn
+res://Scenes/Main_Menu/main_menu.gd

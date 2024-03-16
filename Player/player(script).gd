@@ -14,6 +14,9 @@ var jump_count = 0
 @export var jump_force = 700
 @export var midjump_multiplier = 1.7
 
+# wall jump
+@onready var wall = $wall_ray
+
 # everything related to state machine
 var current_state = player_states.MOVE
 enum player_states {MOVE, SWORD, MAGIC, DEAD}
@@ -28,18 +31,18 @@ var max_attacks = 2
 var isAttacking: bool = false
 
 # variable for magic attacks
-@export var fireball_range = 5
-var TimeInSeconds = 0
-@export var fireball_speed = 1
-
+# @export var fireball_range = 5
+# var TimeInSeconds = 0
+# @export var fireball_speed = 1
+const MAGIC_FIREBALL = preload("res://Player/MagicScenes/fireball.tscn")
 
 @onready var sprite = $AnimatedSprite2D
 @onready var anim = $AnimationPlayer
 
 func _ready():
 	$sword/sword_collider.disabled = true
-	$fireball/fireball_collider.disabled = true
-	$fireball/fireball_sprite.visible = false
+	#$fireball/fireball_collider.disabled = true
+	#$fireball/fireball_sprite.visible = false
 	
 	
 func _physics_process(delta):
@@ -49,7 +52,7 @@ func _physics_process(delta):
 		player_states.SWORD:
 			sword(delta)
 		player_states.MAGIC:
-			fireball(delta)
+			fire(delta)
 	
 func movement(delta):
 	input = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
@@ -60,18 +63,22 @@ func movement(delta):
 			velocity.x += speed * delta
 			velocity.x = clamp(speed, 100, speed)
 			sprite.scale.x = 1
+			wall.scale.x = 1
 			$sword.position.x = 29
-			$fireball.position.x = 29
-			$fireball.scale.x = 1
+			$fbStart.position.x = 29
+			# $fireball.position.x = 29
+			# $fireball.scale.x = 1
 			sprite.position.x = 8
 			anim.play("Run")
 		if input < 0:
 			velocity.x -= speed * delta
 			velocity.x = clamp(-speed, 100, -speed)
 			sprite.scale.x = -1
+			wall.scale.x = -1
 			$sword.position.x = -20
-			$fireball.position.x = -20
-			$fireball.scale.x = -1
+			$fbStart.position.x = -20
+			# $fireball.position.x = -20
+			# $fireball.scale.x = -1
 			sprite.position.x = -1
 			anim.play("Run")
 
@@ -90,7 +97,7 @@ func movement(delta):
 		if velocity.y > 0:
 			anim.play("Fall")
 			
-	if Input.is_action_pressed("ui_accept") && is_on_floor() && jump_count < max_jump:
+	if Input.is_action_just_pressed("ui_accept") && is_on_floor() && jump_count < max_jump:
 		jump_count += 1
 		velocity.y -= jump_force
 		velocity.x = input
@@ -105,6 +112,13 @@ func movement(delta):
 	else:
 		gravity_force()
 	
+	# wall jump
+	if wall_collider() && Input.is_action_just_pressed("ui_accept"):
+		if velocity.x > 0:
+			velocity = Vector2(-3000, -450)
+		elif velocity.x < 0:
+			velocity = Vector2(3000, -450)
+	
 	if Input.is_action_just_pressed("attack"):
 		current_state = player_states.SWORD
 	
@@ -115,12 +129,22 @@ func movement(delta):
 	move_and_slide()
 
 func gravity_force():
-	velocity.y += gravity
+	if !wall_collider():
+		velocity.y += gravity
+	elif wall_collider():
+		velocity.y += 0.1
 	
 func sword(delta):
 	anim.play("Attack")
 	input_movment(delta)
 
+func fire(delta):
+	# const MAGIC_FIREBALL = preload("res://Player/MagicScenes/fireball.tscn")
+	var new_fireball = MAGIC_FIREBALL.instantiate()
+	new_fireball.global_position = $fbStart.global_position
+	$fbStart.add_child(new_fireball)
+	
+"""
 func fireball(delta):
 	anim.play("Fireball")
 	magic_input_movment(delta)
@@ -143,6 +167,7 @@ func fireball_physics(delta):
 			attack_count += 1
 		$fireball.position.x = -20
 		$fireball/fireball_sprite.visible = false
+"""
 			
 func input_movment(delta):
 	input = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
@@ -164,7 +189,8 @@ func input_movment(delta):
 	
 	gravity_force()
 	move_and_slide()
-
+	
+"""
 func magic_input_movment(delta):
 	input = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	
@@ -185,6 +211,10 @@ func magic_input_movment(delta):
 	
 	gravity_force()
 	move_and_slide()
+"""
+
+func wall_collider():
+	return wall.is_colliding()
 	
 func reset_states():
 	current_state = player_states.MOVE
