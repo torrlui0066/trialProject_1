@@ -1,0 +1,149 @@
+[gd_scene load_steps=14 format=3 uid="uid://ci731sm2tm3bk"]
+
+[ext_resource type="Texture2D" uid="uid://dsmrrbfrlnoik" path="res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Skeleton Alstreim/Alstreim2.png" id="1_nxthk"]
+[ext_resource type="Script" path="res://Enemy/Enemy_Scene/Enemy Melee/gravity.gd" id="2_1l74y"]
+[ext_resource type="Script" path="res://Enemy/Scripts/state_machine/node_state.gd" id="3_g0tcj"]
+[ext_resource type="Script" path="res://Enemy/Enemy_Scene/Enemy Melee/state_machine_controller.gd" id="3_qy4yo"]
+[ext_resource type="Script" path="res://Enemy/Enemy_Scene/Enemy Melee/idle_state.gd" id="5_xmvl6"]
+[ext_resource type="Script" path="res://Enemy/Enemy_Scene/Enemy Melee/attack_state.gd" id="6_ab81a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h3js8"]
+size = Vector2(54, 50)
+
+[sub_resource type="Animation" id="Animation_qrkx4"]
+resource_name = "Attack"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.000182024, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [12, 13, 14]
+}
+
+[sub_resource type="Animation" id="Animation_3c57e"]
+resource_name = "Death"
+length = 0.9
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [50, 44, 52]
+}
+
+[sub_resource type="Animation" id="Animation_7nio8"]
+resource_name = "Idle"
+length = 0.25
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00091012, 0.0501254, 0.100251),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="Animation" id="Animation_rjqva"]
+resource_name = "Run"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [2, 3, 4, 5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xygr6"]
+_data = {
+"attack": SubResource("Animation_qrkx4"),
+"death": SubResource("Animation_3c57e"),
+"idle": SubResource("Animation_7nio8"),
+"run": SubResource("Animation_rjqva")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qqydn"]
+radius = 128.472
+
+[node name="Melee Enemy" type="CharacterBody2D"]
+position = Vector2(1, -28)
+collision_mask = 2
+
+[node name="Melee Enemy Collision" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 3)
+shape = SubResource("RectangleShape2D_h3js8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-4.5, -1)
+scale = Vector2(0.222656, 0.21875)
+texture = ExtResource("1_nxthk")
+hframes = 9
+vframes = 6
+frame = 14
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xygr6")
+}
+
+[node name="Gravity" type="Node" parent="." node_paths=PackedStringArray("character_body_2d", "sprite_2d", "animation_player")]
+script = ExtResource("2_1l74y")
+character_body_2d = NodePath("..")
+sprite_2d = NodePath("../Sprite2D")
+animation_player = NodePath("../AnimationPlayer")
+
+[node name="StateMachineController" type="Node" parent="."]
+script = ExtResource("3_qy4yo")
+node_finite_state_machine = NodePath("StateMachine")
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("3_g0tcj")
+
+[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("character_body_2d", "sprite_2d", "animation_player")]
+script = ExtResource("5_xmvl6")
+character_body_2d = NodePath("../..")
+sprite_2d = NodePath("../../Sprite2D")
+animation_player = NodePath("../../AnimationPlayer")
+slow_down_speed = 200
+
+[node name="Attack" type="Node" parent="StateMachine" node_paths=PackedStringArray("character_body_2d", "animation_player")]
+script = ExtResource("6_ab81a")
+character_body_2d = NodePath("../..")
+animation_player = NodePath("../../AnimationPlayer")
+speed = 100
+
+[node name="AttackArea2D" type="Area2D" parent="."]
+position = Vector2(-4, 3)
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea2D"]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_qqydn")
+debug_color = Color(0.898039, 0.117647, 0.717647, 0.419608)
+
+[connection signal="body_entered" from="AttackArea2D" to="StateMachineController" method="_on_attack_area_2d_body_entered"]
+[connection signal="body_exited" from="AttackArea2D" to="StateMachineController" method="_on_attack_area_2d_body_exited"]

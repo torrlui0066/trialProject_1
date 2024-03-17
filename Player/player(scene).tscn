@@ -557,7 +557,7 @@ _data = {
 "Run": SubResource("Animation_aawtg")
 }
 
-[node name="player" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D" groups=["Player"]]
 collision_mask = 2
 script = ExtResource("1_tif46")
 speed = 300.0

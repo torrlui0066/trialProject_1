@@ -1,8 +1,18 @@
-res://Player/player(scene).tscn
-res://Player/player(script).gd
-res://Scenes/Main_Menu/main_menu.tscn
+res://Enemy/Enemy_Scene/Enemy_Melee.tscn
+res://Enemy/Enemy_Scene/Gravity.gd
 res://Scenes/Worlds/Scenes/Test_Area.tscn
+res://Scenes/Main_Menu/main_menu.tscn
+res://Player/player(scene).tscn
 res://Scenes/Interactables/crate.tscn
 res://Player/MagicScenes/fireball.tscn
 res://Scenes/Worlds/Scenes/town.tscn
 res://Scenes/Worlds/Scenes/house_1.tscn
+res://Enemy/Scripts/state_machine/Node_Finite_State_Machine.gd
+res://Enemy/Scripts/state_machine/node_state.gd
+res://Enemy/Enemy_Scene/Enemy Melee/Enemy_Melee.tscn
+res://Enemy/Enemy_Scene/Enemy Melee/Gravity.gd
+res://Enemy/Enemy_Scene/Enemy Melee/Idle_state.gd
+res://Enemy/Enemy_Scene/Enemy Melee/Attack_state.gd
+res://Enemy/Enemy_Scene/Enemy Melee/statemachinecontroller.gd
+res://Enemy/Enemy_Scene/Enemy Melee/state_machine_controller.gd
+res://Enemy/Scripts/state_machine/node_finite_state_machine.gd

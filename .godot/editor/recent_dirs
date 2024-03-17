@@ -1,4 +1,7 @@
-res://Enemy/Enemy Scene
+res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Golem Ort
+res://Enemy/Enemy_Scene/Enemy Melee
+res://Enemy/Scripts/state_machine
+res://Enemy
 res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Skeleton Alstreim
 res://Scenes/Worlds
 res://Player/MagicScenes

@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://cstk21xgcta57"]
+[gd_scene load_steps=11 format=3 uid="uid://cstk21xgcta57"]
 
 [ext_resource type="Script" path="res://Scenes/Worlds/Scripts/WorldCave.gd" id="1_q085o"]
 [ext_resource type="Texture2D" uid="uid://jfqqjvxhmwh7" path="res://Scenes/Worlds/RandomLevelGenTileset.png" id="2_r81ia"]
 [ext_resource type="PackedScene" uid="uid://dmy6rxghroiwn" path="res://Player/player(scene).tscn" id="3_k6ile"]
 [ext_resource type="PackedScene" uid="uid://d1tqy1r7klfrt" path="res://Scenes/Interactables/crate.tscn" id="4_b88ij"]
+[ext_resource type="PackedScene" uid="uid://ci731sm2tm3bk" path="res://Enemy/Enemy_Scene/Enemy Melee/Enemy_Melee.tscn" id="5_qjtnh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q4pt1"]
 texture = ExtResource("2_r81ia")
@@ -495,3 +496,6 @@ offset_bottom = 854.0
 
 [node name="crate" parent="." instance=ExtResource("4_b88ij")]
 position = Vector2(267, 622)
+
+[node name="Melee Enemy" parent="." instance=ExtResource("5_qjtnh")]
+position = Vector2(579, 551)
