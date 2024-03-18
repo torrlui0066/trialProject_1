@@ -22,3 +22,4 @@ func generate_level():
 		cells.append(location)
 	
 	tileMap.set_cells_terrain_connect(0, cells, 0, 0)
+
