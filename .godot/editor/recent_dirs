@@ -1,5 +1,12 @@
-res://Enemy/Scripts
+res://Enemy/Enemy_Scene/Demon_enemy
+res://Enemy/Assets/Vfx/60 Retro Effect 32x32 Pack 1 Free
 res://Enemy/Enemy_Scene
+res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Demon Butler Clorfos
+res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Critter Unibun
+res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Kraken Oceanos
+res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Anubis
+res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Clockwork Dragon Gearex
+res://Enemy/Scripts
 res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Slime
 res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Skeleton Alstreim
 res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Golem Ort

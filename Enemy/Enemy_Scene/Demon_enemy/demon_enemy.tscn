@@ -1,0 +1,203 @@
+[gd_scene load_steps=24 format=3 uid="uid://q72e6o7lj2ix"]
+
+[ext_resource type="Script" path="res://Enemy/Enemy_Scene/Demon_enemy/demon_enemy.gd" id="1_md2kl"]
+[ext_resource type="Texture2D" uid="uid://dbmvrm86wtlyh" path="res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Demon Butler Clorfos/Clorfos3.png" id="1_y28f2"]
+[ext_resource type="Script" path="res://Enemy/Enemy_Scene/Demon_enemy/Demon_grav.gd" id="3_5sf3y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v010v"]
+atlas = ExtResource("1_y28f2")
+region = Rect2(0, 1920, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_87t5i"]
+atlas = ExtResource("1_y28f2")
+region = Rect2(384, 1920, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_of1be"]
+atlas = ExtResource("1_y28f2")
+region = Rect2(768, 1920, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvlpn"]
+atlas = ExtResource("1_y28f2")
+region = Rect2(0, 1152, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmfgi"]
+atlas = ExtResource("1_y28f2")
+region = Rect2(384, 1152, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74f11"]
+atlas = ExtResource("1_y28f2")
+region = Rect2(768, 1152, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbnty"]
+atlas = ExtResource("1_y28f2")
+region = Rect2(1152, 1152, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2ntg"]
+atlas = ExtResource("1_y28f2")
+region = Rect2(1536, 1152, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gggiv"]
+atlas = ExtResource("1_y28f2")
+region = Rect2(1920, 1152, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t44fj"]
+atlas = ExtResource("1_y28f2")
+region = Rect2(2304, 1152, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w0x7s"]
+atlas = ExtResource("1_y28f2")
+region = Rect2(2688, 1152, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0166n"]
+atlas = ExtResource("1_y28f2")
+region = Rect2(3072, 1152, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4kbwt"]
+atlas = ExtResource("1_y28f2")
+region = Rect2(0, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_356y4"]
+atlas = ExtResource("1_y28f2")
+region = Rect2(384, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_073gp"]
+atlas = ExtResource("1_y28f2")
+region = Rect2(768, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rhjv4"]
+atlas = ExtResource("1_y28f2")
+region = Rect2(1152, 0, 384, 384)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_toes8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v010v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_87t5i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_of1be")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kvlpn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dmfgi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_74f11")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xbnty")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2ntg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gggiv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t44fj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w0x7s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0166n")
+}],
+"loop": true,
+"name": &"shoot",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4kbwt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_356y4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_073gp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rhjv4")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_db5r2"]
+size = Vector2(59, 62)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xtukl"]
+radius = 240.002
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_irfmi"]
+size = Vector2(57, 60)
+
+[node name="Demon_Ranged" type="CharacterBody2D"]
+collision_layer = 5
+collision_mask = 2
+script = ExtResource("1_md2kl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(11, -30.5)
+scale = Vector2(0.15625, 0.158854)
+sprite_frames = SubResource("SpriteFrames_toes8")
+animation = &"shoot"
+frame_progress = 0.0679745
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(11.5, -31)
+shape = SubResource("RectangleShape2D_db5r2")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(12, -31)
+target_position = Vector2(-200, 0)
+collision_mask = 19
+
+[node name="Demon_grav" type="Node" parent="." node_paths=PackedStringArray("character_body_2d", "animated_sprite_2D")]
+script = ExtResource("3_5sf3y")
+character_body_2d = NodePath("..")
+animated_sprite_2D = NodePath("../AnimatedSprite2D")
+
+[node name="Detection_Area" type="Area2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detection_Area"]
+position = Vector2(10, -31)
+shape = SubResource("CircleShape2D_xtukl")
+debug_color = Color(0.764706, 0.392157, 0.592157, 0.419608)
+
+[node name="Demon_hitbox" type="Area2D" parent="."]
+collision_layer = 5
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Demon_hitbox"]
+position = Vector2(11.5, -31)
+shape = SubResource("RectangleShape2D_irfmi")
+debug_color = Color(0.882353, 0.156863, 0.721569, 0.419608)
+
+[node name="take_damage_cooldown" type="Timer" parent="."]
+
+[node name="shoot_cooldown" type="Timer" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(-14, -31)
+scale = Vector2(-1.95141, 0.926735)
+
+[connection signal="body_entered" from="Detection_Area" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="Detection_Area" to="." method="_on_detection_area_body_exited"]
+[connection signal="body_entered" from="Demon_hitbox" to="." method="_on_demon_hitbox_body_entered"]
+[connection signal="body_exited" from="Demon_hitbox" to="." method="_on_demon_hitbox_body_exited"]
+[connection signal="timeout" from="take_damage_cooldown" to="." method="_on_take_damage_cooldown_timeout"]
+[connection signal="timeout" from="shoot_cooldown" to="." method="_on_timer_timeout"]

@@ -1,15 +1,16 @@
-res://Enemy/Enemy_Scene/slime_enemy.gd
-res://Scenes/Worlds/Scenes/Test_Area.tscn
 res://Scenes/Main_Menu/main_menu.tscn
+res://Scenes/Worlds/Scenes/Test_Area.tscn
 res://Player/player(scene).tscn
 res://Scenes/Interactables/crate.tscn
 res://Player/MagicScenes/fireball.tscn
 res://Scenes/Worlds/Scenes/town.tscn
 res://Scenes/Worlds/Scenes/house_1.tscn
-res://Enemy/Enemy_Scene/2nd Melee Enemy/2_nd_melee_enemy.tscn
-res://Enemy/Enemy_Scene/slime_enemy.tscn
-res://Enemy/Enemy_Scene/slime_gravity.gd
+res://Enemy/Enemy_Scene/Snake_ranged/snake_enemy.tscn
 res://Enemy/Enemy_Scene/Slime_enemy/slime_enemy.tscn
-res://Enemy/Enemy_Scene/Slime_enemy/slime_gravity.gd
-res://Enemy/Enemy_Scene/Slime_enemy/slime_enemy.gd
-res://Enemy/Scripts/global.gd
+res://Enemy/Enemy_Scene/Demon_enemy/demon_enemy.tscn
+res://Enemy/Enemy_Scene/Demon_enemy/demon_enemy.gd
+res://Enemy/Enemy_Scene/Demon_enemy/demon_proj.gd
+res://Enemy/Enemy_Scene/Demon_enemy/demon_proj.tscn
+res://Enemy/Enemy_Scene/Demon_enemy/Demon_grav.gd
+res://Enemy/Enemy_Scene/Demon_enemy/darkblast.tscn
+res://Enemy/Enemy_Scene/Demon_enemy/darkblast_area.gd
