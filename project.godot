@@ -14,6 +14,10 @@ config/name="Godot Projects"
 run/main_scene="res://Scenes/Main_Menu/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 
+[autoload]
+
+global="*res://Enemy/Scripts/global.gd"
+
 [input]
 
 ui_accept={
@@ -46,7 +50,3 @@ dash={
 2d_physics/layer_2="Ground"
 2d_physics/layer_3="Attack"
 2d_physics/layer_4="Interactables"
-
-[rendering]
-
-renderer/rendering_method="mobile"

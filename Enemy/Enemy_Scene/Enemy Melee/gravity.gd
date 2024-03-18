@@ -1,8 +1,7 @@
 extends Node
 
 @export var character_body_2d : CharacterBody2D
-@export var sprite_2d : Sprite2D
-@export var animation_player : AnimationPlayer
+@export var animated_sprite_2D : AnimatedSprite2D
 
 const GRAVITY : int = 1000
 

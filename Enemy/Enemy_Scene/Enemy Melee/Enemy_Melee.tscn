@@ -110,11 +110,9 @@ libraries = {
 "": SubResource("AnimationLibrary_xygr6")
 }
 
-[node name="Gravity" type="Node" parent="." node_paths=PackedStringArray("character_body_2d", "sprite_2d", "animation_player")]
+[node name="Gravity" type="Node" parent="." node_paths=PackedStringArray("character_body_2d")]
 script = ExtResource("2_1l74y")
 character_body_2d = NodePath("..")
-sprite_2d = NodePath("../Sprite2D")
-animation_player = NodePath("../AnimationPlayer")
 
 [node name="StateMachineController" type="Node" parent="."]
 script = ExtResource("3_qy4yo")
@@ -123,17 +121,14 @@ node_finite_state_machine = NodePath("StateMachine")
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("3_g0tcj")
 
-[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("character_body_2d", "sprite_2d", "animation_player")]
+[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("character_body_2d")]
 script = ExtResource("5_xmvl6")
 character_body_2d = NodePath("../..")
-sprite_2d = NodePath("../../Sprite2D")
-animation_player = NodePath("../../AnimationPlayer")
 slow_down_speed = 200
 
-[node name="Attack" type="Node" parent="StateMachine" node_paths=PackedStringArray("character_body_2d", "animation_player")]
+[node name="Attack" type="Node" parent="StateMachine" node_paths=PackedStringArray("character_body_2d")]
 script = ExtResource("6_ab81a")
 character_body_2d = NodePath("../..")
-animation_player = NodePath("../../AnimationPlayer")
 speed = 100
 
 [node name="AttackArea2D" type="Area2D" parent="."]
