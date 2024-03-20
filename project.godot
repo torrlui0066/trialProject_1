@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.2", "Mobile")
 [autoload]
 
 global="*res://Enemy/Scripts/global.gd"
+CollectibleManager="*res://Collectibles/Scripts/collectible_manager.gd"
 
 [input]
 
@@ -53,3 +54,4 @@ dash={
 2d_physics/layer_2="Ground"
 2d_physics/layer_3="Attack"
 2d_physics/layer_4="Interactables"
+2d_physics/layer_5="Collectibles"

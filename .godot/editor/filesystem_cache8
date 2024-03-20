@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1710756309
+::res://::1710945593
 README.md::TextFile::-1::1710201285::0::1::::<><>::
 ::res://Assets/::1710756032
 ::res://Assets/16x16 Fantasy Platformer Pack/::1710756032
@@ -280,6 +280,14 @@ sky.png::CompressedTexture2D::4991310897378813896::1710756032::1710756032::1::::
 54.png::CompressedTexture2D::359166649905131361::1710205917::1710205917::1::::<><>::
 55.png::CompressedTexture2D::9136537081114892939::1710205917::1710205917::1::::<><>::
 56.png::CompressedTexture2D::8727920736044949037::1710205917::1710205917::1::::<><>::
+::res://Collectibles/::1710945445
+coins-and-gems.png::CompressedTexture2D::3703479049382862887::1710943626::1710943630::1::::<><>::
+Coins.png::CompressedTexture2D::6405744153570402617::1710943747::1710943747::1::::<><>::
+::res://Collectibles/blue_coin/::1710945404
+blue_coin.gd::GDScript::-1::1710945393::0::1::::<>Node2D<>::
+blue_coin.tscn::PackedScene::6013946408140864362::1710945404::0::1::::<><>::uid://cxi8w15gtnw1v::::res://Collectibles/Coins.png<>res://Collectibles/blue_coin/blue_coin.gd
+::res://Collectibles/Scripts/::1710945504
+collectible_manager.gd::GDScript::-1::1710945467::0::1::::<>Node<>::
 ::res://Enemy/::1710756033
 ::res://Enemy/Assets/::1710756211
 ::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/::1710756033
@@ -382,11 +390,11 @@ Wispia.png::CompressedTexture2D::4991619897520331675::1710756033::1710756033::1:
 ::res://Enemy/Enemy_Scene/::1710756211
 ::res://Enemy/Enemy_Scene/2nd Melee Enemy/::1710756033
 2_nd_melee_enemy.tscn::PackedScene::3650681410021805344::1710756033::0::1::::<><>::uid://dsmrrbfrlnoik::::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Skeleton Alstreim/Alstreim2.png<>res://Enemy/Enemy_Scene/Enemy Melee/gravity.gd<>res://Enemy/Enemy_Scene/Enemy Melee/state_machine_controller.gd<>res://Enemy/Scripts/state_machine/node_state.gd<>res://Enemy/Enemy_Scene/Enemy Melee/idle_state.gd<>res://Enemy/Enemy_Scene/Enemy Melee/attack_state.gd
-::res://Enemy/Enemy_Scene/Demon_enemy/::1710756267
-darkblast.tscn::PackedScene::8024310526856302345::1710756267::0::1::::<><>::uid://bcpdikcmaavhk::::res://Enemy/Assets/Vfx/60 Retro Effect 32x32 Pack 1 Free/13.png<>res://Enemy/Enemy_Scene/Demon_enemy/darkblast_area.gd
+::res://Enemy/Enemy_Scene/Demon_enemy/::1710945404
+darkblast.tscn::PackedScene::8024310526856302345::1710945404::0::1::::<><>::uid://bcpdikcmaavhk::::res://Enemy/Assets/Vfx/60 Retro Effect 32x32 Pack 1 Free/13.png<>res://Enemy/Enemy_Scene/Demon_enemy/darkblast_area.gd
 darkblast_area.gd::GDScript::-1::1710756267::0::1::::<>Node2D<>::
 demon_enemy.gd::GDScript::-1::1710756267::0::1::::<>CharacterBody2D<>::
-demon_enemy.tscn::PackedScene::1190729739638879883::1710756267::0::1::::<><>::res://Enemy/Enemy_Scene/Demon_enemy/demon_enemy.gd<>uid://dbmvrm86wtlyh::::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Demon Butler Clorfos/Clorfos3.png<>res://Enemy/Enemy_Scene/Demon_enemy/Demon_grav.gd
+demon_enemy.tscn::PackedScene::1190729739638879883::1710945404::0::1::::<><>::res://Enemy/Enemy_Scene/Demon_enemy/demon_enemy.gd<>uid://dbmvrm86wtlyh::::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Demon Butler Clorfos/Clorfos3.png<>res://Enemy/Enemy_Scene/Demon_enemy/Demon_grav.gd
 Demon_grav.gd::GDScript::-1::1710756267::0::1::::<>Node<>::
 demon_proj.gd::GDScript::-1::1710756267::0::1::::<>AnimatedSprite2D<>::
 ::res://Enemy/Enemy_Scene/Enemy Melee/::1710756033
@@ -395,38 +403,38 @@ Enemy_Melee.tscn::PackedScene::5402159676269968780::1710756033::0::1::::<><>::ui
 gravity.gd::GDScript::-1::1710756033::0::1::::<>Node<>::
 idle_state.gd::GDScript::-1::1710756033::0::1::::<>NodeState<>::
 state_machine_controller.gd::GDScript::-1::1710756033::0::1::::<>Node<>::
-::res://Enemy/Enemy_Scene/Slime_enemy/::1710756267
+::res://Enemy/Enemy_Scene/Slime_enemy/::1710945404
 slime_enemy.gd::GDScript::-1::1710756033::0::1::::<>CharacterBody2D<>::
-slime_enemy.tscn::PackedScene::3199931042356362772::1710756267::0::1::::<><>::res://Enemy/Enemy_Scene/Slime_enemy/slime_enemy.gd<>uid://tgxdt53echo4::::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Slime/Slime1_1.png<>res://Enemy/Enemy_Scene/Slime_enemy/slime_gravity.gd
+slime_enemy.tscn::PackedScene::3199931042356362772::1710945404::0::1::::<><>::res://Enemy/Enemy_Scene/Slime_enemy/slime_enemy.gd<>uid://tgxdt53echo4::::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Slime/Slime1_1.png<>res://Enemy/Enemy_Scene/Slime_enemy/slime_gravity.gd
 slime_gravity.gd::GDScript::-1::1710756033::0::1::::<>Node<>::
 ::res://Enemy/Scripts/::1710756033
 global.gd::GDScript::-1::1710756033::0::1::::<>Node<>::
 ::res://Enemy/Scripts/state_machine/::1710756033
 node_finite_state_machine.gd::GDScript::-1::1710756033::0::1::::NodeFiniteStateMachine<>Node<>::
 node_state.gd::GDScript::-1::1710756033::0::1::::NodeState<>Node<>::
-::res://Player/::1710756264
-player(scene).tscn::PackedScene::8052987043752475769::1710756264::0::1::::<><>::res://Player/player(script).gd<>uid://cx6ud3g37xwff::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_Attack.png<>uid://qcjdntrwjmcr::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_Death.png<>uid://5p41c6kig2d8::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_Idle.png<>uid://bcb2pkxh3hmia::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_Jump.png<>uid://dgvcip662umo4::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_JumpFallInbetween.png<>uid://dm3xcpurib2uo::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_Run.png
-player(script).gd::GDScript::-1::1710756264::0::1::::<>CharacterBody2D<>::
+::res://Player/::1710945403
+player(scene).tscn::PackedScene::8052987043752475769::1710945403::0::1::::<><>::res://Player/player(script).gd<>uid://cx6ud3g37xwff::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_Attack.png<>uid://qcjdntrwjmcr::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_Death.png<>uid://5p41c6kig2d8::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_Idle.png<>uid://bcb2pkxh3hmia::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_Jump.png<>uid://dgvcip662umo4::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_JumpFallInbetween.png<>uid://dm3xcpurib2uo::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_Run.png
+player(script).gd::GDScript::-1::1710945393::0::1::::<>CharacterBody2D<>::
 ::res://Player/GUI/::1710756264
-::res://Player/MagicScenes/::1710756207
+::res://Player/MagicScenes/::1710945404
 fireball.gd::GDScript::-1::1710756033::0::1::::<>Node2D<>::
-fireball.tscn::PackedScene::1273327662914414144::1710756207::0::1::::<><>::uid://b1aq2kcwr50y3::::res://Assets/VFX/42.png<>res://Player/MagicScenes/fireball.gd
+fireball.tscn::PackedScene::1273327662914414144::1710945404::0::1::::<><>::uid://b1aq2kcwr50y3::::res://Assets/VFX/42.png<>res://Player/MagicScenes/fireball.gd
 ::res://Scenes/::1710205917
-::res://Scenes/Interactables/::1710756264
-crate.tscn::PackedScene::9024410887269776289::1710756264::0::1::::<><>::uid://b8nvc5eudfetn::::res://Assets/metroid_asset_1_2/Sprites/Interactables/Crate-animated.png<>res://Scenes/Interactables/Scripts/crate.gd
+::res://Scenes/Interactables/::1710945403
+crate.tscn::PackedScene::9024410887269776289::1710945403::0::1::::<><>::uid://b8nvc5eudfetn::::res://Assets/metroid_asset_1_2/Sprites/Interactables/Crate-animated.png<>res://Scenes/Interactables/Scripts/crate.gd
 ::res://Scenes/Interactables/Scenes/::1710756264
 ::res://Scenes/Interactables/Scripts/::1710756264
 crate.gd::GDScript::-1::1710756264::0::1::::<>StaticBody2D<>::
-::res://Scenes/Main_Menu/::1710756033
+::res://Scenes/Main_Menu/::1710945403
 main_menu.gd::GDScript::-1::1710756033::0::1::::<>Node2D<>::
-main_menu.tscn::PackedScene::5359070057873671201::1710755795::0::1::::<><>::res://Scenes/Main_Menu/main_menu.gd
+main_menu.tscn::PackedScene::5359070057873671201::1710945403::0::1::::<><>::res://Scenes/Main_Menu/main_menu.gd
 ::res://Scenes/Worlds/::1710756033
 RandomLevelGenTileset.png::CompressedTexture2D::643022032305242582::1710756033::1710756033::1::::<><>::
-::res://Scenes/Worlds/Scenes/::1710756267
-house_1.tscn::PackedScene::5554553626324036433::1710756033::0::1::::<><>::uid://cyij7kdttmctn::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Inside) Tileset.png<>uid://d0ob3mq1bvx15::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Outside) Tileset.png<>uid://d2xfenexruq2v::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Outside And Inside) Tileset.png<>res://Scenes/Worlds/Scripts/HouseDoor.gd
-Test_Area.tscn::PackedScene::6076120517974655956::1710756267::0::1::::<><>::res://Scenes/Worlds/Scripts/WorldCave.gd<>uid://jfqqjvxhmwh7::::res://Scenes/Worlds/RandomLevelGenTileset.png<>uid://dmy6rxghroiwn::::res://Player/player(scene).tscn<>uid://d1tqy1r7klfrt::::res://Scenes/Interactables/crate.tscn<>uid://blucnqv6000jg::::res://Enemy/Enemy_Scene/Slime_enemy/slime_enemy.tscn<>uid://q72e6o7lj2ix::::res://Enemy/Enemy_Scene/Demon_enemy/demon_enemy.tscn
-town.tscn::PackedScene::5129655472074501604::1710756033::0::1::::<><>::uid://d1c8g1t8rtng0::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/Terrain Tileset.png<>uid://d0ob3mq1bvx15::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Outside) Tileset.png<>uid://d2xfenexruq2v::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Outside And Inside) Tileset.png<>uid://dmy6rxghroiwn::::res://Player/player(scene).tscn
-::res://Scenes/Worlds/Scripts/::1710756264
+::res://Scenes/Worlds/Scenes/::1710945404
+house_1.tscn::PackedScene::5554553626324036433::1710945404::0::1::::<><>::uid://cyij7kdttmctn::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Inside) Tileset.png<>uid://d0ob3mq1bvx15::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Outside) Tileset.png<>uid://d2xfenexruq2v::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Outside And Inside) Tileset.png<>res://Scenes/Worlds/Scripts/HouseDoor.gd
+Test_Area.tscn::PackedScene::6076120517974655956::1710945403::0::1::::<><>::res://Scenes/Worlds/Scripts/WorldCave.gd<>uid://jfqqjvxhmwh7::::res://Scenes/Worlds/RandomLevelGenTileset.png<>uid://dmy6rxghroiwn::::res://Player/player(scene).tscn<>uid://d1tqy1r7klfrt::::res://Scenes/Interactables/crate.tscn<>uid://blucnqv6000jg::::res://Enemy/Enemy_Scene/Slime_enemy/slime_enemy.tscn<>uid://q72e6o7lj2ix::::res://Enemy/Enemy_Scene/Demon_enemy/demon_enemy.tscn<>uid://crxg23n6u6bao::::res://Collectibles/blue_coin/blue_coin.tscn
+town.tscn::PackedScene::5129655472074501604::1710945404::0::1::::<><>::uid://d1c8g1t8rtng0::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/Terrain Tileset.png<>uid://d0ob3mq1bvx15::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Outside) Tileset.png<>uid://d2xfenexruq2v::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Outside And Inside) Tileset.png<>uid://dmy6rxghroiwn::::res://Player/player(scene).tscn
+::res://Scenes/Worlds/Scripts/::1710757169
 HouseDoor.gd::GDScript::-1::1710756033::0::1::::<>Area2D<>::
-Walker.gd::GDScript::-1::1710756264::0::1::::Walker<>Node<>::
-WorldCave.gd::GDScript::-1::1710205970::0::1::::<>Node2D<>::
+Walker.gd::GDScript::-1::1710757169::0::1::::Walker<>Node<>::
+WorldCave.gd::GDScript::-1::1710757146::0::1::::<>Node2D<>::

@@ -222,3 +222,9 @@ func wall_collider():
 	
 func reset_states():
 	current_state = player_states.MOVE
+
+"""
+func _on_hurtbox_body_entered(body : Node2D):
+	if body.is_ingroup("Enemy"):
+		print("Enemy Entered")
+"""

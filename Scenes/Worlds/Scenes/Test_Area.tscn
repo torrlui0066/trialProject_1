@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cstk21xgcta57"]
+[gd_scene load_steps=14 format=3 uid="uid://cstk21xgcta57"]
 
 [ext_resource type="Script" path="res://Scenes/Worlds/Scripts/WorldCave.gd" id="1_q085o"]
 [ext_resource type="Texture2D" uid="uid://jfqqjvxhmwh7" path="res://Scenes/Worlds/RandomLevelGenTileset.png" id="2_r81ia"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://d1tqy1r7klfrt" path="res://Scenes/Interactables/crate.tscn" id="4_b88ij"]
 [ext_resource type="PackedScene" uid="uid://blucnqv6000jg" path="res://Enemy/Enemy_Scene/Slime_enemy/slime_enemy.tscn" id="5_qpqld"]
 [ext_resource type="PackedScene" uid="uid://q72e6o7lj2ix" path="res://Enemy/Enemy_Scene/Demon_enemy/demon_enemy.tscn" id="6_jgyce"]
+[ext_resource type="PackedScene" uid="uid://crxg23n6u6bao" path="res://Collectibles/blue_coin/blue_coin.tscn" id="7_617a4"]
+[ext_resource type="PackedScene" uid="uid://cd3db11tryynd" path="res://UI/game_screen.tscn" id="8_rutgp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q4pt1"]
 texture = ExtResource("2_r81ia")
@@ -589,3 +591,10 @@ position = Vector2(551, 620)
 
 [node name="Demon_Ranged" parent="." instance=ExtResource("6_jgyce")]
 position = Vector2(694, 628)
+
+[node name="Collectibles" type="Node" parent="."]
+
+[node name="BlueCoin" parent="Collectibles" instance=ExtResource("7_617a4")]
+position = Vector2(198, 599)
+
+[node name="GameScreen" parent="." instance=ExtResource("8_rutgp")]
