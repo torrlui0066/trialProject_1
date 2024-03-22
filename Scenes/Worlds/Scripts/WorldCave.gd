@@ -12,7 +12,7 @@ func _ready():
 	
 
 func generate_level():
-	var walker = Walker.new(Vector2(4, 4), borders)
+	var walker = Walker.new(Vector2(5, 20), borders)
 	var map = walker.walk(500)
 	walker.queue_free()
 	

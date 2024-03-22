@@ -1,6 +1,8 @@
 extends Node
 class_name Walker
 
+#const coin = preload("res://Scenes/Interactables/scenes/coin.tscn").instantiate()
+
 const DIRECTIONS = [Vector2.RIGHT, Vector2.UP, Vector2.DOWN]
 
 var position = Vector2.ZERO
@@ -20,7 +22,7 @@ func _init(starting_position_param, new_borders):
 func walk(steps):
 	create_startroom(position)
 	for i in steps:  # Renamed 'step' to 'i' to avoid shadowing the 'step' method.
-		if  randf() <= 0.25 or steps_since_turn >= 5:
+		if  randf() <= 0.20 or steps_since_turn >= 8:
 			change_direction()
 		
 		if step():  # Now it's clear that 'step()' refers to the method.
@@ -52,16 +54,17 @@ func change_direction():
 		direction = directions.pop_front()
 
 func create_room(position):
-	var size = Vector2(randi() % 4 + 1, randi() % 3 + 1)
+	var size = Vector2(randi() % 9 + 1, randi() % 2 + 2)
 	var top_left_corner = (position - size/2).ceil()
 	for y in size.y:
 		for x in size.x:
 			var new_step = top_left_corner + Vector2(x,y)
 			if borders.has_point(new_step):
 				step_history.append(new_step)
+	#add_child(coin)
 
 func create_startroom(position):
-	var size = Vector2(6,3)
+	var size = Vector2(20,8)
 	var top_left_corner = (position - size/2).ceil()
 	for y in size.y:
 		for x in size.x:
