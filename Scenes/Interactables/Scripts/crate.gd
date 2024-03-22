@@ -16,7 +16,7 @@ func _on_hitbox_area_entered(area):
 		$anim.play("Destroy")
 		await $anim.animation_finished
 		queue_free()
-	if area.name == "fireball":
+	if area.name == "fireball_area":
 		$anim.play("Destroy")
 		await $anim.animation_finished
 		queue_free()

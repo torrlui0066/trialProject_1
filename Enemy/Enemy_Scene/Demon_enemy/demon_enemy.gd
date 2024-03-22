@@ -17,14 +17,15 @@ var projectile_scene = preload("res://Enemy/Enemy_Scene/Demon_enemy/darkblast.ts
 
 
 func _physics_process(delta):
-	if player_inattack_zone:
-		if can_take_damage:
-			health -= 20 
+	if player_inattack_zone and can_take_damage:
+		take_damage()
+		'''if can_take_damage:
+			player_data.life -= 20 
 			$take_damage_cooldown.start()
 			can_take_damage = false
 			print("Demon health =", health)
 			if health <= 0:
-				self.queue_free()
+				self.queue_free()'''
 			
 	if player_inattack_zone and player_chase:
 		if $shoot_cooldown.is_stopped():
@@ -48,10 +49,10 @@ func _physics_process(delta):
 			direction = 1
 	else:
 		$AnimatedSprite2D.play("idle")
-
+'''
 	if can_take_damage and player_inattack_zone:
 		take_damage()
-
+'''
 func _on_detection_area_body_entered(body):
 	if body.name == "player":
 		player = body
@@ -67,7 +68,7 @@ func _on_detection_area_body_exited(body):
 		print("Player exited detection area")
 
 func take_damage():
-	health -= 20
+	player_data.life -= 1
 	$take_damage_cooldown.start()
 	can_take_damage = false
 	print("Demon health =", health)

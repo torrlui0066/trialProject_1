@@ -430,7 +430,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../playerHitbox:position")
+tracks/2/path = NodePath("../playerCollider:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -497,7 +497,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../playerHitbox:position")
+tracks/2/path = NodePath("../playerCollider:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -568,7 +568,7 @@ speed = 300.0
 jump_force = 500
 midjump_multiplier = 1.2
 
-[node name="playerHitbox" type="CollisionShape2D" parent="."]
+[node name="playerCollider" type="CollisionShape2D" parent="."]
 position = Vector2(4, 16)
 shape = SubResource("CapsuleShape2D_5wspj")
 
@@ -605,14 +605,14 @@ position = Vector2(4, 16)
 target_position = Vector2(11, 0)
 collision_mask = 2
 
-[node name="Hurtbox" type="Area2D" parent="."]
+[node name="player_hitbox" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 4
 
-[node name="HurtboxCollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+[node name="HurtboxCollisionShape2D" type="CollisionShape2D" parent="player_hitbox"]
 position = Vector2(2, 16)
 shape = SubResource("CapsuleShape2D_urgha")
 debug_color = Color(0.976471, 0, 0.407843, 0.419608)
 
 [connection signal="area_entered" from="sword" to="." method="_on_sword_swing_area_entered"]
-[connection signal="body_entered" from="Hurtbox" to="." method="_on_hurtbox_body_entered"]
+[connection signal="body_entered" from="player_hitbox" to="." method="_on_hurtbox_body_entered"]

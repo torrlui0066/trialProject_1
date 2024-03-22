@@ -1,440 +1,436 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1710945593
+::res://::1711081853
 README.md::TextFile::-1::1710201285::0::1::::<><>::
-::res://Assets/::1710756032
-::res://Assets/16x16 Fantasy Platformer Pack/::1710756032
-::res://Assets/16x16 Fantasy Platformer Pack/Animals/::1710756032
-::res://Assets/16x16 Fantasy Platformer Pack/Animals/Sheep/::1710756032
-::res://Assets/16x16 Fantasy Platformer Pack/Events or Markers/::1710756032
-sEvent_1.png::CompressedTexture2D::4120361819605127096::1710756032::1710756032::1::::<><>::
-sEvent_2.png::CompressedTexture2D::2085233438654982084::1710756032::1710756032::1::::<><>::
-sEvent_3.png::CompressedTexture2D::4750172249746500017::1710756032::1710756032::1::::<><>::
-s_eEvent_1.png::CompressedTexture2D::6884175436553249990::1710756032::1710756032::1::::<><>::
-s_eEvent_2.png::CompressedTexture2D::1304950701464076213::1710756032::1710756032::1::::<><>::
-s_eEvent_3.png::CompressedTexture2D::5917111599883167000::1710756032::1710756032::1::::<><>::
-::res://Assets/16x16 Fantasy Platformer Pack/GUI/::1710756032
-::res://Assets/16x16 Fantasy Platformer Pack/GUI/Bars/::1710756032
-Bars.png::CompressedTexture2D::3263431902575857004::1710756032::1710756032::1::::<><>::
-::res://Assets/16x16 Fantasy Platformer Pack/GUI/Popups/::1710756032
-Pop-Ups.png::CompressedTexture2D::5360928267007935561::1710756032::1710756032::1::::<><>::
-::res://Assets/16x16 Fantasy Platformer Pack/GUI/Text Box/::1710756032
-Name Box.png::CompressedTexture2D::7481111948556757375::1710756032::1710756032::1::::<><>::
-Portrait Frame.png::CompressedTexture2D::8899766858754174408::1710756032::1710756032::1::::<><>::
-Textbox.png::CompressedTexture2D::7923876738687763455::1710756032::1710756032::1::::<><>::
-::res://Assets/16x16 Fantasy Platformer Pack/Items/::1710756032
-9x9 Mini Items Pack.png::CompressedTexture2D::5085663817257151229::1710756032::1710756032::1::::<><>::
-::res://Assets/16x16 Fantasy Platformer Pack/Monsters/::1710756032
-::res://Assets/16x16 Fantasy Platformer Pack/NPCs/::1710756032
-::res://Assets/16x16 Fantasy Platformer Pack/NPCs/Blue/::1710756032
-::res://Assets/16x16 Fantasy Platformer Pack/NPCs/Burgundy/::1710756032
-::res://Assets/16x16 Fantasy Platformer Pack/NPCs/Green/::1710756032
-::res://Assets/16x16 Fantasy Platformer Pack/Particles And Spells/::1710756032
-::res://Assets/16x16 Fantasy Platformer Pack/Placeholders/::1710756032
-sEnemy_1.png::CompressedTexture2D::4758504806209228893::1710756032::1710756032::1::::<><>::
-sEnemy_2.png::CompressedTexture2D::7983765135627834283::1710756032::1710756032::1::::<><>::
-sEnemy_3.png::CompressedTexture2D::645403725609011334::1710756032::1710756032::1::::<><>::
-sEnemy_4.png::CompressedTexture2D::374045886350596629::1710756032::1710756032::1::::<><>::
-sEnemy_5.png::CompressedTexture2D::6659784653875005240::1710756032::1710756032::1::::<><>::
-::res://Assets/16x16 Fantasy Platformer Pack/Player/::1710756032
-::res://Assets/16x16 Fantasy Platformer Pack/Portraits/::1710756032
-NPC 1.png::CompressedTexture2D::6052859180062757215::1710756032::1710756032::1::::<><>::
-NPC 2.png::CompressedTexture2D::1240954928967607338::1710756032::1710756032::1::::<><>::
-NPC 3.png::CompressedTexture2D::7715102296828387541::1710756032::1710756032::1::::<><>::
-NPC 4.png::CompressedTexture2D::3249500975993577460::1710756032::1710756032::1::::<><>::
-NPC 5.png::CompressedTexture2D::3733178816193490693::1710756032::1710756032::1::::<><>::
-Player.png::CompressedTexture2D::1843529701104852709::1710756032::1710756032::1::::<><>::
-Unknown 1.png::CompressedTexture2D::9092490405826642954::1710756032::1710756032::1::::<><>::
-Unknown 2.png::CompressedTexture2D::1823184413880325646::1710756032::1710756032::1::::<><>::
-Unknown 3.png::CompressedTexture2D::838177676730271247::1710756032::1710756032::1::::<><>::
-Unknown 4.png::CompressedTexture2D::8120923915143066380::1710756032::1710756032::1::::<><>::
-Unknown 5.png::CompressedTexture2D::1465455733834038542::1710756032::1710756032::1::::<><>::
-::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/::1710756032
-Basic Tiles Only.png::CompressedTexture2D::1052951630479238174::1710756032::1710756032::1::::<><>::
-City Ground Tileset.png::CompressedTexture2D::5455542874273050362::1710756032::1710756032::1::::<><>::
-House (Inside) Tileset.png::CompressedTexture2D::6474492765828365131::1710756032::1710756032::1::::<><>::
-House (Outside And Inside) Tileset.png::CompressedTexture2D::9102152935840311803::1710756032::1710756032::1::::<><>::
-House (Outside) Tileset.png::CompressedTexture2D::8942995805989635814::1710756032::1710756032::1::::<><>::
-Terrain Tileset.png::CompressedTexture2D::8990316513182223777::1710756032::1710756032::1::::<><>::
-Vegetation Tileset 1.png::CompressedTexture2D::6080454354056614256::1710756032::1710756032::1::::<><>::
-Vegetation Tileset 2.png::CompressedTexture2D::9042255616154530799::1710756032::1710756032::1::::<><>::
-::res://Assets/KnightSprite/::1710205917
-::res://Assets/KnightSprite/Colour1/::1710205917
-::res://Assets/KnightSprite/Colour1/NoOutline/::1710205917
-::res://Assets/KnightSprite/Colour1/NoOutline/120x80_gifs/::1710205917
-::res://Assets/KnightSprite/Colour1/NoOutline/120x80_PNGSheets/::1710205917
-_Attack2.png::CompressedTexture2D::6822210232961071481::1710205917::1710205917::1::::<><>::
-_Attack2NoMovement.png::CompressedTexture2D::5309235147695235198::1710205917::1710205917::1::::<><>::
-_Attack.png::CompressedTexture2D::6743720356846908299::1710205917::1710205917::1::::<><>::
-_AttackCombo.png::CompressedTexture2D::5294677271414052670::1710205917::1710205917::1::::<><>::
-_AttackComboNoMovement.png::CompressedTexture2D::6323097705996486859::1710205917::1710205917::1::::<><>::
-_AttackNoMovement.png::CompressedTexture2D::8338832092793909765::1710205917::1710205917::1::::<><>::
-_Crouch.png::CompressedTexture2D::9128912554598645576::1710205917::1710205917::1::::<><>::
-_CrouchAttack.png::CompressedTexture2D::9178619795974707831::1710205917::1710205917::1::::<><>::
-_CrouchFull.png::CompressedTexture2D::9069224157651139056::1710205917::1710205917::1::::<><>::
-_CrouchTransition.png::CompressedTexture2D::8926449431707503434::1710205917::1710205917::1::::<><>::
-_CrouchWalk.png::CompressedTexture2D::1141029833350813610::1710205917::1710205917::1::::<><>::
-_Dash.png::CompressedTexture2D::8640742731373055083::1710205917::1710205917::1::::<><>::
-_Death.png::CompressedTexture2D::8907377609530874646::1710205917::1710205917::1::::<><>::
-_DeathNoMovement.png::CompressedTexture2D::8514589140282941367::1710205917::1710205917::1::::<><>::
-_Fall.png::CompressedTexture2D::7658787885796782895::1710205917::1710205917::1::::<><>::
-_Hit.png::CompressedTexture2D::1502991611140903911::1710205917::1710205917::1::::<><>::
-_Idle.png::CompressedTexture2D::6540049739878243190::1710205917::1710205917::1::::<><>::
-_Jump.png::CompressedTexture2D::6931098742315937798::1710205917::1710205917::1::::<><>::
-_JumpFallInbetween.png::CompressedTexture2D::7369860095187686352::1710205917::1710205917::1::::<><>::
-_Roll.png::CompressedTexture2D::8396634368721045636::1710205917::1710205917::1::::<><>::
-_Run.png::CompressedTexture2D::1827795952309791678::1710205917::1710205917::1::::<><>::
-_Slide.png::CompressedTexture2D::1903219828031205251::1710205917::1710205917::1::::<><>::
-_SlideFull.png::CompressedTexture2D::3487518455203633240::1710205917::1710205917::1::::<><>::
-_SlideTransitionEnd.png::CompressedTexture2D::8900125920726666237::1710205917::1710205917::1::::<><>::
-_SlideTransitionStart.png::CompressedTexture2D::1213292839773553372::1710205917::1710205917::1::::<><>::
-_TurnAround.png::CompressedTexture2D::1124460259336149241::1710205917::1710205917::1::::<><>::
-_WallClimb.png::CompressedTexture2D::7495681067595448610::1710205917::1710205917::1::::<><>::
-_WallClimbNoMovement.png::CompressedTexture2D::9122646570143807186::1710205917::1710205917::1::::<><>::
-_WallHang.png::CompressedTexture2D::4045459806445814572::1710205917::1710205917::1::::<><>::
-_WallSlide.png::CompressedTexture2D::1107237051753418361::1710205917::1710205917::1::::<><>::
-::res://Assets/KnightSprite/Colour1/Outline/::1710205917
-::res://Assets/KnightSprite/Colour1/Outline/120x80_gifs/::1710205917
-::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/::1710205917
-_Attack2.png::CompressedTexture2D::6667635962774541752::1710205917::1710205917::1::::<><>::
-_Attack2NoMovement.png::CompressedTexture2D::8172441415377469051::1710205917::1710205917::1::::<><>::
-_Attack.png::CompressedTexture2D::6452401659912358719::1710205917::1710205917::1::::<><>::
-_AttackCombo2hit.png::CompressedTexture2D::4701408374763548648::1710205917::1710205917::1::::<><>::
-_AttackComboNoMovement.png::CompressedTexture2D::8523506326292236414::1710205917::1710205917::1::::<><>::
-_AttackNoMovement.png::CompressedTexture2D::3206237176964308909::1710205917::1710205917::1::::<><>::
-_Crouch.png::CompressedTexture2D::7003636722864010345::1710205917::1710205917::1::::<><>::
-_CrouchAttack.png::CompressedTexture2D::2426264217613243934::1710205917::1710205917::1::::<><>::
-_CrouchFull.png::CompressedTexture2D::4258300583192614095::1710205917::1710205917::1::::<><>::
-_CrouchTransition.png::CompressedTexture2D::6381434621491972185::1710205917::1710205917::1::::<><>::
-_CrouchWalk.png::CompressedTexture2D::6020703260866160089::1710205917::1710205917::1::::<><>::
-_Dash.png::CompressedTexture2D::1861529069985913738::1710205917::1710205917::1::::<><>::
-_Death.png::CompressedTexture2D::1127702776990255629::1710205917::1710205917::1::::<><>::
-_DeathNoMovement.png::CompressedTexture2D::6495903023948814402::1710205917::1710205917::1::::<><>::
-_Fall.png::CompressedTexture2D::3537757504689636299::1710205917::1710205917::1::::<><>::
-_Hit.png::CompressedTexture2D::1330596756733778517::1710205917::1710205917::1::::<><>::
-_Idle.png::CompressedTexture2D::2138438352284572195::1710205917::1710205917::1::::<><>::
-_Jump.png::CompressedTexture2D::2530529455556251224::1710205917::1710205917::1::::<><>::
-_JumpFallInbetween.png::CompressedTexture2D::7623883603264093593::1710205917::1710205917::1::::<><>::
-_Roll.png::CompressedTexture2D::2038251918839610749::1710205917::1710205917::1::::<><>::
-_Run.png::CompressedTexture2D::8060731633800308554::1710205917::1710205917::1::::<><>::
-_Slide.png::CompressedTexture2D::862895939404719152::1710205917::1710205917::1::::<><>::
-_SlideFull.png::CompressedTexture2D::3912988062463714328::1710205917::1710205917::1::::<><>::
-_SlideTransitionEnd.png::CompressedTexture2D::4911586265126092972::1710205917::1710205917::1::::<><>::
-_SlideTransitionStart.png::CompressedTexture2D::1074651018686355579::1710205917::1710205917::1::::<><>::
-_TurnAround.png::CompressedTexture2D::7536525475742675308::1710205917::1710205917::1::::<><>::
-_WallClimb.png::CompressedTexture2D::7172786320316857415::1710205917::1710205917::1::::<><>::
-_WallClimbNoMovement.png::CompressedTexture2D::2749472775375423753::1710205917::1710205917::1::::<><>::
-_WallHang.png::CompressedTexture2D::5845426596340627201::1710205917::1710205917::1::::<><>::
-_WallSlide.png::CompressedTexture2D::1391988338954816681::1710205917::1710205917::1::::<><>::
-::res://Assets/KnightSprite/Colour2/::1710205917
-::res://Assets/KnightSprite/Colour2/NoOutline/::1710205917
-::res://Assets/KnightSprite/Colour2/NoOutline/120x80_gifs/::1710205917
-::res://Assets/KnightSprite/Colour2/NoOutline/120x80_PNGSheets/::1710205917
-_Attack2.png::CompressedTexture2D::6723166920268644870::1710205917::1710205917::1::::<><>::
-_Attack2NoMovement.png::CompressedTexture2D::4590211981837882159::1710205917::1710205917::1::::<><>::
-_Attack.png::CompressedTexture2D::6187539185649114888::1710205917::1710205917::1::::<><>::
-_AttackCombo.png::CompressedTexture2D::7279284166943038216::1710205917::1710205917::1::::<><>::
-_AttackComboNoMovement.png::CompressedTexture2D::3252321395950803646::1710205917::1710205917::1::::<><>::
-_AttackNoMovement.png::CompressedTexture2D::6575730055763477106::1710205917::1710205917::1::::<><>::
-_Crouch.png::CompressedTexture2D::1686722687514612119::1710205917::1710205917::1::::<><>::
-_CrouchAll.png::CompressedTexture2D::2182662147389914330::1710205917::1710205917::1::::<><>::
-_CrouchAttack.png::CompressedTexture2D::5263634890287954259::1710205917::1710205917::1::::<><>::
-_CrouchTransition.png::CompressedTexture2D::5342073655341363820::1710205917::1710205917::1::::<><>::
-_CrouchWalk.png::CompressedTexture2D::275597959719492943::1710205917::1710205917::1::::<><>::
-_Dash.png::CompressedTexture2D::8747784034019817637::1710205917::1710205917::1::::<><>::
-_Death.png::CompressedTexture2D::4217453969947157401::1710205917::1710205917::1::::<><>::
-_DeathNoMovement.png::CompressedTexture2D::1536208601258829759::1710205917::1710205917::1::::<><>::
-_Fall.png::CompressedTexture2D::800126126872125543::1710205917::1710205917::1::::<><>::
-_Hit.png::CompressedTexture2D::5768779707593746960::1710205917::1710205917::1::::<><>::
-_Idle.png::CompressedTexture2D::1373237521676459717::1710205917::1710205917::1::::<><>::
-_Jump.png::CompressedTexture2D::580688937267809148::1710205917::1710205917::1::::<><>::
-_JumpFallInbetween.png::CompressedTexture2D::906532392722882834::1710205917::1710205917::1::::<><>::
-_Roll.png::CompressedTexture2D::6907362018204510765::1710205917::1710205917::1::::<><>::
-_Run.png::CompressedTexture2D::1261547536177439280::1710205917::1710205917::1::::<><>::
-_Slide.png::CompressedTexture2D::9210377056998131877::1710205917::1710205917::1::::<><>::
-_SlideAll.png::CompressedTexture2D::2577402043369283969::1710205917::1710205917::1::::<><>::
-_SlideTransitionEnd.png::CompressedTexture2D::1479596540948618122::1710205917::1710205917::1::::<><>::
-_SlideTransitionStart.png::CompressedTexture2D::3058198947421774290::1710205917::1710205917::1::::<><>::
-_TurnAround.png::CompressedTexture2D::8290472158944073172::1710205917::1710205917::1::::<><>::
-_WallClimb.png::CompressedTexture2D::6899674828960998853::1710205917::1710205917::1::::<><>::
-_WallClimbNoMovement.png::CompressedTexture2D::813603849751715628::1710205917::1710205917::1::::<><>::
-_WallHang.png::CompressedTexture2D::398256576677129048::1710205917::1710205917::1::::<><>::
-_WallSlide.png::CompressedTexture2D::6940072685558966225::1710205917::1710205917::1::::<><>::
-::res://Assets/KnightSprite/Colour2/Outline/::1710205917
-::res://Assets/KnightSprite/Colour2/Outline/120x80_gifs/::1710205917
-::res://Assets/KnightSprite/Colour2/Outline/120x80_PNGSheets/::1710205917
-_Attack2.png::CompressedTexture2D::4604125326473225883::1710205917::1710205917::1::::<><>::
-_Attack2NoMovement.png::CompressedTexture2D::6990834817845745235::1710205917::1710205917::1::::<><>::
-_Attack.png::CompressedTexture2D::8480115067172394220::1710205917::1710205917::1::::<><>::
-_AttackCombo.png::CompressedTexture2D::2003686351757319006::1710205917::1710205917::1::::<><>::
-_AttackComboNoMovement.png::CompressedTexture2D::2995595673861325519::1710205917::1710205917::1::::<><>::
-_AttackNoMovement.png::CompressedTexture2D::1420387348498305332::1710205917::1710205917::1::::<><>::
-_Crouch.png::CompressedTexture2D::7651931631736318453::1710205917::1710205917::1::::<><>::
-_CrouchAll.png::CompressedTexture2D::6397553346033824163::1710205917::1710205917::1::::<><>::
-_CrouchAttack.png::CompressedTexture2D::7145717601872307826::1710205917::1710205917::1::::<><>::
-_CrouchTransition.png::CompressedTexture2D::750152711380486457::1710205917::1710205917::1::::<><>::
-_CrouchWalk.png::CompressedTexture2D::4967824391010012676::1710205917::1710205917::1::::<><>::
-_Dash.png::CompressedTexture2D::5031001618259687997::1710205917::1710205917::1::::<><>::
-_Death.png::CompressedTexture2D::177390969387154256::1710205917::1710205917::1::::<><>::
-_DeathNoMovement.png::CompressedTexture2D::3983822368805547889::1710205917::1710205917::1::::<><>::
-_Fall.png::CompressedTexture2D::6709741734546450961::1710205917::1710205917::1::::<><>::
-_Hit.png::CompressedTexture2D::7805856284477492458::1710205917::1710205917::1::::<><>::
-_Idle.png::CompressedTexture2D::1666533710505364354::1710205917::1710205917::1::::<><>::
-_Jump.png::CompressedTexture2D::8887467261259643763::1710205917::1710205917::1::::<><>::
-_JumpFallInbetween.png::CompressedTexture2D::5598951714073317316::1710205917::1710205917::1::::<><>::
-_Roll.png::CompressedTexture2D::4676793128475724203::1710205917::1710205917::1::::<><>::
-_Run.png::CompressedTexture2D::249422478397934048::1710205917::1710205917::1::::<><>::
-_Slide.png::CompressedTexture2D::6382235936676162382::1710205917::1710205917::1::::<><>::
-_SlideAll.png::CompressedTexture2D::3008835299466672984::1710205917::1710205917::1::::<><>::
-_SlideTransitionEnd.png::CompressedTexture2D::1080073192403893559::1710205917::1710205917::1::::<><>::
-_SlideTransitionStart.png::CompressedTexture2D::8549944162485341903::1710205917::1710205917::1::::<><>::
-_TurnAround.png::CompressedTexture2D::6369822913738684983::1710205917::1710205917::1::::<><>::
-_WallClimb.png::CompressedTexture2D::2178702745434686004::1710205917::1710205917::1::::<><>::
-_WallClimbNoMovement.png::CompressedTexture2D::6132322794011948134::1710205917::1710205917::1::::<><>::
-_WallHang.png::CompressedTexture2D::4955038646209851820::1710205917::1710205917::1::::<><>::
-_WallSlide.png::CompressedTexture2D::5689606035400396274::1710205917::1710205917::1::::<><>::
-::res://Assets/metroid_asset_1_2/::1710205917
-::res://Assets/metroid_asset_1_2/Sprites/::1710205917
-::res://Assets/metroid_asset_1_2/Sprites/Enemies/::1710205917
-enemy_rpg.png::CompressedTexture2D::2193286170512924353::1710205917::1710205917::1::::<><>::
-::res://Assets/metroid_asset_1_2/Sprites/Environment/::1710205917
-2d_metroidvania_serie_mockup_1_tileset.png::CompressedTexture2D::2879143380084762653::1710205917::1710205917::1::::<><>::
-background_sprite_1.png::CompressedTexture2D::4283097448460226960::1710205917::1710205917::1::::<><>::
-background_sprite_2.png::CompressedTexture2D::5600587935712417774::1710205917::1710205917::1::::<><>::
-::res://Assets/metroid_asset_1_2/Sprites/FX/::1710205917
-dead_fx.png::CompressedTexture2D::2519319932409345521::1710205917::1710205917::1::::<><>::
-::res://Assets/metroid_asset_1_2/Sprites/Interactables/::1710205917
-chest-sheet.png::CompressedTexture2D::7261133788531806058::1710205917::1710205917::1::::<><>::
-coin.png::CompressedTexture2D::6923890114270424529::1710205917::1710205917::1::::<><>::
-Crate-animated.png::CompressedTexture2D::4730769645779493627::1710205917::1710205917::1::::<><>::
-JumpPowerUp.png::CompressedTexture2D::1504310860757739799::1710205917::1710205917::1::::<><>::
-key.png::CompressedTexture2D::4056054206780999037::1710205917::1710205917::1::::<><>::
-Lamp.png::CompressedTexture2D::6282417415465766004::1710205917::1710205917::1::::<><>::
-LanternW3.png::CompressedTexture2D::5823141540302565587::1710205917::1710205917::1::::<><>::
-spikes_spritesheet.png::CompressedTexture2D::8166361447197968744::1710205917::1710205917::1::::<><>::
-temporaryPlatform.png::CompressedTexture2D::8169518226160801018::1710205917::1710205917::1::::<><>::
-::res://Assets/metroid_asset_1_2/Sprites/Player/::1710205917
-Player_metroid.png::CompressedTexture2D::2986234950007627255::1710205917::1710205917::1::::<><>::
-::res://Assets/metroid_asset_1_2/Sprites/UI/::1710205917
-HeartSpriteSheet.png::CompressedTexture2D::1142908346806125448::1710205917::1710205917::1::::<><>::
-::res://Assets/PNG/::1710756032
-::res://Assets/PNG/game_background_1/::1710756032
-game_background_1.png::CompressedTexture2D::4186786821754576529::1710756032::1710756032::1::::<><>::
-::res://Assets/PNG/game_background_1/layers/::1710756032
-clouds_1.png::CompressedTexture2D::4505638083633467420::1710756032::1710756032::1::::<><>::
-clouds_2.png::CompressedTexture2D::3938448338854297620::1710756032::1710756032::1::::<><>::
-clouds_3.png::CompressedTexture2D::2020272387386096171::1710756032::1710756032::1::::<><>::
-clouds_4.png::CompressedTexture2D::5290409241513768822::1710756032::1710756032::1::::<><>::
-rocks_1.png::CompressedTexture2D::4763071573397963684::1710756032::1710756032::1::::<><>::
-rocks_2.png::CompressedTexture2D::9187851147874211329::1710756032::1710756032::1::::<><>::
-sky.png::CompressedTexture2D::5408771413945539201::1710756032::1710756032::1::::<><>::
-::res://Assets/PNG/game_background_2/::1710756032
-game_background_2.png::CompressedTexture2D::1575291247958714253::1710756032::1710756032::1::::<><>::
-::res://Assets/PNG/game_background_2/layers/::1710756032
-birds.png::CompressedTexture2D::2079474096942476239::1710756032::1710756032::1::::<><>::
-clouds_1.png::CompressedTexture2D::8506394844340742462::1710756032::1710756032::1::::<><>::
-clouds_2.png::CompressedTexture2D::7664211703204591287::1710756032::1710756032::1::::<><>::
-clouds_3.png::CompressedTexture2D::8766938325934481493::1710756032::1710756032::1::::<><>::
-pines.png::CompressedTexture2D::1788686324662123618::1710756032::1710756032::1::::<><>::
-rocks_1.png::CompressedTexture2D::2757945667845111514::1710756032::1710756032::1::::<><>::
-rocks_2.png::CompressedTexture2D::7681955494918895660::1710756032::1710756032::1::::<><>::
-rocks_3.png::CompressedTexture2D::5777104907873668254::1710756032::1710756032::1::::<><>::
-sky.png::CompressedTexture2D::1207798093804966298::1710756032::1710756032::1::::<><>::
-::res://Assets/PNG/game_background_3/::1710756032
-game_background_3.1.png::CompressedTexture2D::2776369932119519099::1710756032::1710756032::1::::<><>::
-game_background_3. 2.png::CompressedTexture2D::5369719218498261230::1710756032::1710756032::1::::<><>::
-::res://Assets/PNG/game_background_3/layers/::1710756032
-clouds_1.png::CompressedTexture2D::7892799406928991302::1710756032::1710756032::1::::<><>::
-clouds_2.png::CompressedTexture2D::8869367585718271047::1710756032::1710756032::1::::<><>::
-ground_1.png::CompressedTexture2D::6541684643213106369::1710756032::1710756032::1::::<><>::
-ground_2.png::CompressedTexture2D::569496466100461779::1710756032::1710756032::1::::<><>::
-ground_3.png::CompressedTexture2D::2650407823319854302::1710756032::1710756032::1::::<><>::
-plant.png::CompressedTexture2D::4229011318031689390::1710756032::1710756032::1::::<><>::
-rocks.png::CompressedTexture2D::5385710017472625581::1710756032::1710756032::1::::<><>::
-sky.png::CompressedTexture2D::1428528251995548013::1710756032::1710756032::1::::<><>::
-::res://Assets/PNG/game_background_4/::1710756032
-game_background_4.png::CompressedTexture2D::1083638263594738919::1710756032::1710756032::1::::<><>::
-::res://Assets/PNG/game_background_4/layers/::1710756032
-clouds_1.png::CompressedTexture2D::347044390168261428::1710756032::1710756032::1::::<><>::
-clouds_2.png::CompressedTexture2D::8899619571678003534::1710756032::1710756032::1::::<><>::
-ground.png::CompressedTexture2D::8977677907617285694::1710756032::1710756032::1::::<><>::
-rocks.png::CompressedTexture2D::3616605782326985778::1710756032::1710756032::1::::<><>::
-sky.png::CompressedTexture2D::4991310897378813896::1710756032::1710756032::1::::<><>::
-::res://Assets/VFX/::1710205917
-01.png::CompressedTexture2D::5170901013622006827::1710205917::1710205917::1::::<><>::
-05.png::CompressedTexture2D::9220541185466125602::1710205917::1710205917::1::::<><>::
-08.png::CompressedTexture2D::4993550042504864558::1710205917::1710205917::1::::<><>::
-10.png::CompressedTexture2D::675820147541687973::1710205917::1710205917::1::::<><>::
-12.png::CompressedTexture2D::1306626909594598222::1710205917::1710205917::1::::<><>::
-13.png::CompressedTexture2D::2030954988130958091::1710205917::1710205917::1::::<><>::
-20.png::CompressedTexture2D::3515411680298665503::1710205917::1710205917::1::::<><>::
-21.png::CompressedTexture2D::5775136175992922924::1710205917::1710205917::1::::<><>::
-22.png::CompressedTexture2D::1764777690366167724::1710205917::1710205917::1::::<><>::
-29.png::CompressedTexture2D::7876583855512516159::1710205917::1710205917::1::::<><>::
-31.png::CompressedTexture2D::8545526631871082177::1710205917::1710205917::1::::<><>::
-36.png::CompressedTexture2D::8688538559950646874::1710205917::1710205917::1::::<><>::
-38.png::CompressedTexture2D::82116319802408592::1710205917::1710205917::1::::<><>::
-42.png::CompressedTexture2D::4212350835948254832::1710205917::1710205917::1::::<><>::
-44.png::CompressedTexture2D::7475950730586391492::1710205917::1710205917::1::::<><>::
-47.png::CompressedTexture2D::8348787098448030426::1710205917::1710205917::1::::<><>::
-52.png::CompressedTexture2D::896743871696372628::1710205917::1710205917::1::::<><>::
-54.png::CompressedTexture2D::359166649905131361::1710205917::1710205917::1::::<><>::
-55.png::CompressedTexture2D::9136537081114892939::1710205917::1710205917::1::::<><>::
-56.png::CompressedTexture2D::8727920736044949037::1710205917::1710205917::1::::<><>::
-::res://Collectibles/::1710945445
-coins-and-gems.png::CompressedTexture2D::3703479049382862887::1710943626::1710943630::1::::<><>::
-Coins.png::CompressedTexture2D::6405744153570402617::1710943747::1710943747::1::::<><>::
-::res://Collectibles/blue_coin/::1710945404
-blue_coin.gd::GDScript::-1::1710945393::0::1::::<>Node2D<>::
-blue_coin.tscn::PackedScene::6013946408140864362::1710945404::0::1::::<><>::uid://cxi8w15gtnw1v::::res://Collectibles/Coins.png<>res://Collectibles/blue_coin/blue_coin.gd
-::res://Collectibles/Scripts/::1710945504
-collectible_manager.gd::GDScript::-1::1710945467::0::1::::<>Node<>::
-::res://Enemy/::1710756033
-::res://Enemy/Assets/::1710756211
-::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/::1710756033
-::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Anubis/::1710756033
-Anubis.png::CompressedTexture2D::248838935119951257::1710756033::1710756033::1::::<><>::
-::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Bat/::1710756033
-Bat1_1.png::CompressedTexture2D::1115885424481738982::1710756033::1710756033::1::::<><>::
-::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Carnivorous Plant Cathy/::1710756033
-carnivorousplant.png::CompressedTexture2D::1970982753322048262::1710756033::1710756033::1::::<><>::
-::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Clockwork Dragon Gearex/::1710756033
-Gearex.png::CompressedTexture2D::3682178929869363565::1710756033::1710756033::1::::<><>::
-::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Critter Unibun/::1710756033
-Unibun1_1.png::CompressedTexture2D::6736778760112981895::1710756033::1710756033::1::::<><>::
-Unibun.png::CompressedTexture2D::2511623034930785074::1710756033::1710756033::1::::<><>::
-::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Demon Butler Clorfos/::1710756033
-Clorfos3.png::CompressedTexture2D::7255529525807937147::1710756033::1710756033::1::::<><>::
-::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Dragon Demios/::1710756033
-Demios.png::CompressedTexture2D::6920619525661397701::1710756033::1710756033::1::::<><>::
-::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Golem Ort/::1710756033
-Golem1_1.png::CompressedTexture2D::6227764662489117375::1710756033::1710756033::1::::<><>::
-Golem1_2.png::CompressedTexture2D::3162161516061331335::1710756033::1710756033::1::::<><>::
-Golem.png::CompressedTexture2D::2990095394306467070::1710756033::1710756033::1::::<><>::
-::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Great Owl/::1710756033
-Great Owl.png::CompressedTexture2D::3651735110799909621::1710756033::1710756033::1::::<><>::
-::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Jupiter/::1710756033
-Jupiter.png::CompressedTexture2D::3350254843812341851::1710756033::1710756033::1::::<><>::
-Terms of use - Tag settings.txt::TextFile::-1::1710756033::0::1::::<><>::
-::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Kraken Oceanos/::1710756033
-OceanosL.png::CompressedTexture2D::5258946554798504460::1710756033::1710756033::1::::<><>::
-::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Lamia Diana/::1710756033
-Diana1_1.png::CompressedTexture2D::8230721272598414484::1710756033::1710756033::1::::<><>::
-Diana1_2.png::CompressedTexture2D::3372959947404977663::1710756033::1710756033::1::::<><>::
-Diana1_3.png::CompressedTexture2D::5551126869510181911::1710756033::1710756033::1::::<><>::
-Diana.png::CompressedTexture2D::1781332454916278035::1710756033::1710756033::1::::<><>::
-::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Leaf Leafen/::1710756033
-Leafen1_1.png::CompressedTexture2D::9065694145752501196::1710756033::1710756033::1::::<><>::
-Leafen1_2.png::CompressedTexture2D::4285771339913075667::1710756033::1710756033::1::::<><>::
-Leafen.png::CompressedTexture2D::2524229907393074535::1710756033::1710756033::1::::<><>::
-::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Mimic MiMic/::1710756033
-Mimic.png::CompressedTexture2D::4805577246716908535::1710756033::1710756033::1::::<><>::
-::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Minotaur Beef/::1710756033
-Beef.png::CompressedTexture2D::6108330521947896701::1710756033::1710756033::1::::<><>::
-::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Phoenix/::1710756033
-Phoenix.png::CompressedTexture2D::4148275989040618177::1710756033::1710756033::1::::<><>::
-::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Quetzalcoatl/::1710756033
-Quetzalcoatl.png::CompressedTexture2D::8756363358694859952::1710756033::1710756033::1::::<><>::
-::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Rat Ritz/::1710756033
-Ritz.png::CompressedTexture2D::2400144802568674206::1710756033::1710756033::1::::<><>::
-::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Skeleton Alstreim/::1710756033
-Alstreim2.png::CompressedTexture2D::8448496378021018058::1710756033::1710756033::1::::<><>::
-::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Slime/::1710756033
-Slime1_1.png::CompressedTexture2D::1347377189427726949::1710756033::1710756033::1::::<><>::
-Slime1_2.png::CompressedTexture2D::5413062749872054028::1710756033::1710756033::1::::<><>::
-Slime1_3.png::CompressedTexture2D::2879566986212600836::1710756033::1710756033::1::::<><>::
-Slime1_4.png::CompressedTexture2D::275306753441168163::1710756033::1710756033::1::::<><>::
-Slime1_5.png::CompressedTexture2D::8596362072537056812::1710756033::1710756033::1::::<><>::
-Slime1_6.png::CompressedTexture2D::3959198050313586377::1710756033::1710756033::1::::<><>::
-Slime1_7.png::CompressedTexture2D::6726379116780837523::1710756033::1710756033::1::::<><>::
-Slime1_8.png::CompressedTexture2D::2823365573478904324::1710756033::1710756033::1::::<><>::
-Slime1_9.png::CompressedTexture2D::6848325118785598797::1710756033::1710756033::1::::<><>::
-::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Snake Cobrens/::1710756033
-Cobrens1_1.png::CompressedTexture2D::6466092106865804221::1710756033::1710756033::1::::<><>::
-Cobrens1_2.png::CompressedTexture2D::2615456413683058141::1710756033::1710756033::1::::<><>::
-Cobrens1_3.png::CompressedTexture2D::4747637733261367721::1710756033::1710756033::1::::<><>::
-Cobrens.png::CompressedTexture2D::1576122715852316371::1710756033::1710756033::1::::<><>::
-::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Succubbus Vi/::1710756033
-Vi1_1.png::CompressedTexture2D::7080058675323169615::1710756033::1710756033::1::::<><>::
-Vi1_2.png::CompressedTexture2D::7038713388291477342::1710756033::1710756033::1::::<><>::
-Vi.png::CompressedTexture2D::3638699710011212964::1710756033::1710756033::1::::<><>::
-::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Tiamat/::1710756033
-Tiamat.png::CompressedTexture2D::8505624861565048963::1710756033::1710756033::1::::<><>::
-::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Ventoss/::1710756033
-VEntos.png::CompressedTexture2D::1107375599122747024::1710756033::1710756033::1::::<><>::
-::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Werewolf Regulus/::1710756033
-Regulus.png::CompressedTexture2D::1807389111915986194::1710756033::1710756033::1::::<><>::
-::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Wisp Wispia/::1710756033
-Wispia.png::CompressedTexture2D::4991619897520331675::1710756033::1710756033::1::::<><>::
-::res://Enemy/Assets/Vfx/::1710756211
-::res://Enemy/Assets/Vfx/60 Retro Effect 32x32 Pack 1 Free/::1710756267
-01.png::CompressedTexture2D::5533076789859447511::1710756267::1710756267::1::::<><>::
-05.png::CompressedTexture2D::3052713410521227712::1710756267::1710756267::1::::<><>::
-08.png::CompressedTexture2D::7236987013501557250::1710756267::1710756267::1::::<><>::
-10.png::CompressedTexture2D::1072851571684200697::1710756267::1710756267::1::::<><>::
-12.png::CompressedTexture2D::2522610584147113136::1710756267::1710756267::1::::<><>::
-13.png::CompressedTexture2D::2557961003477960908::1710756267::1710756267::1::::<><>::
-20.png::CompressedTexture2D::677458499329808783::1710756267::1710756267::1::::<><>::
-21.png::CompressedTexture2D::6671240409656421081::1710756267::1710756267::1::::<><>::
-22.png::CompressedTexture2D::311427571785606362::1710756267::1710756267::1::::<><>::
-29.png::CompressedTexture2D::3640199302495109417::1710756267::1710756267::1::::<><>::
-31.png::CompressedTexture2D::8871006219707961349::1710756267::1710756267::1::::<><>::
-36.png::CompressedTexture2D::6158926420365989501::1710756267::1710756267::1::::<><>::
-38.png::CompressedTexture2D::3930286288317313574::1710756267::1710756267::1::::<><>::
-42.png::CompressedTexture2D::3240372690546761118::1710756267::1710756267::1::::<><>::
-44.png::CompressedTexture2D::3871014267452660476::1710756267::1710756267::1::::<><>::
-47.png::CompressedTexture2D::1469800107854250463::1710756267::1710756267::1::::<><>::
-52.png::CompressedTexture2D::710871264737421966::1710756267::1710756267::1::::<><>::
-54.png::CompressedTexture2D::8958662039970284287::1710756267::1710756267::1::::<><>::
-55.png::CompressedTexture2D::6978677722314441683::1710756267::1710756267::1::::<><>::
-56.png::CompressedTexture2D::7944719191342390790::1710756267::1710756267::1::::<><>::
-::res://Enemy/Enemy_Scene/::1710756211
-::res://Enemy/Enemy_Scene/2nd Melee Enemy/::1710756033
-2_nd_melee_enemy.tscn::PackedScene::3650681410021805344::1710756033::0::1::::<><>::uid://dsmrrbfrlnoik::::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Skeleton Alstreim/Alstreim2.png<>res://Enemy/Enemy_Scene/Enemy Melee/gravity.gd<>res://Enemy/Enemy_Scene/Enemy Melee/state_machine_controller.gd<>res://Enemy/Scripts/state_machine/node_state.gd<>res://Enemy/Enemy_Scene/Enemy Melee/idle_state.gd<>res://Enemy/Enemy_Scene/Enemy Melee/attack_state.gd
-::res://Enemy/Enemy_Scene/Demon_enemy/::1710945404
-darkblast.tscn::PackedScene::8024310526856302345::1710945404::0::1::::<><>::uid://bcpdikcmaavhk::::res://Enemy/Assets/Vfx/60 Retro Effect 32x32 Pack 1 Free/13.png<>res://Enemy/Enemy_Scene/Demon_enemy/darkblast_area.gd
-darkblast_area.gd::GDScript::-1::1710756267::0::1::::<>Node2D<>::
-demon_enemy.gd::GDScript::-1::1710756267::0::1::::<>CharacterBody2D<>::
-demon_enemy.tscn::PackedScene::1190729739638879883::1710945404::0::1::::<><>::res://Enemy/Enemy_Scene/Demon_enemy/demon_enemy.gd<>uid://dbmvrm86wtlyh::::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Demon Butler Clorfos/Clorfos3.png<>res://Enemy/Enemy_Scene/Demon_enemy/Demon_grav.gd
-Demon_grav.gd::GDScript::-1::1710756267::0::1::::<>Node<>::
-demon_proj.gd::GDScript::-1::1710756267::0::1::::<>AnimatedSprite2D<>::
-::res://Enemy/Enemy_Scene/Enemy Melee/::1710756033
-attack_state.gd::GDScript::-1::1710756033::0::1::::<>NodeState<>::
-Enemy_Melee.tscn::PackedScene::5402159676269968780::1710756033::0::1::::<><>::uid://dsmrrbfrlnoik::::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Skeleton Alstreim/Alstreim2.png<>res://Enemy/Enemy_Scene/Enemy Melee/gravity.gd<>res://Enemy/Scripts/state_machine/node_state.gd<>res://Enemy/Enemy_Scene/Enemy Melee/state_machine_controller.gd<>res://Enemy/Enemy_Scene/Enemy Melee/idle_state.gd<>res://Enemy/Enemy_Scene/Enemy Melee/attack_state.gd
-gravity.gd::GDScript::-1::1710756033::0::1::::<>Node<>::
-idle_state.gd::GDScript::-1::1710756033::0::1::::<>NodeState<>::
-state_machine_controller.gd::GDScript::-1::1710756033::0::1::::<>Node<>::
-::res://Enemy/Enemy_Scene/Slime_enemy/::1710945404
-slime_enemy.gd::GDScript::-1::1710756033::0::1::::<>CharacterBody2D<>::
-slime_enemy.tscn::PackedScene::3199931042356362772::1710945404::0::1::::<><>::res://Enemy/Enemy_Scene/Slime_enemy/slime_enemy.gd<>uid://tgxdt53echo4::::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Slime/Slime1_1.png<>res://Enemy/Enemy_Scene/Slime_enemy/slime_gravity.gd
-slime_gravity.gd::GDScript::-1::1710756033::0::1::::<>Node<>::
-::res://Enemy/Scripts/::1710756033
-global.gd::GDScript::-1::1710756033::0::1::::<>Node<>::
-::res://Enemy/Scripts/state_machine/::1710756033
-node_finite_state_machine.gd::GDScript::-1::1710756033::0::1::::NodeFiniteStateMachine<>Node<>::
-node_state.gd::GDScript::-1::1710756033::0::1::::NodeState<>Node<>::
-::res://Player/::1710945403
-player(scene).tscn::PackedScene::8052987043752475769::1710945403::0::1::::<><>::res://Player/player(script).gd<>uid://cx6ud3g37xwff::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_Attack.png<>uid://qcjdntrwjmcr::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_Death.png<>uid://5p41c6kig2d8::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_Idle.png<>uid://bcb2pkxh3hmia::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_Jump.png<>uid://dgvcip662umo4::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_JumpFallInbetween.png<>uid://dm3xcpurib2uo::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_Run.png
-player(script).gd::GDScript::-1::1710945393::0::1::::<>CharacterBody2D<>::
-::res://Player/GUI/::1710756264
-::res://Player/MagicScenes/::1710945404
-fireball.gd::GDScript::-1::1710756033::0::1::::<>Node2D<>::
-fireball.tscn::PackedScene::1273327662914414144::1710945404::0::1::::<><>::uid://b1aq2kcwr50y3::::res://Assets/VFX/42.png<>res://Player/MagicScenes/fireball.gd
-::res://Scenes/::1710205917
-::res://Scenes/Interactables/::1710945403
-crate.tscn::PackedScene::9024410887269776289::1710945403::0::1::::<><>::uid://b8nvc5eudfetn::::res://Assets/metroid_asset_1_2/Sprites/Interactables/Crate-animated.png<>res://Scenes/Interactables/Scripts/crate.gd
-::res://Scenes/Interactables/Scenes/::1710756264
-::res://Scenes/Interactables/Scripts/::1710756264
-crate.gd::GDScript::-1::1710756264::0::1::::<>StaticBody2D<>::
-::res://Scenes/Main_Menu/::1710945403
-main_menu.gd::GDScript::-1::1710756033::0::1::::<>Node2D<>::
-main_menu.tscn::PackedScene::5359070057873671201::1710945403::0::1::::<><>::res://Scenes/Main_Menu/main_menu.gd
-::res://Scenes/Worlds/::1710756033
-RandomLevelGenTileset.png::CompressedTexture2D::643022032305242582::1710756033::1710756033::1::::<><>::
-::res://Scenes/Worlds/Scenes/::1710945404
-house_1.tscn::PackedScene::5554553626324036433::1710945404::0::1::::<><>::uid://cyij7kdttmctn::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Inside) Tileset.png<>uid://d0ob3mq1bvx15::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Outside) Tileset.png<>uid://d2xfenexruq2v::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Outside And Inside) Tileset.png<>res://Scenes/Worlds/Scripts/HouseDoor.gd
-Test_Area.tscn::PackedScene::6076120517974655956::1710945403::0::1::::<><>::res://Scenes/Worlds/Scripts/WorldCave.gd<>uid://jfqqjvxhmwh7::::res://Scenes/Worlds/RandomLevelGenTileset.png<>uid://dmy6rxghroiwn::::res://Player/player(scene).tscn<>uid://d1tqy1r7klfrt::::res://Scenes/Interactables/crate.tscn<>uid://blucnqv6000jg::::res://Enemy/Enemy_Scene/Slime_enemy/slime_enemy.tscn<>uid://q72e6o7lj2ix::::res://Enemy/Enemy_Scene/Demon_enemy/demon_enemy.tscn<>uid://crxg23n6u6bao::::res://Collectibles/blue_coin/blue_coin.tscn
-town.tscn::PackedScene::5129655472074501604::1710945404::0::1::::<><>::uid://d1c8g1t8rtng0::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/Terrain Tileset.png<>uid://d0ob3mq1bvx15::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Outside) Tileset.png<>uid://d2xfenexruq2v::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Outside And Inside) Tileset.png<>uid://dmy6rxghroiwn::::res://Player/player(scene).tscn
-::res://Scenes/Worlds/Scripts/::1710757169
-HouseDoor.gd::GDScript::-1::1710756033::0::1::::<>Area2D<>::
-Walker.gd::GDScript::-1::1710757169::0::1::::Walker<>Node<>::
-WorldCave.gd::GDScript::-1::1710757146::0::1::::<>Node2D<>::
+::res://Assets/::1711072104
+::res://Assets/16x16 Fantasy Platformer Pack/::1711072104
+::res://Assets/16x16 Fantasy Platformer Pack/Animals/::1711072104
+::res://Assets/16x16 Fantasy Platformer Pack/Animals/Sheep/::1711072104
+::res://Assets/16x16 Fantasy Platformer Pack/Events or Markers/::1711072104
+sEvent_1.png::CompressedTexture2D::4120361819605127096::1711072104::1711072104::1::::<><>::
+sEvent_2.png::CompressedTexture2D::2085233438654982084::1711072104::1711072104::1::::<><>::
+sEvent_3.png::CompressedTexture2D::4750172249746500017::1711072104::1711072104::1::::<><>::
+s_eEvent_1.png::CompressedTexture2D::6884175436553249990::1711072104::1711072104::1::::<><>::
+s_eEvent_2.png::CompressedTexture2D::1304950701464076213::1711072104::1711072104::1::::<><>::
+s_eEvent_3.png::CompressedTexture2D::5917111599883167000::1711072104::1711072104::1::::<><>::
+::res://Assets/16x16 Fantasy Platformer Pack/GUI/::1711072104
+::res://Assets/16x16 Fantasy Platformer Pack/GUI/Bars/::1711072104
+Bars.png::CompressedTexture2D::3263431902575857004::1711072104::1711072104::1::::<><>::
+::res://Assets/16x16 Fantasy Platformer Pack/GUI/Popups/::1711072104
+Pop-Ups.png::CompressedTexture2D::5360928267007935561::1711072104::1711072104::1::::<><>::
+::res://Assets/16x16 Fantasy Platformer Pack/GUI/Text Box/::1711072104
+Name Box.png::CompressedTexture2D::7481111948556757375::1711072104::1711072104::1::::<><>::
+Portrait Frame.png::CompressedTexture2D::8899766858754174408::1711072104::1711072104::1::::<><>::
+Textbox.png::CompressedTexture2D::7923876738687763455::1711072104::1711072104::1::::<><>::
+::res://Assets/16x16 Fantasy Platformer Pack/Items/::1711072104
+9x9 Mini Items Pack.png::CompressedTexture2D::5085663817257151229::1711072104::1711072104::1::::<><>::
+::res://Assets/16x16 Fantasy Platformer Pack/Monsters/::1711072104
+::res://Assets/16x16 Fantasy Platformer Pack/NPCs/::1711072104
+::res://Assets/16x16 Fantasy Platformer Pack/NPCs/Blue/::1711072104
+::res://Assets/16x16 Fantasy Platformer Pack/NPCs/Burgundy/::1711072104
+::res://Assets/16x16 Fantasy Platformer Pack/NPCs/Green/::1711072104
+::res://Assets/16x16 Fantasy Platformer Pack/Particles And Spells/::1711072104
+::res://Assets/16x16 Fantasy Platformer Pack/Placeholders/::1711072104
+sEnemy_1.png::CompressedTexture2D::4758504806209228893::1711072104::1711072104::1::::<><>::
+sEnemy_2.png::CompressedTexture2D::7983765135627834283::1711072104::1711072104::1::::<><>::
+sEnemy_3.png::CompressedTexture2D::645403725609011334::1711072104::1711072104::1::::<><>::
+sEnemy_4.png::CompressedTexture2D::374045886350596629::1711072104::1711072104::1::::<><>::
+sEnemy_5.png::CompressedTexture2D::6659784653875005240::1711072104::1711072104::1::::<><>::
+::res://Assets/16x16 Fantasy Platformer Pack/Player/::1711072104
+::res://Assets/16x16 Fantasy Platformer Pack/Portraits/::1711072104
+NPC 1.png::CompressedTexture2D::6052859180062757215::1711072104::1711072104::1::::<><>::
+NPC 2.png::CompressedTexture2D::1240954928967607338::1711072104::1711072104::1::::<><>::
+NPC 3.png::CompressedTexture2D::7715102296828387541::1711072104::1711072104::1::::<><>::
+NPC 4.png::CompressedTexture2D::3249500975993577460::1711072104::1711072104::1::::<><>::
+NPC 5.png::CompressedTexture2D::3733178816193490693::1711072104::1711072104::1::::<><>::
+Player.png::CompressedTexture2D::1843529701104852709::1711072104::1711072104::1::::<><>::
+Unknown 1.png::CompressedTexture2D::9092490405826642954::1711072104::1711072104::1::::<><>::
+Unknown 2.png::CompressedTexture2D::1823184413880325646::1711072104::1711072104::1::::<><>::
+Unknown 3.png::CompressedTexture2D::838177676730271247::1711072104::1711072104::1::::<><>::
+Unknown 4.png::CompressedTexture2D::8120923915143066380::1711072104::1711072104::1::::<><>::
+Unknown 5.png::CompressedTexture2D::1465455733834038542::1711072104::1711072104::1::::<><>::
+::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/::1711072104
+Basic Tiles Only.png::CompressedTexture2D::1052951630479238174::1711072104::1711072104::1::::<><>::
+City Ground Tileset.png::CompressedTexture2D::5455542874273050362::1711072104::1711072104::1::::<><>::
+House (Inside) Tileset.png::CompressedTexture2D::6474492765828365131::1711072104::1711072104::1::::<><>::
+House (Outside And Inside) Tileset.png::CompressedTexture2D::9102152935840311803::1711072104::1711072104::1::::<><>::
+House (Outside) Tileset.png::CompressedTexture2D::8942995805989635814::1711072104::1711072104::1::::<><>::
+Terrain Tileset.png::CompressedTexture2D::8990316513182223777::1711072104::1711072104::1::::<><>::
+Vegetation Tileset 1.png::CompressedTexture2D::6080454354056614256::1711072104::1711072104::1::::<><>::
+Vegetation Tileset 2.png::CompressedTexture2D::9042255616154530799::1711072104::1711072104::1::::<><>::
+::res://Assets/KnightSprite/::1711072096
+::res://Assets/KnightSprite/Colour1/::1711072096
+::res://Assets/KnightSprite/Colour1/NoOutline/::1711072096
+::res://Assets/KnightSprite/Colour1/NoOutline/120x80_gifs/::1711072096
+::res://Assets/KnightSprite/Colour1/NoOutline/120x80_PNGSheets/::1711072096
+_Attack2.png::CompressedTexture2D::6822210232961071481::1711072096::1711072096::1::::<><>::
+_Attack2NoMovement.png::CompressedTexture2D::5309235147695235198::1711072096::1711072096::1::::<><>::
+_Attack.png::CompressedTexture2D::6743720356846908299::1711072096::1711072096::1::::<><>::
+_AttackCombo.png::CompressedTexture2D::5294677271414052670::1711072096::1711072096::1::::<><>::
+_AttackComboNoMovement.png::CompressedTexture2D::6323097705996486859::1711072096::1711072096::1::::<><>::
+_AttackNoMovement.png::CompressedTexture2D::8338832092793909765::1711072096::1711072096::1::::<><>::
+_Crouch.png::CompressedTexture2D::9128912554598645576::1711072096::1711072096::1::::<><>::
+_CrouchAttack.png::CompressedTexture2D::9178619795974707831::1711072096::1711072096::1::::<><>::
+_CrouchFull.png::CompressedTexture2D::9069224157651139056::1711072096::1711072096::1::::<><>::
+_CrouchTransition.png::CompressedTexture2D::8926449431707503434::1711072096::1711072096::1::::<><>::
+_CrouchWalk.png::CompressedTexture2D::1141029833350813610::1711072096::1711072096::1::::<><>::
+_Dash.png::CompressedTexture2D::8640742731373055083::1711072096::1711072096::1::::<><>::
+_Death.png::CompressedTexture2D::8907377609530874646::1711072096::1711072096::1::::<><>::
+_DeathNoMovement.png::CompressedTexture2D::8514589140282941367::1711072096::1711072096::1::::<><>::
+_Fall.png::CompressedTexture2D::7658787885796782895::1711072096::1711072096::1::::<><>::
+_Hit.png::CompressedTexture2D::1502991611140903911::1711072096::1711072096::1::::<><>::
+_Idle.png::CompressedTexture2D::6540049739878243190::1711072096::1711072096::1::::<><>::
+_Jump.png::CompressedTexture2D::6931098742315937798::1711072096::1711072096::1::::<><>::
+_JumpFallInbetween.png::CompressedTexture2D::7369860095187686352::1711072096::1711072096::1::::<><>::
+_Roll.png::CompressedTexture2D::8396634368721045636::1711072096::1711072096::1::::<><>::
+_Run.png::CompressedTexture2D::1827795952309791678::1711072096::1711072096::1::::<><>::
+_Slide.png::CompressedTexture2D::1903219828031205251::1711072096::1711072096::1::::<><>::
+_SlideFull.png::CompressedTexture2D::3487518455203633240::1711072096::1711072096::1::::<><>::
+_SlideTransitionEnd.png::CompressedTexture2D::8900125920726666237::1711072096::1711072096::1::::<><>::
+_SlideTransitionStart.png::CompressedTexture2D::1213292839773553372::1711072096::1711072096::1::::<><>::
+_TurnAround.png::CompressedTexture2D::1124460259336149241::1711072096::1711072096::1::::<><>::
+_WallClimb.png::CompressedTexture2D::7495681067595448610::1711072096::1711072096::1::::<><>::
+_WallClimbNoMovement.png::CompressedTexture2D::9122646570143807186::1711072096::1711072096::1::::<><>::
+_WallHang.png::CompressedTexture2D::4045459806445814572::1711072096::1711072096::1::::<><>::
+_WallSlide.png::CompressedTexture2D::1107237051753418361::1711072096::1711072096::1::::<><>::
+::res://Assets/KnightSprite/Colour1/Outline/::1711072096
+::res://Assets/KnightSprite/Colour1/Outline/120x80_gifs/::1711072096
+::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/::1711072096
+_Attack2.png::CompressedTexture2D::6667635962774541752::1711072096::1711072096::1::::<><>::
+_Attack2NoMovement.png::CompressedTexture2D::8172441415377469051::1711072096::1711072096::1::::<><>::
+_Attack.png::CompressedTexture2D::6452401659912358719::1711072096::1711072096::1::::<><>::
+_AttackCombo2hit.png::CompressedTexture2D::4701408374763548648::1711072096::1711072096::1::::<><>::
+_AttackComboNoMovement.png::CompressedTexture2D::8523506326292236414::1711072096::1711072096::1::::<><>::
+_AttackNoMovement.png::CompressedTexture2D::3206237176964308909::1711072096::1711072096::1::::<><>::
+_Crouch.png::CompressedTexture2D::7003636722864010345::1711072096::1711072096::1::::<><>::
+_CrouchAttack.png::CompressedTexture2D::2426264217613243934::1711072096::1711072096::1::::<><>::
+_CrouchFull.png::CompressedTexture2D::4258300583192614095::1711072096::1711072096::1::::<><>::
+_CrouchTransition.png::CompressedTexture2D::6381434621491972185::1711072096::1711072096::1::::<><>::
+_CrouchWalk.png::CompressedTexture2D::6020703260866160089::1711072096::1711072096::1::::<><>::
+_Dash.png::CompressedTexture2D::1861529069985913738::1711072096::1711072096::1::::<><>::
+_Death.png::CompressedTexture2D::1127702776990255629::1711072096::1711072096::1::::<><>::
+_DeathNoMovement.png::CompressedTexture2D::6495903023948814402::1711072096::1711072096::1::::<><>::
+_Fall.png::CompressedTexture2D::3537757504689636299::1711072096::1711072096::1::::<><>::
+_Hit.png::CompressedTexture2D::1330596756733778517::1711072096::1711072096::1::::<><>::
+_Idle.png::CompressedTexture2D::2138438352284572195::1711072096::1711072096::1::::<><>::
+_Jump.png::CompressedTexture2D::2530529455556251224::1711072096::1711072096::1::::<><>::
+_JumpFallInbetween.png::CompressedTexture2D::7623883603264093593::1711072096::1711072096::1::::<><>::
+_Roll.png::CompressedTexture2D::2038251918839610749::1711072096::1711072096::1::::<><>::
+_Run.png::CompressedTexture2D::8060731633800308554::1711072096::1711072096::1::::<><>::
+_Slide.png::CompressedTexture2D::862895939404719152::1711072096::1711072096::1::::<><>::
+_SlideFull.png::CompressedTexture2D::3912988062463714328::1711072096::1711072096::1::::<><>::
+_SlideTransitionEnd.png::CompressedTexture2D::4911586265126092972::1711072096::1711072096::1::::<><>::
+_SlideTransitionStart.png::CompressedTexture2D::1074651018686355579::1711072096::1711072096::1::::<><>::
+_TurnAround.png::CompressedTexture2D::7536525475742675308::1711072096::1711072096::1::::<><>::
+_WallClimb.png::CompressedTexture2D::7172786320316857415::1711072096::1711072096::1::::<><>::
+_WallClimbNoMovement.png::CompressedTexture2D::2749472775375423753::1711072096::1711072096::1::::<><>::
+_WallHang.png::CompressedTexture2D::5845426596340627201::1711072096::1711072096::1::::<><>::
+_WallSlide.png::CompressedTexture2D::1391988338954816681::1711072096::1711072096::1::::<><>::
+::res://Assets/KnightSprite/Colour2/::1711072096
+::res://Assets/KnightSprite/Colour2/NoOutline/::1711072096
+::res://Assets/KnightSprite/Colour2/NoOutline/120x80_gifs/::1711072096
+::res://Assets/KnightSprite/Colour2/NoOutline/120x80_PNGSheets/::1711072096
+_Attack2.png::CompressedTexture2D::6723166920268644870::1711072096::1711072096::1::::<><>::
+_Attack2NoMovement.png::CompressedTexture2D::4590211981837882159::1711072096::1711072096::1::::<><>::
+_Attack.png::CompressedTexture2D::6187539185649114888::1711072096::1711072096::1::::<><>::
+_AttackCombo.png::CompressedTexture2D::7279284166943038216::1711072096::1711072096::1::::<><>::
+_AttackComboNoMovement.png::CompressedTexture2D::3252321395950803646::1711072096::1711072096::1::::<><>::
+_AttackNoMovement.png::CompressedTexture2D::6575730055763477106::1711072096::1711072096::1::::<><>::
+_Crouch.png::CompressedTexture2D::1686722687514612119::1711072096::1711072096::1::::<><>::
+_CrouchAll.png::CompressedTexture2D::2182662147389914330::1711072096::1711072096::1::::<><>::
+_CrouchAttack.png::CompressedTexture2D::5263634890287954259::1711072096::1711072096::1::::<><>::
+_CrouchTransition.png::CompressedTexture2D::5342073655341363820::1711072096::1711072096::1::::<><>::
+_CrouchWalk.png::CompressedTexture2D::275597959719492943::1711072096::1711072096::1::::<><>::
+_Dash.png::CompressedTexture2D::8747784034019817637::1711072096::1711072096::1::::<><>::
+_Death.png::CompressedTexture2D::4217453969947157401::1711072096::1711072096::1::::<><>::
+_DeathNoMovement.png::CompressedTexture2D::1536208601258829759::1711072096::1711072096::1::::<><>::
+_Fall.png::CompressedTexture2D::800126126872125543::1711072096::1711072096::1::::<><>::
+_Hit.png::CompressedTexture2D::5768779707593746960::1711072096::1711072096::1::::<><>::
+_Idle.png::CompressedTexture2D::1373237521676459717::1711072096::1711072096::1::::<><>::
+_Jump.png::CompressedTexture2D::580688937267809148::1711072096::1711072096::1::::<><>::
+_JumpFallInbetween.png::CompressedTexture2D::906532392722882834::1711072096::1711072096::1::::<><>::
+_Roll.png::CompressedTexture2D::6907362018204510765::1711072096::1711072096::1::::<><>::
+_Run.png::CompressedTexture2D::1261547536177439280::1711072096::1711072096::1::::<><>::
+_Slide.png::CompressedTexture2D::9210377056998131877::1711072096::1711072096::1::::<><>::
+_SlideAll.png::CompressedTexture2D::2577402043369283969::1711072096::1711072096::1::::<><>::
+_SlideTransitionEnd.png::CompressedTexture2D::1479596540948618122::1711072096::1711072096::1::::<><>::
+_SlideTransitionStart.png::CompressedTexture2D::3058198947421774290::1711072096::1711072096::1::::<><>::
+_TurnAround.png::CompressedTexture2D::8290472158944073172::1711072096::1711072096::1::::<><>::
+_WallClimb.png::CompressedTexture2D::6899674828960998853::1711072096::1711072096::1::::<><>::
+_WallClimbNoMovement.png::CompressedTexture2D::813603849751715628::1711072096::1711072096::1::::<><>::
+_WallHang.png::CompressedTexture2D::398256576677129048::1711072096::1711072096::1::::<><>::
+_WallSlide.png::CompressedTexture2D::6940072685558966225::1711072096::1711072096::1::::<><>::
+::res://Assets/KnightSprite/Colour2/Outline/::1711072096
+::res://Assets/KnightSprite/Colour2/Outline/120x80_gifs/::1711072096
+::res://Assets/KnightSprite/Colour2/Outline/120x80_PNGSheets/::1711072096
+_Attack2.png::CompressedTexture2D::4604125326473225883::1711072096::1711072096::1::::<><>::
+_Attack2NoMovement.png::CompressedTexture2D::6990834817845745235::1711072096::1711072096::1::::<><>::
+_Attack.png::CompressedTexture2D::8480115067172394220::1711072096::1711072096::1::::<><>::
+_AttackCombo.png::CompressedTexture2D::2003686351757319006::1711072096::1711072096::1::::<><>::
+_AttackComboNoMovement.png::CompressedTexture2D::2995595673861325519::1711072096::1711072096::1::::<><>::
+_AttackNoMovement.png::CompressedTexture2D::1420387348498305332::1711072096::1711072096::1::::<><>::
+_Crouch.png::CompressedTexture2D::7651931631736318453::1711072096::1711072096::1::::<><>::
+_CrouchAll.png::CompressedTexture2D::6397553346033824163::1711072096::1711072096::1::::<><>::
+_CrouchAttack.png::CompressedTexture2D::7145717601872307826::1711072096::1711072096::1::::<><>::
+_CrouchTransition.png::CompressedTexture2D::750152711380486457::1711072096::1711072096::1::::<><>::
+_CrouchWalk.png::CompressedTexture2D::4967824391010012676::1711072096::1711072096::1::::<><>::
+_Dash.png::CompressedTexture2D::5031001618259687997::1711072096::1711072096::1::::<><>::
+_Death.png::CompressedTexture2D::177390969387154256::1711072096::1711072096::1::::<><>::
+_DeathNoMovement.png::CompressedTexture2D::3983822368805547889::1711072096::1711072096::1::::<><>::
+_Fall.png::CompressedTexture2D::6709741734546450961::1711072096::1711072096::1::::<><>::
+_Hit.png::CompressedTexture2D::7805856284477492458::1711072096::1711072096::1::::<><>::
+_Idle.png::CompressedTexture2D::1666533710505364354::1711072096::1711072096::1::::<><>::
+_Jump.png::CompressedTexture2D::8887467261259643763::1711072096::1711072096::1::::<><>::
+_JumpFallInbetween.png::CompressedTexture2D::5598951714073317316::1711072096::1711072096::1::::<><>::
+_Roll.png::CompressedTexture2D::4676793128475724203::1711072096::1711072096::1::::<><>::
+_Run.png::CompressedTexture2D::249422478397934048::1711072096::1711072096::1::::<><>::
+_Slide.png::CompressedTexture2D::6382235936676162382::1711072096::1711072096::1::::<><>::
+_SlideAll.png::CompressedTexture2D::3008835299466672984::1711072096::1711072096::1::::<><>::
+_SlideTransitionEnd.png::CompressedTexture2D::1080073192403893559::1711072096::1711072096::1::::<><>::
+_SlideTransitionStart.png::CompressedTexture2D::8549944162485341903::1711072096::1711072096::1::::<><>::
+_TurnAround.png::CompressedTexture2D::6369822913738684983::1711072096::1711072096::1::::<><>::
+_WallClimb.png::CompressedTexture2D::2178702745434686004::1711072096::1711072096::1::::<><>::
+_WallClimbNoMovement.png::CompressedTexture2D::6132322794011948134::1711072096::1711072096::1::::<><>::
+_WallHang.png::CompressedTexture2D::4955038646209851820::1711072096::1711072096::1::::<><>::
+_WallSlide.png::CompressedTexture2D::5689606035400396274::1711072096::1711072096::1::::<><>::
+::res://Assets/metroid_asset_1_2/::1711072096
+::res://Assets/metroid_asset_1_2/Sprites/::1711072096
+::res://Assets/metroid_asset_1_2/Sprites/Enemies/::1711072096
+enemy_rpg.png::CompressedTexture2D::2193286170512924353::1711072096::1711072096::1::::<><>::
+::res://Assets/metroid_asset_1_2/Sprites/Environment/::1711072096
+2d_metroidvania_serie_mockup_1_tileset.png::CompressedTexture2D::2879143380084762653::1711072096::1711072096::1::::<><>::
+background_sprite_1.png::CompressedTexture2D::4283097448460226960::1711072096::1711072096::1::::<><>::
+background_sprite_2.png::CompressedTexture2D::5600587935712417774::1711072096::1711072096::1::::<><>::
+::res://Assets/metroid_asset_1_2/Sprites/FX/::1711072096
+dead_fx.png::CompressedTexture2D::2519319932409345521::1711072096::1711072096::1::::<><>::
+::res://Assets/metroid_asset_1_2/Sprites/Interactables/::1711072096
+chest-sheet.png::CompressedTexture2D::7261133788531806058::1711072096::1711072096::1::::<><>::
+coin.png::CompressedTexture2D::6923890114270424529::1711072096::1711072096::1::::<><>::
+Crate-animated.png::CompressedTexture2D::4730769645779493627::1711072096::1711072096::1::::<><>::
+JumpPowerUp.png::CompressedTexture2D::1504310860757739799::1711072096::1711072096::1::::<><>::
+key.png::CompressedTexture2D::4056054206780999037::1711072096::1711072096::1::::<><>::
+Lamp.png::CompressedTexture2D::6282417415465766004::1711072096::1711072096::1::::<><>::
+LanternW3.png::CompressedTexture2D::5823141540302565587::1711072096::1711072096::1::::<><>::
+spikes_spritesheet.png::CompressedTexture2D::8166361447197968744::1711072096::1711072096::1::::<><>::
+temporaryPlatform.png::CompressedTexture2D::8169518226160801018::1711072096::1711072096::1::::<><>::
+::res://Assets/metroid_asset_1_2/Sprites/Player/::1711072096
+Player_metroid.png::CompressedTexture2D::2986234950007627255::1711072096::1711072096::1::::<><>::
+::res://Assets/metroid_asset_1_2/Sprites/UI/::1711072096
+HeartSpriteSheet.png::CompressedTexture2D::1142908346806125448::1711072096::1711072096::1::::<><>::
+::res://Assets/PNG/::1711072104
+::res://Assets/PNG/game_background_1/::1711072104
+game_background_1.png::CompressedTexture2D::4186786821754576529::1711072104::1711072104::1::::<><>::
+::res://Assets/PNG/game_background_1/layers/::1711072104
+clouds_1.png::CompressedTexture2D::4505638083633467420::1711072104::1711072104::1::::<><>::
+clouds_2.png::CompressedTexture2D::3938448338854297620::1711072104::1711072104::1::::<><>::
+clouds_3.png::CompressedTexture2D::2020272387386096171::1711072104::1711072104::1::::<><>::
+clouds_4.png::CompressedTexture2D::5290409241513768822::1711072104::1711072104::1::::<><>::
+rocks_1.png::CompressedTexture2D::4763071573397963684::1711072104::1711072104::1::::<><>::
+rocks_2.png::CompressedTexture2D::9187851147874211329::1711072104::1711072104::1::::<><>::
+sky.png::CompressedTexture2D::5408771413945539201::1711072104::1711072104::1::::<><>::
+::res://Assets/PNG/game_background_2/::1711072104
+game_background_2.png::CompressedTexture2D::1575291247958714253::1711072104::1711072104::1::::<><>::
+::res://Assets/PNG/game_background_2/layers/::1711072104
+birds.png::CompressedTexture2D::2079474096942476239::1711072104::1711072104::1::::<><>::
+clouds_1.png::CompressedTexture2D::8506394844340742462::1711072104::1711072104::1::::<><>::
+clouds_2.png::CompressedTexture2D::7664211703204591287::1711072104::1711072104::1::::<><>::
+clouds_3.png::CompressedTexture2D::8766938325934481493::1711072104::1711072104::1::::<><>::
+pines.png::CompressedTexture2D::1788686324662123618::1711072104::1711072104::1::::<><>::
+rocks_1.png::CompressedTexture2D::2757945667845111514::1711072104::1711072104::1::::<><>::
+rocks_2.png::CompressedTexture2D::7681955494918895660::1711072104::1711072104::1::::<><>::
+rocks_3.png::CompressedTexture2D::5777104907873668254::1711072104::1711072104::1::::<><>::
+sky.png::CompressedTexture2D::1207798093804966298::1711072104::1711072104::1::::<><>::
+::res://Assets/PNG/game_background_3/::1711072104
+game_background_3.1.png::CompressedTexture2D::2776369932119519099::1711072104::1711072104::1::::<><>::
+game_background_3. 2.png::CompressedTexture2D::5369719218498261230::1711072104::1711072104::1::::<><>::
+::res://Assets/PNG/game_background_3/layers/::1711072104
+clouds_1.png::CompressedTexture2D::7892799406928991302::1711072104::1711072104::1::::<><>::
+clouds_2.png::CompressedTexture2D::8869367585718271047::1711072104::1711072104::1::::<><>::
+ground_1.png::CompressedTexture2D::6541684643213106369::1711072104::1711072104::1::::<><>::
+ground_2.png::CompressedTexture2D::569496466100461779::1711072104::1711072104::1::::<><>::
+ground_3.png::CompressedTexture2D::2650407823319854302::1711072104::1711072104::1::::<><>::
+plant.png::CompressedTexture2D::4229011318031689390::1711072104::1711072104::1::::<><>::
+rocks.png::CompressedTexture2D::5385710017472625581::1711072104::1711072104::1::::<><>::
+sky.png::CompressedTexture2D::1428528251995548013::1711072104::1711072104::1::::<><>::
+::res://Assets/PNG/game_background_4/::1711072104
+game_background_4.png::CompressedTexture2D::1083638263594738919::1711072104::1711072104::1::::<><>::
+::res://Assets/PNG/game_background_4/layers/::1711072104
+clouds_1.png::CompressedTexture2D::347044390168261428::1711072104::1711072104::1::::<><>::
+clouds_2.png::CompressedTexture2D::8899619571678003534::1711072104::1711072104::1::::<><>::
+ground.png::CompressedTexture2D::8977677907617285694::1711072104::1711072104::1::::<><>::
+rocks.png::CompressedTexture2D::3616605782326985778::1711072104::1711072104::1::::<><>::
+sky.png::CompressedTexture2D::4991310897378813896::1711072104::1711072104::1::::<><>::
+::res://Assets/VFX/::1711072096
+01.png::CompressedTexture2D::5170901013622006827::1711072096::1711072096::1::::<><>::
+05.png::CompressedTexture2D::9220541185466125602::1711072096::1711072096::1::::<><>::
+08.png::CompressedTexture2D::4993550042504864558::1711072096::1711072096::1::::<><>::
+10.png::CompressedTexture2D::675820147541687973::1711072096::1711072096::1::::<><>::
+12.png::CompressedTexture2D::1306626909594598222::1711072096::1711072096::1::::<><>::
+13.png::CompressedTexture2D::2030954988130958091::1711072096::1711072096::1::::<><>::
+20.png::CompressedTexture2D::3515411680298665503::1711072096::1711072096::1::::<><>::
+21.png::CompressedTexture2D::5775136175992922924::1711072096::1711072096::1::::<><>::
+22.png::CompressedTexture2D::1764777690366167724::1711072096::1711072096::1::::<><>::
+29.png::CompressedTexture2D::7876583855512516159::1711072096::1711072096::1::::<><>::
+31.png::CompressedTexture2D::8545526631871082177::1711072096::1711072096::1::::<><>::
+36.png::CompressedTexture2D::8688538559950646874::1711072096::1711072096::1::::<><>::
+38.png::CompressedTexture2D::82116319802408592::1711072096::1711072096::1::::<><>::
+42.png::CompressedTexture2D::4212350835948254832::1711072096::1711072096::1::::<><>::
+44.png::CompressedTexture2D::7475950730586391492::1711072096::1711072096::1::::<><>::
+47.png::CompressedTexture2D::8348787098448030426::1711072096::1711072096::1::::<><>::
+52.png::CompressedTexture2D::896743871696372628::1711072096::1711072096::1::::<><>::
+54.png::CompressedTexture2D::359166649905131361::1711072096::1711072096::1::::<><>::
+55.png::CompressedTexture2D::9136537081114892939::1711072096::1711072096::1::::<><>::
+56.png::CompressedTexture2D::8727920736044949037::1711072096::1711072096::1::::<><>::
+::res://Enemy/::1711072106
+::res://Enemy/Assets/::1711072105
+::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/::1711072105
+::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Anubis/::1711072104
+Anubis.png::CompressedTexture2D::248838935119951257::1711072104::1711072104::1::::<><>::
+::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Bat/::1711072104
+Bat1_1.png::CompressedTexture2D::1115885424481738982::1711072104::1711072104::1::::<><>::
+::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Carnivorous Plant Cathy/::1711072104
+carnivorousplant.png::CompressedTexture2D::1970982753322048262::1711072104::1711072104::1::::<><>::
+::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Clockwork Dragon Gearex/::1711072104
+Gearex.png::CompressedTexture2D::3682178929869363565::1711072104::1711072104::1::::<><>::
+::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Critter Unibun/::1711072104
+Unibun1_1.png::CompressedTexture2D::6736778760112981895::1711072104::1711072104::1::::<><>::
+Unibun.png::CompressedTexture2D::2511623034930785074::1711072104::1711072104::1::::<><>::
+::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Demon Butler Clorfos/::1711072104
+Clorfos3.png::CompressedTexture2D::7255529525807937147::1711072104::1711072104::1::::<><>::
+::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Dragon Demios/::1711072104
+Demios.png::CompressedTexture2D::6920619525661397701::1711072104::1711072104::1::::<><>::
+::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Golem Ort/::1711072105
+Golem1_1.png::CompressedTexture2D::6227764662489117375::1711072104::1711072104::1::::<><>::
+Golem1_2.png::CompressedTexture2D::3162161516061331335::1711072105::1711072105::1::::<><>::
+Golem.png::CompressedTexture2D::2990095394306467070::1711072104::1711072104::1::::<><>::
+::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Great Owl/::1711072105
+Great Owl.png::CompressedTexture2D::3651735110799909621::1711072105::1711072105::1::::<><>::
+::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Jupiter/::1711072105
+Jupiter.png::CompressedTexture2D::3350254843812341851::1711072105::1711072105::1::::<><>::
+Terms of use - Tag settings.txt::TextFile::-1::1711072105::0::1::::<><>::
+::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Kraken Oceanos/::1711072105
+OceanosL.png::CompressedTexture2D::5258946554798504460::1711072105::1711072105::1::::<><>::
+::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Lamia Diana/::1711072105
+Diana1_1.png::CompressedTexture2D::8230721272598414484::1711072105::1711072105::1::::<><>::
+Diana1_2.png::CompressedTexture2D::3372959947404977663::1711072105::1711072105::1::::<><>::
+Diana1_3.png::CompressedTexture2D::5551126869510181911::1711072105::1711072105::1::::<><>::
+Diana.png::CompressedTexture2D::1781332454916278035::1711072105::1711072105::1::::<><>::
+::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Leaf Leafen/::1711072105
+Leafen1_1.png::CompressedTexture2D::9065694145752501196::1711072105::1711072105::1::::<><>::
+Leafen1_2.png::CompressedTexture2D::4285771339913075667::1711072105::1711072105::1::::<><>::
+Leafen.png::CompressedTexture2D::2524229907393074535::1711072105::1711072105::1::::<><>::
+::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Mimic MiMic/::1711072105
+Mimic.png::CompressedTexture2D::4805577246716908535::1711072105::1711072105::1::::<><>::
+::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Minotaur Beef/::1711072105
+Beef.png::CompressedTexture2D::6108330521947896701::1711072105::1711072105::1::::<><>::
+::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Phoenix/::1711072105
+Phoenix.png::CompressedTexture2D::4148275989040618177::1711072105::1711072105::1::::<><>::
+::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Quetzalcoatl/::1711072105
+Quetzalcoatl.png::CompressedTexture2D::8756363358694859952::1711072105::1711072105::1::::<><>::
+::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Rat Ritz/::1711072105
+Ritz.png::CompressedTexture2D::2400144802568674206::1711072105::1711072105::1::::<><>::
+::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Skeleton Alstreim/::1711072105
+Alstreim2.png::CompressedTexture2D::8448496378021018058::1711072105::1711072105::1::::<><>::
+::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Slime/::1711072105
+Slime1_1.png::CompressedTexture2D::1347377189427726949::1711072105::1711072105::1::::<><>::
+Slime1_2.png::CompressedTexture2D::5413062749872054028::1711072105::1711072105::1::::<><>::
+Slime1_3.png::CompressedTexture2D::2879566986212600836::1711072105::1711072105::1::::<><>::
+Slime1_4.png::CompressedTexture2D::275306753441168163::1711072105::1711072105::1::::<><>::
+Slime1_5.png::CompressedTexture2D::8596362072537056812::1711072105::1711072105::1::::<><>::
+Slime1_6.png::CompressedTexture2D::3959198050313586377::1711072105::1711072105::1::::<><>::
+Slime1_7.png::CompressedTexture2D::6726379116780837523::1711072105::1711072105::1::::<><>::
+Slime1_8.png::CompressedTexture2D::2823365573478904324::1711072105::1711072105::1::::<><>::
+Slime1_9.png::CompressedTexture2D::6848325118785598797::1711072105::1711072105::1::::<><>::
+::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Snake Cobrens/::1711072105
+Cobrens1_1.png::CompressedTexture2D::6466092106865804221::1711072105::1711072105::1::::<><>::
+Cobrens1_2.png::CompressedTexture2D::2615456413683058141::1711072105::1711072105::1::::<><>::
+Cobrens1_3.png::CompressedTexture2D::4747637733261367721::1711072105::1711072105::1::::<><>::
+Cobrens.png::CompressedTexture2D::1576122715852316371::1711072105::1711072105::1::::<><>::
+::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Succubbus Vi/::1711072105
+Vi1_1.png::CompressedTexture2D::7080058675323169615::1711072105::1711072105::1::::<><>::
+Vi1_2.png::CompressedTexture2D::7038713388291477342::1711072105::1711072105::1::::<><>::
+Vi.png::CompressedTexture2D::3638699710011212964::1711072105::1711072105::1::::<><>::
+::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Tiamat/::1711072105
+Tiamat.png::CompressedTexture2D::8505624861565048963::1711072105::1711072105::1::::<><>::
+::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Ventoss/::1711072105
+VEntos.png::CompressedTexture2D::1107375599122747024::1711072105::1711072105::1::::<><>::
+::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Werewolf Regulus/::1711072105
+Regulus.png::CompressedTexture2D::1807389111915986194::1711072105::1711072105::1::::<><>::
+::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Wisp Wispia/::1711072105
+Wispia.png::CompressedTexture2D::4991619897520331675::1711072105::1711072105::1::::<><>::
+::res://Enemy/Assets/Vfx/::1711072105
+::res://Enemy/Assets/Vfx/60 Retro Effect 32x32 Pack 1 Free/::1711072106
+01.png::CompressedTexture2D::5533076789859447511::1711072106::1711072106::1::::<><>::
+05.png::CompressedTexture2D::3052713410521227712::1711072106::1711072106::1::::<><>::
+08.png::CompressedTexture2D::7236987013501557250::1711072106::1711072106::1::::<><>::
+10.png::CompressedTexture2D::1072851571684200697::1711072106::1711072106::1::::<><>::
+12.png::CompressedTexture2D::2522610584147113136::1711072106::1711072106::1::::<><>::
+13.png::CompressedTexture2D::2557961003477960908::1711072106::1711072106::1::::<><>::
+20.png::CompressedTexture2D::677458499329808783::1711072106::1711072106::1::::<><>::
+21.png::CompressedTexture2D::6671240409656421081::1711072106::1711072106::1::::<><>::
+22.png::CompressedTexture2D::311427571785606362::1711072106::1711072106::1::::<><>::
+29.png::CompressedTexture2D::3640199302495109417::1711072106::1711072106::1::::<><>::
+31.png::CompressedTexture2D::8871006219707961349::1711072106::1711072106::1::::<><>::
+36.png::CompressedTexture2D::6158926420365989501::1711072106::1711072106::1::::<><>::
+38.png::CompressedTexture2D::3930286288317313574::1711072106::1711072106::1::::<><>::
+42.png::CompressedTexture2D::3240372690546761118::1711072106::1711072106::1::::<><>::
+44.png::CompressedTexture2D::3871014267452660476::1711072106::1711072106::1::::<><>::
+47.png::CompressedTexture2D::1469800107854250463::1711072106::1711072106::1::::<><>::
+52.png::CompressedTexture2D::710871264737421966::1711072106::1711072106::1::::<><>::
+54.png::CompressedTexture2D::8958662039970284287::1711072106::1711072106::1::::<><>::
+55.png::CompressedTexture2D::6978677722314441683::1711072106::1711072106::1::::<><>::
+56.png::CompressedTexture2D::7944719191342390790::1711072106::1711072106::1::::<><>::
+::res://Enemy/Enemy_Scene/::1711072106
+::res://Enemy/Enemy_Scene/2nd Melee Enemy/::1711072106
+2_nd_melee_enemy.tscn::PackedScene::3650681410021805344::1711072106::0::1::::<><>::uid://dsmrrbfrlnoik::::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Skeleton Alstreim/Alstreim2.png<>res://Enemy/Enemy_Scene/Enemy Melee/gravity.gd<>res://Enemy/Enemy_Scene/Enemy Melee/state_machine_controller.gd<>res://Enemy/Scripts/state_machine/node_state.gd<>res://Enemy/Enemy_Scene/Enemy Melee/idle_state.gd<>res://Enemy/Enemy_Scene/Enemy Melee/attack_state.gd
+::res://Enemy/Enemy_Scene/Demon_enemy/::1711081481
+darkblast.tscn::PackedScene::8024310526856302345::1711081481::0::1::::<><>::uid://bcpdikcmaavhk::::res://Enemy/Assets/Vfx/60 Retro Effect 32x32 Pack 1 Free/13.png<>res://Enemy/Enemy_Scene/Demon_enemy/darkblast_area.gd
+darkblast_area.gd::GDScript::-1::1711072106::0::1::::<>Node2D<>::
+demon_enemy.gd::GDScript::-1::1711072106::0::1::::<>CharacterBody2D<>::
+demon_enemy.tscn::PackedScene::1190729739638879883::1711081481::0::1::::<><>::res://Enemy/Enemy_Scene/Demon_enemy/demon_enemy.gd<>uid://dbmvrm86wtlyh::::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Demon Butler Clorfos/Clorfos3.png<>res://Enemy/Enemy_Scene/Demon_enemy/Demon_grav.gd
+Demon_grav.gd::GDScript::-1::1711072106::0::1::::<>Node<>::
+demon_proj.gd::GDScript::-1::1711072106::0::1::::<>AnimatedSprite2D<>::
+::res://Enemy/Enemy_Scene/Enemy Melee/::1711072106
+attack_state.gd::GDScript::-1::1711072106::0::1::::<>NodeState<>::
+Enemy_Melee.tscn::PackedScene::5402159676269968780::1711072106::0::1::::<><>::uid://dsmrrbfrlnoik::::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Skeleton Alstreim/Alstreim2.png<>res://Enemy/Enemy_Scene/Enemy Melee/gravity.gd<>res://Enemy/Scripts/state_machine/node_state.gd<>res://Enemy/Enemy_Scene/Enemy Melee/state_machine_controller.gd<>res://Enemy/Enemy_Scene/Enemy Melee/idle_state.gd<>res://Enemy/Enemy_Scene/Enemy Melee/attack_state.gd
+gravity.gd::GDScript::-1::1711072106::0::1::::<>Node<>::
+idle_state.gd::GDScript::-1::1711072106::0::1::::<>NodeState<>::
+state_machine_controller.gd::GDScript::-1::1711072106::0::1::::<>Node<>::
+::res://Enemy/Enemy_Scene/Slime_enemy/::1711081481
+slime_enemy.gd::GDScript::-1::1711072106::0::1::::<>CharacterBody2D<>::
+slime_enemy.tscn::PackedScene::3199931042356362772::1711081481::0::1::::<><>::res://Enemy/Enemy_Scene/Slime_enemy/slime_enemy.gd<>uid://tgxdt53echo4::::res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Slime/Slime1_1.png<>res://Enemy/Enemy_Scene/Slime_enemy/slime_gravity.gd
+slime_gravity.gd::GDScript::-1::1711072106::0::1::::<>Node<>::
+::res://Enemy/Scripts/::1711072106
+global.gd::GDScript::-1::1711072106::0::1::::<>Node<>::
+::res://Enemy/Scripts/state_machine/::1711072106
+node_finite_state_machine.gd::GDScript::-1::1711072106::0::1::::NodeFiniteStateMachine<>Node<>::
+node_state.gd::GDScript::-1::1711072106::0::1::::NodeState<>Node<>::
+::res://Player/::1711081829
+player(scene).tscn::PackedScene::8052987043752475769::1711081829::0::1::::<><>::res://Player/player(script).gd<>uid://cx6ud3g37xwff::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_Attack.png<>uid://qcjdntrwjmcr::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_Death.png<>uid://5p41c6kig2d8::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_Idle.png<>uid://bcb2pkxh3hmia::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_Jump.png<>uid://dgvcip662umo4::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_JumpFallInbetween.png<>uid://dm3xcpurib2uo::::res://Assets/KnightSprite/Colour1/Outline/120x80_PNGSheets/_Run.png
+player(script).gd::GDScript::-1::1711072106::0::1::::<>CharacterBody2D<>::
+::res://Player/GUI/::1711079272
+GUI.gd::GDScript::-1::1711079272::0::1::::<>CanvasLayer<>::
+player_data.gd::GDScript::-1::1711079272::0::1::::player_data<>Node2D<>::
+::res://Player/MagicScenes/::1711081480
+fireball.gd::GDScript::-1::1711072106::0::1::::<>Node2D<>::
+fireball.tscn::PackedScene::1273327662914414144::1711081480::0::1::::<><>::uid://b1aq2kcwr50y3::::res://Assets/VFX/42.png<>res://Player/MagicScenes/fireball.gd
+::res://Scenes/::1711072096
+::res://Scenes/Interactables/::1711080263
+::res://Scenes/Interactables/scenes/::1711081481
+coin.tscn::PackedScene::9149284252492158083::1711081481::0::1::::<><>::res://Scenes/Interactables/Scripts/coin.gd<>uid://c5v8puena60n2::::res://Assets/metroid_asset_1_2/Sprites/Interactables/coin.png
+crate.tscn::PackedScene::9024410887269776289::1711081480::0::1::::<><>::uid://b8nvc5eudfetn::::res://Assets/metroid_asset_1_2/Sprites/Interactables/Crate-animated.png<>res://Scenes/Interactables/Scripts/crate.gd
+::res://Scenes/Interactables/Scripts/::1711081480
+coin.gd::GDScript::-1::1711081480::0::1::::<>Area2D<>::
+crate.gd::GDScript::-1::1711072096::0::1::::<>StaticBody2D<>::
+::res://Scenes/Main_Menu/::1711081480
+main_menu.gd::GDScript::-1::1711072106::0::1::::<>Node2D<>::
+main_menu.tscn::PackedScene::5359070057873671201::1711081480::0::1::::<><>::res://Scenes/Main_Menu/main_menu.gd
+::res://Scenes/Worlds/::1711072106
+RandomLevelGenTileset.png::CompressedTexture2D::643022032305242582::1711072106::1711072106::1::::<><>::
+::res://Scenes/Worlds/Scenes/::1711081481
+house_1.tscn::PackedScene::5554553626324036433::1711081481::0::1::::<><>::uid://cyij7kdttmctn::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Inside) Tileset.png<>uid://d0ob3mq1bvx15::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Outside) Tileset.png<>uid://d2xfenexruq2v::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Outside And Inside) Tileset.png<>res://Scenes/Worlds/Scripts/HouseDoor.gd
+Test_Area.tscn::PackedScene::6076120517974655956::1711081480::0::1::::<><>::res://Scenes/Worlds/Scripts/WorldCave.gd<>uid://jfqqjvxhmwh7::::res://Scenes/Worlds/RandomLevelGenTileset.png<>uid://dmy6rxghroiwn::::res://Player/player(scene).tscn<>uid://d1tqy1r7klfrt::::res://Scenes/Interactables/scenes/crate.tscn<>uid://blucnqv6000jg::::res://Enemy/Enemy_Scene/Slime_enemy/slime_enemy.tscn<>uid://q72e6o7lj2ix::::res://Enemy/Enemy_Scene/Demon_enemy/demon_enemy.tscn<>res://Player/GUI/GUI.gd<>uid://qjvseyldet5q::::res://Assets/metroid_asset_1_2/Sprites/UI/HeartSpriteSheet.png<>uid://c5v8puena60n2::::res://Assets/metroid_asset_1_2/Sprites/Interactables/coin.png<>uid://d3l8m0nrt342j::::res://Scenes/Interactables/scenes/coin.tscn
+town.tscn::PackedScene::5129655472074501604::1711081481::0::1::::<><>::uid://d1c8g1t8rtng0::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/Terrain Tileset.png<>uid://d0ob3mq1bvx15::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Outside) Tileset.png<>uid://d2xfenexruq2v::::res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Outside And Inside) Tileset.png<>uid://dmy6rxghroiwn::::res://Player/player(scene).tscn
+::res://Scenes/Worlds/Scripts/::1711072106
+HouseDoor.gd::GDScript::-1::1711072106::0::1::::<>Area2D<>::
+Walker.gd::GDScript::-1::1711072106::0::1::::Walker<>Node<>::
+WorldCave.gd::GDScript::-1::1711072106::0::1::::<>Node2D<>::
