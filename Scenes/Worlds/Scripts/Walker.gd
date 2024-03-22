@@ -22,7 +22,8 @@ func _init(starting_position_param, new_borders):
 func walk(steps):
 	create_startroom(position)
 	for i in steps:  # Renamed 'step' to 'i' to avoid shadowing the 'step' method.
-		if  randf() <= 0.20 or steps_since_turn >= 8:
+		#increase randf higher for more chance of rooms and steps since inscreases length of passive  tunnels
+		if  randf() <= 0.22 or steps_since_turn >= 8:
 			change_direction()
 		
 		if step():  # Now it's clear that 'step()' refers to the method.
@@ -54,7 +55,8 @@ func change_direction():
 		direction = directions.pop_front()
 
 func create_room(position):
-	var size = Vector2(randi() % 9 + 1, randi() % 2 + 2)
+	#increase random room size higher # means less individual rooms more merged rooms
+	var size = Vector2(randi() % 5 + 1, randi() % 3 + 2)
 	var top_left_corner = (position - size/2).ceil()
 	for y in size.y:
 		for x in size.x:

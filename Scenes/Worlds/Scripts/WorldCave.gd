@@ -1,7 +1,8 @@
 extends Node2D
 
 
-var borders = Rect2(1, 1, 130, 40)
+var rect = Rect2(-64, -256, 300,600)
+var borders = rect.abs()
 
 @onready var tileMap = $TileMap
 
@@ -12,8 +13,8 @@ func _ready():
 	
 
 func generate_level():
-	var walker = Walker.new(Vector2(5, 20), borders)
-	var map = walker.walk(500)
+	var walker = Walker.new(Vector2(7, 13), borders)
+	var map = walker.walk(1000)
 	walker.queue_free()
 	
 	var cells =[]

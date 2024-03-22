@@ -540,17 +540,17 @@ tile_set = SubResource("TileSet_1iuso")
 format = 2
 
 [node name="player" parent="." instance=ExtResource("3_k6ile")]
-position = Vector2(125, 595)
+position = Vector2(32, 448)
 collision_layer = 1
 
 [node name="crate" parent="." instance=ExtResource("4_b88ij")]
-position = Vector2(251, 710)
+position = Vector2(160, 448)
 
 [node name="Slime enemy" parent="." instance=ExtResource("5_qpqld")]
-position = Vector2(239, 631)
+position = Vector2(160, 416)
 
 [node name="Demon_Ranged" parent="." instance=ExtResource("6_jgyce")]
-position = Vector2(292, 647)
+position = Vector2(256, 480)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("7_xli5e")
@@ -576,4 +576,4 @@ scale = Vector2(3, 3)
 text = "0"
 
 [node name="coin" parent="." instance=ExtResource("9_6vslh")]
-position = Vector2(210, 712)
+position = Vector2(96, 448)
