@@ -1,7 +1,7 @@
 extends Node
 class_name Walker
 
-#const coin = preload("res://Scenes/Interactables/scenes/coin.tscn").instantiate()
+#const coin = preload("res://Scenes/Interactables/scenes/coin.tscn")
 
 const DIRECTIONS = [Vector2.RIGHT, Vector2.UP, Vector2.DOWN]
 

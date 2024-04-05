@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://clewxl24n0jun"]
+[gd_scene load_steps=11 format=3 uid="uid://clewxl24n0jun"]
 
 [ext_resource type="Texture2D" uid="uid://cyij7kdttmctn" path="res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Inside) Tileset.png" id="1_wsbor"]
 [ext_resource type="Texture2D" uid="uid://d0ob3mq1bvx15" path="res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Outside) Tileset.png" id="2_oanyd"]
 [ext_resource type="Texture2D" uid="uid://d2xfenexruq2v" path="res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Outside And Inside) Tileset.png" id="3_av53c"]
 [ext_resource type="Script" path="res://Scenes/Worlds/Scripts/HouseDoor.gd" id="4_id64q"]
+[ext_resource type="Texture2D" uid="uid://cepse05l1cg34" path="res://Assets/16x16 Fantasy Platformer Pack/Items/9x9 Mini Items Pack.png" id="5_2ol0c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qpe3d"]
 texture = ExtResource("1_wsbor")
@@ -1034,13 +1035,27 @@ format = 2
 layer_0/name = "Walls/Roof"
 layer_0/tile_data = PackedInt32Array(-131080, 1, 4, -65544, 1, 5, -131079, 65537, 4, -65543, 65537, 5, -7, 655361, 5, 65529, 655361, 5, 131065, 655361, 5, 196601, 655361, 7, -131078, 131073, 4, -65542, 131073, 5, -6, 720897, 5, 65530, 720897, 5, 131066, 720897, 5, 196602, 720897, 7, -131077, 196609, 4, -65541, 196609, 5, -5, 786433, 5, 65531, 786433, 5, 131067, 786433, 5, 196603, 786433, 7, -131076, 262145, 4, -65540, 262145, 5, -4, 851969, 5, 65532, 851969, 5, 131068, 851969, 5, 196604, 851969, 7, -131075, 327681, 4, -65539, 327681, 5, -3, 917505, 5, 65533, 917505, 5, 131069, 917505, 5, 196605, 917505, 7, -131074, 393217, 4, -65538, 393217, 5, -2, 983041, 5, 65534, 983041, 5, 131070, 983041, 5, 196606, 983041, 5, -131073, 458753, 4, -65537, 65537, 5, -1, 1048577, 5, 65535, 1048577, 5, 131071, 1048577, 5, 196607, 1048577, 5, -196608, 131073, 4, -131072, 327681, 5, -65536, 720897, 5, 0, 720897, 5, 65536, 720897, 5, 131072, 720897, 7, -196607, 196609, 4, -131071, 196609, 5, -65535, 786433, 5, 1, 786433, 5, 65537, 786433, 5, 131073, 786433, 7, -196606, 262145, 4, -131070, 262145, 5, -65534, 851969, 5, 2, 851969, 5, 65538, 851969, 5, 131074, 851969, 7, -196605, 327681, 4, -131069, 327681, 5, -65533, 917505, 5, 3, 917505, 5, 65539, 917505, 5, 131075, 917505, 7, -196604, 393217, 4, -131068, 393217, 5, -65532, 983041, 5, 4, 983041, 5, 65540, 983041, 5, 131076, 983041, 7, -196603, 458753, 4, -131067, 458753, 5, -65531, 1048577, 5, 5, 1048577, 5, 65541, 1048577, 5, 131077, 1048577, 7, -196602, 524289, 4, -131066, 524289, 5, -65530, 1114113, 5, 6, 1114113, 5, 65542, 1114113, 5, 131078, 1114113, 7, -196601, 589825, 4, -131065, 589825, 5)
 layer_1/name = "Door/Window"
+layer_1/z_index = 1
 layer_1/tile_data = PackedInt32Array(65531, 1048578, 18, 131067, 1048578, 18, 65532, 1048578, 18, 131068, 1048578, 18, 65534, 393218, 17, 131070, 393218, 18, 196606, 393218, 19, 65535, 458754, 17, 131071, 458754, 18, 196607, 458754, 19, 3, 1048578, 18, 65539, 1048578, 18, 4, 1048578, 18, 65540, 1048578, 18)
 layer_2/name = "Frames"
+layer_2/z_index = 2
 layer_2/tile_data = PackedInt32Array(65531, 1048578, 16, 131067, 1048578, 17, 65532, 1114114, 16, 131068, 1114114, 17, 3, 1048578, 16, 65539, 1048578, 17, 4, 1114114, 16, 65540, 1114114, 17, -65536, 1, 8, 0, 1, 9, -65535, 65537, 8, 1, 65537, 9, -65534, 131073, 8, 2, 131073, 9)
 
 [node name="door" type="Area2D" parent="Background"]
+collision_layer = 8
 script = ExtResource("4_id64q")
 
 [node name="door_collider" type="CollisionShape2D" parent="Background/door"]
 position = Vector2(-15.5, 27)
 shape = SubResource("RectangleShape2D_2d4ha")
+
+[node name="sign" type="Sprite2D" parent="Background"]
+z_index = 2
+position = Vector2(22, 2)
+scale = Vector2(2.5, 2.05556)
+texture = ExtResource("5_2ol0c")
+hframes = 6
+vframes = 6
+frame = 24
+
+[connection signal="area_entered" from="Background/door" to="Background/door" method="_on_area_entered"]
