@@ -1,3 +1,5 @@
+res://Enemy/Enemy_Scene/Wolf_enemy (dup)/Canines
+res://Enemy/Enemy_Scene/Wolf_enemy (dup)
 res://Scenes/Worlds/Scenes
 res://Scenes/Interactables/scenes
 res://Player/GUI
@@ -18,4 +20,3 @@ res://Enemy/Scripts/state_machine
 res://Enemy
 res://Scenes/Worlds
 res://Player/MagicScenes
-res://Assets/VFX

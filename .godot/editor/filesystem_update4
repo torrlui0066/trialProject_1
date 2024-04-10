@@ -1,15 +1,1 @@
-res://Scenes/Worlds/Scenes/house_1.tscn
-res://Scenes/Main_Menu/main_menu.tscn
-res://Scenes/Worlds/Scenes/Test_Area.tscn
-res://Player/player(scene).tscn
-res://Scenes/Interactables/scenes/crate.tscn
-res://Player/MagicScenes/fireball.tscn
-res://Scenes/Worlds/Scenes/town.tscn
-res://Scenes/Interactables/scenes/coin.tscn
-res://Scenes/Worlds/Scripts/HouseDoor.gd
-res://Scenes/Worlds/Scripts/Walker.gd
-res://Scenes/Worlds/Scenes/house_2.tscn
-res://House2.gd
-res://Scenes/Worlds/Scenes/inside_building_1.tscn
-res://Scenes/Worlds/Scripts/house_one_exit.gd
-res://Scenes/Main_Menu/main_menu.gd
+res://Enemy/Enemy_Scene/Wolf_enemy (dup)/wolve_enemy.tscn
