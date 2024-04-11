@@ -1,1 +1,11 @@
+res://Scenes/Main_Menu/main_menu.tscn
+res://Scenes/Worlds/Scenes/Test_Area.tscn
+res://Player/player(scene).tscn
+res://Scenes/Interactables/scenes/crate.tscn
+res://Scenes/Worlds/Scenes/town.tscn
+res://Scenes/Worlds/Scenes/house_1.tscn
+res://Scenes/Worlds/Scenes/house_2.tscn
+res://Scenes/Worlds/Scenes/inside_building_1.tscn
 res://Enemy/Enemy_Scene/Wolf_enemy (dup)/wolve_enemy.tscn
+res://Scenes/Worlds/Scripts/Walker.gd
+res://Scenes/Worlds/Scripts/WorldCave.gd

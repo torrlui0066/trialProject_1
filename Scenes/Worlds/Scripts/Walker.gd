@@ -1,7 +1,7 @@
 extends Node
 class_name Walker
 
-#const coin = preload("res://Scenes/Interactables/scenes/coin.tscn")
+
 
 const DIRECTIONS = [Vector2.RIGHT, Vector2.UP, Vector2.DOWN]
 
@@ -11,6 +11,7 @@ var borders = Rect2()
 var step_history = []
 var steps_since_turn = 0
 var steps_since_loot = 0
+var rooms = []
 
 func _init(starting_position_param, new_borders):
 	assert(new_borders.has_point(starting_position_param))
@@ -37,7 +38,6 @@ func step():
 	var target_position = position + direction
 	if borders.has_point(target_position):
 		steps_since_turn += 1
-		##steps_since_loot += 1
 		position = target_position
 		return true
 	else:
@@ -54,16 +54,19 @@ func change_direction():
 	while not borders.has_point(position + direction):
 		direction = directions.pop_front()
 
+func room_slot(position, size):
+		return {position = position, size = size}
+
 func create_room(position):
 	#increase random room size higher # means less individual rooms more merged rooms
 	var size = Vector2(randi() % 5 + 1, randi() % 3 + 2)
 	var top_left_corner = (position - size/2).ceil()
+	rooms.append(room_slot(position, size))
 	for y in size.y:
 		for x in size.x:
 			var new_step = top_left_corner + Vector2(x,y)
 			if borders.has_point(new_step):
 				step_history.append(new_step)
-	#add_child(coin)
 
 func create_startroom(position):
 	var size = Vector2(20,8)
@@ -73,6 +76,3 @@ func create_startroom(position):
 			var new_step = top_left_corner + Vector2(x,y)
 			if borders.has_point(new_step):
 				step_history.append(new_step)
-
-##func create_loot(position):
-	
