@@ -2,13 +2,13 @@ extends Area2D
 
 const meleeEnemy = preload("res://Enemy/Enemy_Scene/Slime_enemy/slime_enemy.tscn")
 
-@onready var left_spawnPoint : Marker2D = $leftSpawnPoint
-@onready var left_SpawnCollider : CollisionShape2D = $leftDetection
+@onready var right_spawnPoint : Marker2D = $rightSpawnPoint
+@onready var right_SpawnCollider : CollisionShape2D = $rightDetection
 
 var spawnPoint_Position
 
 func _ready():
-	spawnPoint_Position = left_spawnPoint.position
+	spawnPoint_Position = right_spawnPoint.position
 
 func _on_body_entered(body):
 	if body.name == "player":
@@ -18,11 +18,11 @@ func _on_body_entered(body):
 			await get_tree().create_timer(1).timeout
 			beginSpawn()
 		
-		left_SpawnCollider.disabled = true
+		right_SpawnCollider.disabled = true
 	
 func beginSpawn():
 	print("Now spawning")
 	var slimeEnemy = meleeEnemy.instantiate()
-	slimeEnemy.global_position = left_spawnPoint.global_position
+	slimeEnemy.global_position = right_spawnPoint.global_position
 	get_tree().get_root().add_child(slimeEnemy)
 	print("Added Child")

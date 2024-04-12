@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dss53qapism3s"]
+[gd_scene load_steps=21 format=3 uid="uid://dss53qapism3s"]
 
 [ext_resource type="Texture2D" uid="uid://d1c8g1t8rtng0" path="res://Assets/16x16 Fantasy Platformer Pack/Tilesets/Terrain Tileset.png" id="1_pa0gp"]
 [ext_resource type="Texture2D" uid="uid://csvogvihqe84s" path="res://Assets/16x16 Fantasy Platformer Pack/Tilesets/Vegetation Tileset 1.png" id="2_hlh2c"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://31vudi20ueh4" path="res://Assets/PNG/game_background_1/layers/clouds_3.png" id="10_imjua"]
 [ext_resource type="Texture2D" uid="uid://chmyjc70sr4q1" path="res://Assets/PNG/game_background_1/layers/clouds_4.png" id="11_hnssi"]
 [ext_resource type="Script" path="res://Scenes/Worlds/Scripts/leftSpawn.gd" id="11_nrvcc"]
+[ext_resource type="Script" path="res://Scenes/Worlds/Scripts/rightSpawn.gd" id="12_c2fbt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7e6fp"]
 texture = ExtResource("1_pa0gp")
@@ -5100,6 +5101,7 @@ shape = SubResource("CircleShape2D_7hnu0")
 
 [node name="rightSpawn" type="Area2D" parent="."]
 position = Vector2(390, -327)
+script = ExtResource("12_c2fbt")
 
 [node name="rightSpawnPoint" type="Marker2D" parent="rightSpawn"]
 position = Vector2(1806, 0)
@@ -5114,3 +5116,4 @@ z_index = 1
 position = Vector2(253, -321)
 
 [connection signal="body_entered" from="leftSpawn" to="leftSpawn" method="_on_body_entered"]
+[connection signal="body_entered" from="rightSpawn" to="rightSpawn" method="_on_body_entered"]

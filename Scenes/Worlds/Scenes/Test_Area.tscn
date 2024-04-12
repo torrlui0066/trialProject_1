@@ -542,7 +542,6 @@ format = 2
 
 [node name="player" parent="." instance=ExtResource("3_k6ile")]
 position = Vector2(32, 448)
-collision_layer = 1
 
 [node name="crate" parent="." instance=ExtResource("4_b88ij")]
 position = Vector2(160, 448)
