@@ -223,8 +223,8 @@ script = ExtResource("1_mut4q")
 position = Vector2(-1, -16)
 scale = Vector2(1, 0.96875)
 sprite_frames = SubResource("SpriteFrames_hyynv")
-animation = &"run"
-frame_progress = 0.732147
+animation = &"attack"
+frame_progress = 0.0909288
 
 [node name="wolf_detection" type="Area2D" parent="."]
 collision_mask = 19

@@ -1,3 +1,5 @@
+res://Enemy/Enemy_Scene
+res://Enemy/Assets/Bat
 res://Scenes/Worlds/Scenes
 res://Enemy/Enemy_Scene/Wolf_enemy (dup)/Canines
 res://Enemy/Enemy_Scene/Wolf_enemy (dup)
@@ -5,7 +7,6 @@ res://Scenes/Interactables/scenes
 res://Player/GUI
 res://Enemy/Enemy_Scene/Demon_enemy
 res://Enemy/Assets/Vfx/60 Retro Effect 32x32 Pack 1 Free
-res://Enemy/Enemy_Scene
 res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Demon Butler Clorfos
 res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Critter Unibun
 res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Kraken Oceanos
@@ -19,4 +20,3 @@ res://Enemy/Enemy_Scene/Enemy Melee
 res://Enemy/Scripts/state_machine
 res://Enemy
 res://Scenes/Worlds
-res://Player/MagicScenes

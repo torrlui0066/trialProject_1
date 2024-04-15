@@ -1,8 +1,10 @@
+Node
 Timer
 CollisionShape2D
 Area2D
+AnimatedSprite2D
+CharacterBody2D
 Marker2D
-Node
 Sprite2D
 ParallaxLayer
 ParallaxBackground
@@ -10,6 +12,3 @@ TileMap
 AnimationPlayer
 Label
 CanvasLayer
-Control
-HBoxContainer
-VBoxContainer

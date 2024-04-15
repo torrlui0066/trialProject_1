@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cstk21xgcta57"]
+[gd_scene load_steps=15 format=3 uid="uid://cstk21xgcta57"]
 
 [ext_resource type="Script" path="res://Scenes/Worlds/Scripts/WorldCave.gd" id="1_q085o"]
 [ext_resource type="Texture2D" uid="uid://jfqqjvxhmwh7" path="res://Scenes/Worlds/RandomLevelGenTileset.png" id="2_r81ia"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c5v8puena60n2" path="res://Assets/metroid_asset_1_2/Sprites/Interactables/coin.png" id="8_mxdey"]
 [ext_resource type="PackedScene" uid="uid://d3l8m0nrt342j" path="res://Scenes/Interactables/scenes/coin.tscn" id="9_6vslh"]
 [ext_resource type="PackedScene" uid="uid://cr8llijean5kh" path="res://Enemy/Enemy_Scene/Wolf_enemy (dup)/wolve_enemy.tscn" id="11_e6ouo"]
+[ext_resource type="PackedScene" uid="uid://dfy5kvtfkrc50" path="res://Enemy/Enemy_Scene/Bat_enemy/bat_enemy.tscn" id="12_5p0n5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q4pt1"]
 texture = ExtResource("2_r81ia")
@@ -580,3 +581,6 @@ position = Vector2(96, 448)
 
 [node name="Wolf_Enemy" parent="." instance=ExtResource("11_e6ouo")]
 position = Vector2(192, 480)
+
+[node name="bat_enemy" parent="." instance=ExtResource("12_5p0n5")]
+position = Vector2(96, 352)

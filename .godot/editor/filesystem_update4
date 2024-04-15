@@ -1,9 +1,17 @@
-res://Scenes/Worlds/Scenes/horde.tscn
 res://Scenes/Worlds/Scripts/leftSpawn.gd
-res://Scenes/Worlds/Scripts/rightSpawn.gd
+res://Enemy/Enemy_Scene/bat_enemy.tscn
 res://Scenes/Main_Menu/main_menu.tscn
 res://Scenes/Worlds/Scenes/Test_Area.tscn
 res://Player/player(scene).tscn
 res://Scenes/Interactables/scenes/crate.tscn
 res://Scenes/Worlds/Scenes/town.tscn
+res://Scenes/Worlds/Scenes/horde.tscn
+res://Enemy/Enemy_Scene/Wolf_enemy (dup)/wolve_enemy.tscn
+res://Enemy/Enemy_Scene/Bat_enemy/bat_enemy.tscn
+res://Enemy/Enemy_Scene/Bat_enemy/bat_enemy.gd
 res://Enemy/Enemy_Scene/Slime_enemy/slime_enemy.tscn
+res://Enemy/Enemy_Scene/Bat_enemy/bat_gravity.gd
+res://Enemy/Enemy_Scene/Wolf_enemy (dup)/Wolf_gravtiy.gd
+res://Enemy/Enemy_Scene/Demon_enemy/demon_enemy.gd
+res://Enemy/Enemy_Scene/Demon_enemy/demon_enemy.tscn
+res://Enemy/Enemy_Scene/Wolf_enemy (dup)/wolve_enemy.gd

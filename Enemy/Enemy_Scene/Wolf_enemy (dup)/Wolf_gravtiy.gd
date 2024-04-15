@@ -12,6 +12,8 @@ func _physics_process(delta):
 	if character_body_2d && !is_attacking:
 		if !character_body_2d.is_on_floor():
 			character_body_2d.velocity.y += GRAVITY * delta
+		else:
+			character_body_2d.velocity.y = 0  # Reset vertical velocity when on the floor
 
 		if is_attacking:
 			attack_timer += delta
@@ -26,4 +28,3 @@ func attack_player():
 	if character_body_2d and !is_attacking:
 		is_attacking = true
 		animated_sprite_2D.play("attack")  # Play the attack animation
-		# Add logic here to damage the player or trigger player's hit function

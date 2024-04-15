@@ -20,10 +20,6 @@ func _physics_process(delta):
 
 		# Adjust Y position to stay grounded
 		var ground_position = Vector2(target_position.x, position.y)
-		if position.y < ground_position.y:
-			position.y = ground_position.y
-		else:
-			position.y = min(position.y, ground_position.y + MAX_Y_SPEED * delta)
 
 		# Move horizontally towards the player
 		position += direction * speed * delta
