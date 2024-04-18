@@ -3,6 +3,8 @@ extends Node2D
 #preload Exit
 const Player = preload("res://Player/player(scene).tscn")
 const Coin = preload("res://Scenes/Interactables/scenes/coin.tscn")
+const Exit = preload("res://Scenes/Worlds/Scenes/CaveExit.tscn")
+const Slime = preload("res://Enemy/Enemy_Scene/Wolf_enemy (dup)/wolve_enemy.tscn")
 
 var rect = Rect2(-64, -256, 300,600)
 var borders = rect.abs()
@@ -26,9 +28,9 @@ func generate_level():
 	#player.position = map.front()*32
 	
 	for room in walker.rooms:
-		var coin = Coin.instantiate()
-		add_child(coin)
-		coin.position = room.position *32
+		var exit = Slime.instantiate()
+		add_child(exit)
+		exit.position = room.position *32
 	
 	walker.queue_free()
 	var cells =[]
