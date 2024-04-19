@@ -1,0 +1,88 @@
+[gd_scene load_steps=13 format=3 uid="uid://csdlete3vwtuu"]
+
+[ext_resource type="Script" path="res://Enemy/Boss Folder/golem_rock_area.gd" id="1_022hk"]
+[ext_resource type="Texture2D" uid="uid://c1up64dskp0dk" path="res://Enemy/Assets/Mecha-stone Golem 0.1/weapon PNG/arm_projectile_glowing.png" id="2_mruwa"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p8bhd"]
+atlas = ExtResource("2_mruwa")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_60igy"]
+atlas = ExtResource("2_mruwa")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_svg25"]
+atlas = ExtResource("2_mruwa")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q0cst"]
+atlas = ExtResource("2_mruwa")
+region = Rect2(0, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bb0kp"]
+atlas = ExtResource("2_mruwa")
+region = Rect2(100, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wg46t"]
+atlas = ExtResource("2_mruwa")
+region = Rect2(200, 100, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lw1yh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p8bhd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_60igy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_svg25")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q0cst")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bb0kp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wg46t")
+}],
+"loop": true,
+"name": &"shoot_blade",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_siue8"]
+size = Vector2(33, 11)
+
+[sub_resource type="Animation" id="Animation_0dohu"]
+resource_name = "blade_animation"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_crs27"]
+_data = {
+"blade_animation": SubResource("Animation_0dohu")
+}
+
+[node name="Golem_proj" type="Node2D"]
+position = Vector2(0, -4)
+
+[node name="golem_rock_area" type="Area2D" parent="."]
+script = ExtResource("1_022hk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="golem_rock_area"]
+position = Vector2(95, -95.5)
+scale = Vector2(2.9, 2.91)
+sprite_frames = SubResource("SpriteFrames_lw1yh")
+animation = &"shoot_blade"
+frame_progress = 0.16848
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="golem_rock_area"]
+visible = false
+position = Vector2(27.5, -12.5)
+shape = SubResource("RectangleShape2D_siue8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_crs27")
+}
