@@ -57,6 +57,7 @@ func change_direction():
 func room_slot(position, size):
 		return {position = position, size = size}
 
+
 func create_room(position):
 	#increase random room size higher # means less individual rooms more merged rooms
 	var size = Vector2(randi() % 5 + 1, randi() % 3 + 2)
@@ -76,3 +77,10 @@ func create_startroom(position):
 			var new_step = top_left_corner + Vector2(x,y)
 			if borders.has_point(new_step):
 				step_history.append(new_step)
+
+func get_unique_room_positions():
+	var unique_positions = {}  # Using a dictionary to simulate a set
+	for room in rooms:
+		var pos = room.position
+		unique_positions[pos] = true  # Set-like behavior using keys of a dictionary
+	return unique_positions.keys()  # This will be an array of unique positions
