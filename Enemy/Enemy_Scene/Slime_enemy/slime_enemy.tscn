@@ -142,7 +142,7 @@ radius = 93.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_ar24b"]
 radius = 9.0
 
-[node name="Slime enemy" type="CharacterBody2D"]
+[node name="Slime enemy" type="CharacterBody2D" groups=["Enemy"]]
 position = Vector2(0, -6)
 collision_layer = 36
 collision_mask = 34
@@ -175,6 +175,8 @@ character_body_2d = NodePath("..")
 animated_sprite_2D = NodePath("../AnimatedSprite2D")
 
 [node name="slime_hitbox" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="slime_hitbox"]
 position = Vector2(0, 1)
@@ -186,6 +188,7 @@ wait_time = 0.5
 
 [connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]
+[connection signal="area_entered" from="slime_hitbox" to="." method="_on_slime_hitbox_area_entered"]
 [connection signal="body_entered" from="slime_hitbox" to="." method="_on_slime_hitbox_body_entered"]
 [connection signal="body_exited" from="slime_hitbox" to="." method="_on_slime_hitbox_body_exited"]
 [connection signal="timeout" from="take_damage_cooldown" to="." method="_on_take_damage_cooldown_timeout"]

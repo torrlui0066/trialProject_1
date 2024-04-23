@@ -223,8 +223,25 @@ func wall_collider():
 func reset_states():
 	current_state = player_states.MOVE
 
-"""
+
 func _on_hurtbox_body_entered(body : Node2D):
-	if body.is_ingroup("Enemy"):
-		print("Enemy Entered")
-"""
+	if body.is_in_group("Enemy"):
+		player_data.life -= 1
+		print("in enemy collision zone")
+	
+	if player_data.life <= 0:
+		print("melee death")
+		#add animations for death or scene change
+		queue_free()
+		get_tree().change_scene_to_file("res://Scenes/Main_Menu/main_menu.tscn")
+
+func _on_player_hitbox_area_entered(area):
+	if area.name == "darkblast_area":
+		player_data.life -= 1
+		print("hit by enemy 'darkblast' ranged attack")
+	
+	if player_data.life <= 0:
+		print("ranged death")
+		#add animations for death or scene change
+		queue_free()
+		get_tree().change_scene_to_file("res://Scenes/Main_Menu/main_menu.tscn")

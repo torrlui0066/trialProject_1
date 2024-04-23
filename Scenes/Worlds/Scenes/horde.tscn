@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dss53qapism3s"]
+[gd_scene load_steps=24 format=3 uid="uid://dss53qapism3s"]
 
 [ext_resource type="Texture2D" uid="uid://d1c8g1t8rtng0" path="res://Assets/16x16 Fantasy Platformer Pack/Tilesets/Terrain Tileset.png" id="1_pa0gp"]
 [ext_resource type="Texture2D" uid="uid://csvogvihqe84s" path="res://Assets/16x16 Fantasy Platformer Pack/Tilesets/Vegetation Tileset 1.png" id="2_hlh2c"]
@@ -13,6 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://chmyjc70sr4q1" path="res://Assets/PNG/game_background_1/layers/clouds_4.png" id="11_hnssi"]
 [ext_resource type="Script" path="res://Scenes/Worlds/Scripts/leftSpawn.gd" id="11_nrvcc"]
 [ext_resource type="Script" path="res://Scenes/Worlds/Scripts/rightSpawn.gd" id="12_c2fbt"]
+[ext_resource type="Script" path="res://Player/GUI/GUI.gd" id="14_eivk1"]
+[ext_resource type="Texture2D" uid="uid://qjvseyldet5q" path="res://Assets/metroid_asset_1_2/Sprites/UI/HeartSpriteSheet.png" id="15_vf7en"]
+[ext_resource type="Texture2D" uid="uid://c5v8puena60n2" path="res://Assets/metroid_asset_1_2/Sprites/Interactables/coin.png" id="16_c62ij"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7e6fp"]
 texture = ExtResource("1_pa0gp")
@@ -5114,6 +5117,29 @@ shape = SubResource("CircleShape2D_7hnu0")
 [node name="player" parent="." instance=ExtResource("4_2ggre")]
 z_index = 1
 position = Vector2(253, -321)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("14_eivk1")
+
+[node name="playerLife" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(29, 30)
+scale = Vector2(3, 3)
+texture = ExtResource("15_vf7en")
+hframes = 5
+
+[node name="coinSprite" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(29, 90)
+scale = Vector2(3, 3)
+texture = ExtResource("16_c62ij")
+hframes = 12
+
+[node name="coinNumber" type="Label" parent="CanvasLayer"]
+offset_left = 83.0
+offset_top = 52.0
+offset_right = 123.0
+offset_bottom = 75.0
+scale = Vector2(3, 3)
+text = "0"
 
 [connection signal="body_entered" from="leftSpawn" to="leftSpawn" method="_on_body_entered"]
 [connection signal="body_entered" from="rightSpawn" to="rightSpawn" method="_on_body_entered"]

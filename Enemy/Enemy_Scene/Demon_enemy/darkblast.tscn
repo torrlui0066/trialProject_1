@@ -109,8 +109,8 @@ _data = {
 [node name="darkblast" type="Node2D"]
 
 [node name="darkblast_area" type="Area2D" parent="."]
-collision_layer = 19
-collision_mask = 19
+collision_layer = 4
+collision_mask = 9
 script = ExtResource("1_uyp16")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="darkblast_area"]

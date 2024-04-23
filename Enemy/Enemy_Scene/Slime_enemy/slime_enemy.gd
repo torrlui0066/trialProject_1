@@ -4,7 +4,7 @@ var speed = 25
 var player_chase = false
 var player = null
 
-var health = 100
+var health = 1
 var player_inattack_zone = false
 var can_take_damage = true
 
@@ -58,6 +58,13 @@ func deal_with_damage():
 			if health <= 0:
 				self.queue_free()
 
-
 func _on_take_damage_cooldown_timeout():
 	can_take_damage = true
+
+func _on_slime_hitbox_area_entered(area):
+	if area.name == "sword" || area.name == "fireball_area":
+		print("Enemy has been attacked")
+		health -= 1
+	
+	if health == 0:
+		queue_free()

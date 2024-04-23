@@ -1,3 +1,4 @@
+res://Player/GUI
 res://Enemy/Enemy_Scene/yellowSlime
 res://Enemy/Boss Folder
 res://Scenes/Worlds/Scenes
@@ -6,7 +7,6 @@ res://Enemy/Assets/Bat
 res://Enemy/Enemy_Scene/Wolf_enemy (dup)/Canines
 res://Enemy/Enemy_Scene/Wolf_enemy (dup)
 res://Scenes/Interactables/scenes
-res://Player/GUI
 res://Enemy/Enemy_Scene/Demon_enemy
 res://Enemy/Assets/Vfx/60 Retro Effect 32x32 Pack 1 Free
 res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Demon Butler Clorfos

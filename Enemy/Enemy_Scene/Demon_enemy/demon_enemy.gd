@@ -4,7 +4,7 @@ var speed = 200
 var player_chase = false
 var player = null
 
-var health = 100
+var health = 2
 var player_inattack_zone = false
 var can_take_damage = true
 var can_shoot = true
@@ -18,7 +18,7 @@ var projectile_scene = preload("res://Enemy/Enemy_Scene/Demon_enemy/darkblast.ts
 
 func _physics_process(delta):
 	if player_inattack_zone and can_take_damage:
-		take_damage()
+		#take_damage()
 		'''if can_take_damage:
 			player_data.life -= 20 
 			$take_damage_cooldown.start()
@@ -112,3 +112,11 @@ func _on_timer_timeout():
 	can_shoot = true
 	shoot_projectile()
 
+
+func _on_demon_hitbox_area_entered(area):
+	if area.name == "sword" || area.name == "fireball_area":
+		print("Enemy has been attacked")
+		health -= 1
+	
+	if health == 0:
+		queue_free()
