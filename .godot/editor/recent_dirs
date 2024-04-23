@@ -1,3 +1,4 @@
+res://Enemy/Enemy_Scene/yellowSlime
 res://Enemy/Boss Folder
 res://Scenes/Worlds/Scenes
 res://Enemy/Enemy_Scene
@@ -19,4 +20,3 @@ res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Skeleton Alstr
 res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Golem Ort
 res://Enemy/Enemy_Scene/Enemy Melee
 res://Enemy/Scripts/state_machine
-res://Enemy

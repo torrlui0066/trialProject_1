@@ -1,6 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://cfc3w8wkmagga"]
 
 [ext_resource type="Texture2D" uid="uid://d1c8g1t8rtng0" path="res://Assets/16x16 Fantasy Platformer Pack/Tilesets/Terrain Tileset.png" id="1_kgsdk"]
+[ext_resource type="PackedScene" uid="uid://bwwjmhbmacgqx" path="res://Enemy/Boss Folder/boss_golem.tscn" id="1_wx20d"]
 [ext_resource type="Texture2D" uid="uid://d0ob3mq1bvx15" path="res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Outside) Tileset.png" id="2_36ikh"]
 [ext_resource type="Texture2D" uid="uid://d2xfenexruq2v" path="res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Outside And Inside) Tileset.png" id="3_phb5h"]
 [ext_resource type="PackedScene" uid="uid://dmy6rxghroiwn" path="res://Player/player(scene).tscn" id="4_qr47u"]
@@ -8,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://bcrfaqf5jb3dn" path="res://Scenes/Worlds/Scenes/house_2.tscn" id="6_awuca"]
 [ext_resource type="Script" path="res://Scenes/Worlds/Scripts/townToDungeon.gd" id="7_tdr8x"]
 [ext_resource type="Script" path="res://Scenes/Worlds/Scripts/townToHorde.gd" id="8_lyqhm"]
-[ext_resource type="PackedScene" uid="uid://604ja7hjtkh1" path="res://Enemy/Enemy_Scene/yellowSlime/basic_enemy.tscn" id="9_vhb4w"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fci3i"]
 
@@ -3674,6 +3674,9 @@ size = Vector2(44, 113)
 
 [node name="town" type="Node2D"]
 
+[node name="Boss_Golem" parent="." instance=ExtResource("1_wx20d")]
+position = Vector2(98, 819)
+
 [node name="Ground" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_d6td1")
 format = 2
@@ -3708,9 +3711,6 @@ script = ExtResource("8_lyqhm")
 [node name="ttdCollider" type="CollisionShape2D" parent="townToHorde"]
 position = Vector2(-41, 633.5)
 shape = SubResource("RectangleShape2D_5g370")
-
-[node name="basicEnemy" parent="." instance=ExtResource("9_vhb4w")]
-position = Vector2(333, 584)
 
 [connection signal="area_entered" from="townToDungeon" to="townToDungeon" method="_on_area_entered"]
 [connection signal="area_entered" from="townToHorde" to="townToHorde" method="_on_area_entered"]

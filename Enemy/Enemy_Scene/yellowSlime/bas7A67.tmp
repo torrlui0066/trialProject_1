@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://604ja7hjtkh1"]
+
+[ext_resource type="Script" path="res://Enemy/Enemy_Scene/yellowSlime/yellowSlime.gd" id="1_hv0r6"]
+[ext_resource type="Texture2D" uid="uid://d6mi545r4yy2" path="res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Slime/Slime1_4.png" id="2_ap6y5"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y6lrg"]
+radius = 25.0
+height = 102.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6ea6x"]
+radius = 59.0339
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_otey2"]
+radius = 318.025
+
+[node name="basicEnemy" type="Node2D"]
+
+[node name="yellowSlime" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 3
+script = ExtResource("1_hv0r6")
+
+[node name="slimeSprite" type="Sprite2D" parent="yellowSlime"]
+texture = ExtResource("2_ap6y5")
+offset = Vector2(0, -35)
+hframes = 9
+vframes = 6
+frame = 9
+
+[node name="slimeCollider" type="CollisionShape2D" parent="yellowSlime"]
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_y6lrg")
+
+[node name="slimeHitbox" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 5
+
+[node name="hitboxCollider" type="CollisionShape2D" parent="slimeHitbox"]
+shape = SubResource("CircleShape2D_6ea6x")
+
+[node name="detectionArea" type="Area2D" parent="."]
+
+[node name="detectionCollider" type="CollisionShape2D" parent="detectionArea"]
+shape = SubResource("CircleShape2D_otey2")
+
+[connection signal="area_entered" from="slimeHitbox" to="yellowSlime" method="_on_slime_hitbox_area_entered"]
+[connection signal="body_entered" from="detectionArea" to="yellowSlime" method="_on_detection_area_body_entered"]
