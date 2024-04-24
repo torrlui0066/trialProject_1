@@ -4,7 +4,7 @@ var speed = 25
 var player_chase = false
 var player = null
 
-var health = 1
+var health = 2
 var player_inattack_zone = false
 var can_take_damage = true
 
@@ -67,4 +67,5 @@ func _on_slime_hitbox_area_entered(area):
 		health -= 1
 	
 	if health == 0:
+		$AnimatedSprite2D.play("death")
 		queue_free()

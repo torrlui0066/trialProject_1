@@ -231,7 +231,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"death",
-"speed": 8.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -260,7 +260,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -286,7 +286,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"melee",
-"speed": 8.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -312,7 +312,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"ranged",
-"speed": 8.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -344,7 +344,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"ranged_2",
-"speed": 6.0
+"speed": 10.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7v46q"]
@@ -358,17 +358,21 @@ height = 180.0
 radius = 128.0
 
 [node name="Boss_Golem" type="CharacterBody2D"]
+collision_layer = 5
+collision_mask = 2
 script = ExtResource("1_tfkk3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(256, -256)
-scale = Vector2(5.12, 5.12)
+position = Vector2(195.5, -198)
+scale = Vector2(3.91, 3.96)
 sprite_frames = SubResource("SpriteFrames_ikoyp")
-animation = &"idle"
-frame_progress = 0.499797
+animation = &"death"
+frame_progress = 0.312127
 
 [node name="Boss_detection" type="Area2D" parent="."]
 visible = false
+light_mask = 3
+visibility_layer = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss_detection"]
 position = Vector2(256, -256)
@@ -383,6 +387,8 @@ debug_color = Color(0.0862745, 0.34902, 0.729412, 0.419608)
 [node name="Boss_hitbox" type="Area2D" parent="."]
 visible = false
 position = Vector2(256, -256)
+collision_layer = 5
+collision_mask = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss_hitbox"]
 shape = SubResource("CircleShape2D_yylt2")
@@ -391,14 +397,17 @@ debug_color = Color(0.913725, 0.223529, 0.482353, 0.419608)
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Beam_marker" type="Marker2D" parent="."]
-position = Vector2(265, -343)
+position = Vector2(202, -265)
 
 [node name="knife_marker" type="Marker2D" parent="."]
-position = Vector2(448, -320)
+position = Vector2(337, -246)
 
 [node name="golem_grav" type="Node" parent="."]
 script = ExtResource("3_8g70g")
 
 [connection signal="body_entered" from="Boss_detection" to="." method="_on_boss_detection_body_entered"]
 [connection signal="body_exited" from="Boss_detection" to="." method="_on_boss_detection_body_exited"]
+[connection signal="area_entered" from="Boss_hitbox" to="." method="_on_boss_hitbox_area_entered"]
+[connection signal="body_entered" from="Boss_hitbox" to="." method="_on_boss_hitbox_body_entered"]
+[connection signal="body_exited" from="Boss_hitbox" to="." method="_on_boss_hitbox_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

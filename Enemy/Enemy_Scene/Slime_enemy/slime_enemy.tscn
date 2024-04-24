@@ -157,8 +157,6 @@ frame_progress = 0.929303
 offset = Vector2(0, -8)
 
 [node name="detection_area" type="Area2D" parent="."]
-collision_layer = 3
-collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
 position = Vector2(1, 0)

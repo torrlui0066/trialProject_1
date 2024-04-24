@@ -1,16 +1,16 @@
-res://Scenes/Main_Menu/main_menu.tscn
+res://Scenes/Worlds/Scenes/Test_Area.tscn
 res://Player/player(script).gd
 res://Scenes/Worlds/Scripts/leftSpawn.gd
-res://Scenes/Worlds/Scenes/Test_Area.tscn
+res://Enemy/Enemy_Scene/Demon_enemy/darkblast.tscn
+res://Enemy/Boss Folder/boss_golem.gd
+res://Enemy/Boss Folder/boss_golem.tscn
+res://Scenes/Main_Menu/main_menu.tscn
 res://Player/player(scene).tscn
 res://Scenes/Interactables/scenes/crate.tscn
 res://Scenes/Worlds/Scenes/town.tscn
 res://Scenes/Worlds/Scenes/horde.tscn
-res://Enemy/Enemy_Scene/yellowSlime/basic_enemy.tscn
-res://Enemy/Enemy_Scene/Demon_enemy/demon_enemy.tscn
-res://Enemy/Enemy_Scene/Demon_enemy/darkblast.tscn
 res://Player/MagicScenes/fireball.tscn
-res://Enemy/Enemy_Scene/Demon_enemy/demon_enemy.gd
-res://Enemy/Enemy_Scene/Slime_enemy/slime_enemy.gd
 res://Enemy/Enemy_Scene/Slime_enemy/slime_enemy.tscn
-res://Scenes/Main_Menu/main_menu.gd
+res://Enemy/Enemy_Scene/Demon_enemy/demon_enemy.tscn
+res://Enemy/Enemy_Scene/Slime_enemy/slime_enemy.gd
+res://Enemy/Enemy_Scene/Demon_enemy/demon_enemy.gd

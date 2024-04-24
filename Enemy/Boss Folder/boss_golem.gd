@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var health = 1000
+var health = 20
 var speed = 0
 var direction = 0
 var attack_cooldown = 2.0
@@ -20,7 +20,8 @@ var projectile_scene2 = preload("res://Enemy/Boss Folder/golem_proj.tscn") # Pat
 
 func _physics_process(delta):
 	if player_inattack_zone and can_take_damage:
-		take_damage()
+		#take_damage()
+		'blah blah blah'
 			
 	if player_inattack_zone and player_chase:
 		if $shoot_cooldown.is_stopped():
@@ -67,9 +68,6 @@ func _on_boss_detection_body_exited(body):
 		player_chase = false
 		player_inattack_zone = false
 		print("Player exited detection area")
-
-func _ready():
-	player = get_node("/root/MainScene/Player") # Adjust the path to the player node in your scene
 
 func _process(delta):
 	if can_attack:
@@ -128,8 +126,24 @@ func rangedAttack2():
 			projectile.set("direction", direction)
 			$AnimatedSprite2D.play("ranged_2")
 			await $AnimatedSprite2D.animation_finished
-
-
-func _on_timer_timeout():
+		
+'func _on_timer_timeout():
 	can_attack = true
-	shoot_projectile()
+	rangedAttack1()'
+
+func _on_boss_hitbox_body_entered(body):
+	if body.has_method("player"):
+		player_inattack_zone = true
+
+
+func _on_boss_hitbox_body_exited(body):
+	if body.has_method("player"):
+		player_inattack_zone = false
+
+func _on_boss_hitbox_area_entered(area):
+	if area.name == "sword" || area.name == "fireball_area":
+		print("Enemy has been attacked")
+		health -= 1
+	if health == 0:
+		$AnimatedSprite2D.play("death")
+		queue_free()
