@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cfc3w8wkmagga"]
+[gd_scene load_steps=19 format=3 uid="uid://cfc3w8wkmagga"]
 
 [ext_resource type="Texture2D" uid="uid://d1c8g1t8rtng0" path="res://Assets/16x16 Fantasy Platformer Pack/Tilesets/Terrain Tileset.png" id="1_kgsdk"]
 [ext_resource type="Texture2D" uid="uid://d0ob3mq1bvx15" path="res://Assets/16x16 Fantasy Platformer Pack/Tilesets/House (Outside) Tileset.png" id="2_36ikh"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://Player/GUI/GUI.gd" id="9_7lm6k"]
 [ext_resource type="Texture2D" uid="uid://qjvseyldet5q" path="res://Assets/metroid_asset_1_2/Sprites/UI/HeartSpriteSheet.png" id="10_fyebc"]
 [ext_resource type="Texture2D" uid="uid://c5v8puena60n2" path="res://Assets/metroid_asset_1_2/Sprites/Interactables/coin.png" id="11_ppp54"]
+[ext_resource type="PackedScene" uid="uid://dfe7gionqf3o2" path="res://Enemy/Enemy_Scene/Skeleton_enemy/Skeleton_enemy.tscn" id="12_6qq1n"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fci3i"]
 
@@ -3733,6 +3734,9 @@ offset_right = 123.0
 offset_bottom = 75.0
 scale = Vector2(3, 3)
 text = "0"
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("12_6qq1n")]
+position = Vector2(216, 645)
 
 [connection signal="area_entered" from="townToDungeon" to="townToDungeon" method="_on_area_entered"]
 [connection signal="area_entered" from="townToHorde" to="townToHorde" method="_on_area_entered"]

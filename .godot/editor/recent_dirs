@@ -1,8 +1,9 @@
+res://Enemy/Enemy_Scene
+res://Enemy/Assets/Skeleton enemy
 res://Player/GUI
 res://Enemy/Enemy_Scene/yellowSlime
 res://Enemy/Boss Folder
 res://Scenes/Worlds/Scenes
-res://Enemy/Enemy_Scene
 res://Enemy/Assets/Bat
 res://Enemy/Enemy_Scene/Wolf_enemy (dup)/Canines
 res://Enemy/Enemy_Scene/Wolf_enemy (dup)
@@ -19,4 +20,3 @@ res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Slime
 res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Skeleton Alstreim
 res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Golem Ort
 res://Enemy/Enemy_Scene/Enemy Melee
-res://Enemy/Scripts/state_machine

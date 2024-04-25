@@ -1,8 +1,7 @@
-[gd_scene load_steps=24 format=3 uid="uid://blucnqv6000jg"]
+[gd_scene load_steps=23 format=3 uid="uid://blucnqv6000jg"]
 
 [ext_resource type="Script" path="res://Enemy/Enemy_Scene/Slime_enemy/slime_enemy.gd" id="1_ak4cx"]
 [ext_resource type="Texture2D" uid="uid://tgxdt53echo4" path="res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Slime/Slime1_1.png" id="1_yfs12"]
-[ext_resource type="Script" path="res://Enemy/Enemy_Scene/Slime_enemy/slime_gravity.gd" id="3_2gnt4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p1q50"]
 atlas = ExtResource("1_yfs12")
@@ -167,10 +166,7 @@ position = Vector2(0, -2)
 shape = SubResource("CircleShape2D_u203k")
 debug_color = Color(0.227451, 0.517647, 0.972549, 0.419608)
 
-[node name="slime_gravity" type="Node" parent="." node_paths=PackedStringArray("character_body_2d", "animated_sprite_2D")]
-script = ExtResource("3_2gnt4")
-character_body_2d = NodePath("..")
-animated_sprite_2D = NodePath("../AnimatedSprite2D")
+[node name="slime_gravity" type="Node" parent="."]
 
 [node name="slime_hitbox" type="Area2D" parent="."]
 collision_layer = 32
