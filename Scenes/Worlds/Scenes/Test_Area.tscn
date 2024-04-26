@@ -5,12 +5,12 @@
 [ext_resource type="PackedScene" uid="uid://dmy6rxghroiwn" path="res://Player/player(scene).tscn" id="3_k6ile"]
 [ext_resource type="PackedScene" uid="uid://d1tqy1r7klfrt" path="res://Scenes/Interactables/scenes/crate.tscn" id="4_b88ij"]
 [ext_resource type="PackedScene" uid="uid://blucnqv6000jg" path="res://Enemy/Enemy_Scene/Slime_enemy/slime_enemy.tscn" id="5_qpqld"]
-[ext_resource type="PackedScene" uid="uid://q72e6o7lj2ix" path="res://Enemy/Enemy_Scene/Demon_enemy/demon_enemy.tscn" id="6_jgyce"]
 [ext_resource type="Script" path="res://Player/GUI/GUI.gd" id="7_xli5e"]
 [ext_resource type="Texture2D" uid="uid://qjvseyldet5q" path="res://Assets/metroid_asset_1_2/Sprites/UI/HeartSpriteSheet.png" id="7_yx42v"]
 [ext_resource type="Texture2D" uid="uid://c5v8puena60n2" path="res://Assets/metroid_asset_1_2/Sprites/Interactables/coin.png" id="8_mxdey"]
 [ext_resource type="PackedScene" uid="uid://d3l8m0nrt342j" path="res://Scenes/Interactables/scenes/coin.tscn" id="9_6vslh"]
 [ext_resource type="PackedScene" uid="uid://dfe7gionqf3o2" path="res://Enemy/Enemy_Scene/Skeleton_enemy/Skeleton_enemy.tscn" id="11_5wsgb"]
+[ext_resource type="PackedScene" uid="uid://q72e6o7lj2ix" path="res://Enemy/Enemy_Scene/Mini_golem_enemy/demon_enemy.tscn" id="11_kd5i1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q4pt1"]
 texture = ExtResource("2_r81ia")
@@ -549,9 +549,6 @@ position = Vector2(128, 448)
 [node name="Slime enemy" parent="." instance=ExtResource("5_qpqld")]
 position = Vector2(160, 448)
 
-[node name="Demon_Ranged" parent="." instance=ExtResource("6_jgyce")]
-position = Vector2(320, 480)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("7_xli5e")
 
@@ -580,3 +577,6 @@ position = Vector2(96, 448)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("11_5wsgb")]
 position = Vector2(96, 416)
+
+[node name="Golem_Ranged" parent="." instance=ExtResource("11_kd5i1")]
+position = Vector2(256, 480)

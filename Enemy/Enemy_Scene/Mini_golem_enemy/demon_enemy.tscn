@@ -1,0 +1,218 @@
+[gd_scene load_steps=28 format=3 uid="uid://q72e6o7lj2ix"]
+
+[ext_resource type="Script" path="res://Enemy/Enemy_Scene/Mini_golem_enemy/demon_enemy.gd" id="1_rwpxw"]
+[ext_resource type="Texture2D" uid="uid://dgk22ifggfp7u" path="res://Enemy/Assets/Golem/Armored/Golem_Armor_Idle.png" id="2_72pgl"]
+[ext_resource type="Texture2D" uid="uid://d2ofa81ix3t0w" path="res://Enemy/Assets/Golem/Armored/Golem_Armor_AttackC.png" id="3_6kr6y"]
+[ext_resource type="Texture2D" uid="uid://262ye5tbmyvj" path="res://Enemy/Assets/Golem/Armored/Golem_Armor_Run.png" id="4_d7dwf"]
+[ext_resource type="Script" path="res://Enemy/Enemy_Scene/Mini_golem_enemy/Demon_grav.gd" id="5_2ojmq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_53ys5"]
+atlas = ExtResource("2_72pgl")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gyunm"]
+atlas = ExtResource("2_72pgl")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f3xxn"]
+atlas = ExtResource("2_72pgl")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhc3i"]
+atlas = ExtResource("2_72pgl")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06w4m"]
+atlas = ExtResource("3_6kr6y")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6l2o"]
+atlas = ExtResource("3_6kr6y")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qcsqh"]
+atlas = ExtResource("3_6kr6y")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rigc7"]
+atlas = ExtResource("3_6kr6y")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jwiui"]
+atlas = ExtResource("3_6kr6y")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7f3am"]
+atlas = ExtResource("3_6kr6y")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3lw3k"]
+atlas = ExtResource("3_6kr6y")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wh0jg"]
+atlas = ExtResource("3_6kr6y")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5bypc"]
+atlas = ExtResource("3_6kr6y")
+region = Rect2(192, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_51sbi"]
+atlas = ExtResource("3_6kr6y")
+region = Rect2(128, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3cuje"]
+atlas = ExtResource("4_d7dwf")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nry8r"]
+atlas = ExtResource("4_d7dwf")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3w4nh"]
+atlas = ExtResource("4_d7dwf")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8b3tg"]
+atlas = ExtResource("4_d7dwf")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_toes8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_53ys5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gyunm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f3xxn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bhc3i")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_06w4m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6l2o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qcsqh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rigc7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jwiui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7f3am")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3lw3k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wh0jg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5bypc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_51sbi")
+}],
+"loop": true,
+"name": &"shoot",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3cuje")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nry8r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3w4nh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8b3tg")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_db5r2"]
+size = Vector2(18, 22)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xtukl"]
+radius = 212.038
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_irfmi"]
+size = Vector2(27, 26)
+
+[node name="Golem_Ranged" type="CharacterBody2D" groups=["Enemy"]]
+collision_layer = 5
+collision_mask = 2
+script = ExtResource("1_rwpxw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(13, -16)
+scale = Vector2(1.05078, 0.974935)
+sprite_frames = SubResource("SpriteFrames_toes8")
+animation = &"walk"
+frame_progress = 0.246978
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(14, -11)
+shape = SubResource("RectangleShape2D_db5r2")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(11.5141, -17.7327)
+target_position = Vector2(-200, 0)
+collision_mask = 19
+
+[node name="Demon_grav" type="Node" parent="." node_paths=PackedStringArray("character_body_2d", "animated_sprite_2D")]
+script = ExtResource("5_2ojmq")
+character_body_2d = NodePath("..")
+animated_sprite_2D = NodePath("../AnimatedSprite2D")
+
+[node name="Detection_Area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detection_Area"]
+position = Vector2(12, -31)
+shape = SubResource("CircleShape2D_xtukl")
+debug_color = Color(0.552941, 0.564706, 0.00392157, 0.419608)
+
+[node name="Demon_hitbox" type="Area2D" parent="."]
+collision_layer = 5
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Demon_hitbox"]
+position = Vector2(13.5, -14)
+shape = SubResource("RectangleShape2D_irfmi")
+debug_color = Color(0.882353, 0.156863, 0.721569, 0.419608)
+
+[node name="take_damage_cooldown" type="Timer" parent="."]
+
+[node name="shoot_cooldown" type="Timer" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(-14.4859, -17.7327)
+scale = Vector2(-1.95141, 0.926735)
+
+[connection signal="body_entered" from="Detection_Area" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="Detection_Area" to="." method="_on_detection_area_body_exited"]
+[connection signal="area_entered" from="Demon_hitbox" to="." method="_on_demon_hitbox_area_entered"]
+[connection signal="body_entered" from="Demon_hitbox" to="." method="_on_demon_hitbox_body_entered"]
+[connection signal="body_exited" from="Demon_hitbox" to="." method="_on_demon_hitbox_body_exited"]
+[connection signal="timeout" from="take_damage_cooldown" to="." method="_on_take_damage_cooldown_timeout"]
+[connection signal="timeout" from="shoot_cooldown" to="." method="_on_timer_timeout"]

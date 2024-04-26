@@ -17,6 +17,7 @@ var projectile_scene2 = preload("res://Enemy/Boss Folder/golem_proj.tscn") # Pat
 
 @onready var Beam_marker : Marker2D = $Beam_marker
 @onready var knife_marker : Marker2D = $knife_marker
+@onready var ranged_cooldown : Timer = $ranged_cooldown
 
 func _physics_process(delta):
 	if player_inattack_zone and can_take_damage:
@@ -24,12 +25,11 @@ func _physics_process(delta):
 		'blah blah blah'
 			
 	if player_inattack_zone and player_chase:
-		if $shoot_cooldown.is_stopped():
-			$shoot_cooldown.start()
+		if ranged_cooldown.is_stopped():
+			ranged_cooldown.start()
 	else:
-		
-		if not $shoot_cooldown.is_stopped():
-			$shoot_cooldown.stop()
+		if ranged_cooldown and not ranged_cooldown.is_stopped():
+			ranged_cooldown.stop()
 	
 	if player_chase:
 		position += (player.position - position) / speed

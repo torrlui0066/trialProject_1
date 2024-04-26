@@ -1,0 +1,143 @@
+[gd_scene load_steps=21 format=3 uid="uid://dmlbhsv6euxx6"]
+
+[ext_resource type="Script" path="res://Enemy/Enemy_Scene/Mini_golem_enemy/darkblast_area.gd" id="1_ihldj"]
+[ext_resource type="Texture2D" uid="uid://bcpdikcmaavhk" path="res://Enemy/Assets/Vfx/60 Retro Effect 32x32 Pack 1 Free/13.png" id="2_jn8ec"]
+[ext_resource type="Texture2D" uid="uid://dd20uwu4gfs5a" path="res://Enemy/Assets/Vfx/Armored/Golem_Armor_AttackC_FX.png" id="3_moxpb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbcb3"]
+atlas = ExtResource("2_jn8ec")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oj6fd"]
+atlas = ExtResource("2_jn8ec")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fe1no"]
+atlas = ExtResource("2_jn8ec")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u7rav"]
+atlas = ExtResource("2_jn8ec")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dxq5p"]
+atlas = ExtResource("2_jn8ec")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6j4lv"]
+atlas = ExtResource("2_jn8ec")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwqrt"]
+atlas = ExtResource("2_jn8ec")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tyd11"]
+atlas = ExtResource("2_jn8ec")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0f4cu"]
+atlas = ExtResource("2_jn8ec")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tvdyb"]
+atlas = ExtResource("2_jn8ec")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ssof"]
+atlas = ExtResource("2_jn8ec")
+region = Rect2(128, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5r85"]
+atlas = ExtResource("2_jn8ec")
+region = Rect2(160, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qgcri"]
+atlas = ExtResource("3_moxpb")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yk1a7"]
+atlas = ExtResource("3_moxpb")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vga8v"]
+atlas = ExtResource("3_moxpb")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bewor"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_jbcb3")
+}, {
+"duration": 2.5,
+"texture": SubResource("AtlasTexture_oj6fd")
+}, {
+"duration": 2.5,
+"texture": SubResource("AtlasTexture_fe1no")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u7rav")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dxq5p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6j4lv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gwqrt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tyd11")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0f4cu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tvdyb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ssof")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u5r85")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qgcri")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yk1a7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vga8v")
+}],
+"loop": true,
+"name": &"golem_default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ova0g"]
+radius = 6.08276
+
+[node name="darkblast" type="Node2D"]
+
+[node name="darkblast_area" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 9
+script = ExtResource("1_ihldj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="darkblast_area"]
+position = Vector2(0, 1.19209e-07)
+scale = Vector2(0.914063, 0.804687)
+sprite_frames = SubResource("SpriteFrames_bewor")
+animation = &"golem_default"
+frame_progress = 0.48219
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="darkblast_area"]
+shape = SubResource("CircleShape2D_ova0g")

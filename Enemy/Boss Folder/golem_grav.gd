@@ -6,8 +6,9 @@ extends Node
 const GRAVITY : int = 50
 
 func _physics_process(delta):
-	if !character_body_2d.is_on_floor():
-		character_body_2d.velocity.y += GRAVITY * delta
+	if character_body_2d:
+		if !character_body_2d.is_on_floor():
+			character_body_2d.velocity.y += GRAVITY * delta
 
-
-	character_body_2d.move_and_slide()
+		if character_body_2d and character_body_2d.is_valid():
+			character_body_2d.move_and_slide()
