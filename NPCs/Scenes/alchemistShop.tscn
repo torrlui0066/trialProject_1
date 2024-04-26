@@ -1,0 +1,98 @@
+[gd_scene load_steps=6 format=3 uid="uid://b27ddpypl0xrm"]
+
+[ext_resource type="Script" path="res://NPCs/Scripts/healOption.gd" id="1_yl2xy"]
+
+[sub_resource type="Animation" id="Animation_c1wy7"]
+resource_name = "TransIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(350, -300), Vector2(350, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_t27ge"]
+resource_name = "TransOut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(350, 0), Vector2(350, -300)]
+}
+
+[sub_resource type="Animation" id="Animation_et75l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -300)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3l5tp"]
+_data = {
+"RESET": SubResource("Animation_et75l"),
+"TransIn": SubResource("Animation_c1wy7"),
+"TransOut": SubResource("Animation_t27ge")
+}
+
+[node name="alchemistShop" type="CanvasLayer"]
+offset = Vector2(0, -300)
+transform = Transform2D(1, 0, 0, 1, 0, -300)
+
+[node name="menuBackground" type="Panel" parent="."]
+offset_left = 36.0
+offset_top = 17.0
+offset_right = 537.0
+offset_bottom = 249.0
+
+[node name="menuName" type="Label" parent="."]
+offset_left = 56.0
+offset_top = 21.0
+offset_right = 96.0
+offset_bottom = 44.0
+text = "Shop"
+
+[node name="healOption" type="Node" parent="."]
+script = ExtResource("1_yl2xy")
+
+[node name="heal_Button" type="Button" parent="healOption"]
+offset_left = 54.0
+offset_top = 48.0
+offset_right = 526.0
+offset_bottom = 84.0
+text = "Heal"
+alignment = 0
+
+[node name="cost" type="Label" parent="healOption/heal_Button"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 7.0
+offset_right = 465.0
+offset_bottom = 30.0
+text = "10 Coins"
+
+[node name="anim" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3l5tp")
+}
+
+[connection signal="pressed" from="healOption/heal_Button" to="healOption" method="_on_heal_button_pressed"]

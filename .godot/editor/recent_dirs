@@ -1,3 +1,4 @@
+res://NPCs/Scenes
 res://Enemy/Enemy_Scene
 res://Enemy/Assets/Skeleton enemy
 res://Player/GUI
@@ -19,4 +20,3 @@ res://Enemy/Scripts
 res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Slime
 res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Skeleton Alstreim
 res://Enemy/Assets/RPG Maker MV format Animated Sideview Battlers/Golem Ort
-res://Enemy/Enemy_Scene/Enemy Melee

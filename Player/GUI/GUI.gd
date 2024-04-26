@@ -16,6 +16,9 @@ func _ready():
 func _process(delta):
 	$coinNumber.text = var_to_str(player_data.coin)
 	display_heart()
+	
+	if get_tree().current_scene.name == "horde":
+		$killCount.text = var_to_str(player_data.kills)
 
 func display_heart():
 	for heart in $playerLife.get_children():

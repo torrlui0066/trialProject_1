@@ -68,4 +68,6 @@ func _on_slime_hitbox_area_entered(area):
 	
 	if health == 0:
 		$AnimatedSprite2D.play("death")
+		player_data.kills += 1
+		print("player has killed ", player_data.kills, " slimes")
 		queue_free()

@@ -151,8 +151,7 @@ script = ExtResource("1_ak4cx")
 position = Vector2(1, -5)
 scale = Vector2(0.210938, 0.203125)
 sprite_frames = SubResource("SpriteFrames_g0r0n")
-animation = &"walk"
-frame_progress = 0.929303
+animation = &"death"
 offset = Vector2(0, -8)
 
 [node name="detection_area" type="Area2D" parent="."]
