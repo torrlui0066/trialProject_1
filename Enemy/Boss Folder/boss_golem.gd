@@ -25,7 +25,7 @@ func _physics_process(delta):
 		'blah blah blah'
 			
 	if player_inattack_zone and player_chase:
-		if ranged_cooldown.is_stopped():
+		if ranged_cooldown and ranged_cooldown.is_stopped():
 			ranged_cooldown.start()
 	else:
 		if ranged_cooldown and not ranged_cooldown.is_stopped():
@@ -83,9 +83,10 @@ func _process(delta):
 		$Timer.start(attack_cooldown)
 
 func meleeAttack():
-	if player.global_position.distance_to(global_position) < 100: # Melee range
-		player.takeDamage(10) # Adjust the damage value as needed
-		$AnimatedSprite2D.play("melee")
+	if player and player.global_position:
+		if player.global_position.distance_to(global_position) < 100: # Melee range
+			player.takeDamage(10) # Adjust the damage value as needed
+			$AnimatedSprite2D.play("melee")
 	#else:
 		# Move towards the player for melee attack
 

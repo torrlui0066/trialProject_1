@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cstk21xgcta57"]
+[gd_scene load_steps=15 format=3 uid="uid://cstk21xgcta57"]
 
 [ext_resource type="Script" path="res://Scenes/Worlds/Scripts/WorldCave.gd" id="1_q085o"]
 [ext_resource type="Texture2D" uid="uid://jfqqjvxhmwh7" path="res://Scenes/Worlds/RandomLevelGenTileset.png" id="2_r81ia"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://d3l8m0nrt342j" path="res://Scenes/Interactables/scenes/coin.tscn" id="9_6vslh"]
 [ext_resource type="PackedScene" uid="uid://dfe7gionqf3o2" path="res://Enemy/Enemy_Scene/Skeleton_enemy/Skeleton_enemy.tscn" id="11_5wsgb"]
 [ext_resource type="PackedScene" uid="uid://q72e6o7lj2ix" path="res://Enemy/Enemy_Scene/Mini_golem_enemy/demon_enemy.tscn" id="11_kd5i1"]
+[ext_resource type="PackedScene" uid="uid://bwwjmhbmacgqx" path="res://Enemy/Boss Folder/boss_golem.tscn" id="12_f6e8c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q4pt1"]
 texture = ExtResource("2_r81ia")
@@ -580,3 +581,6 @@ position = Vector2(96, 416)
 
 [node name="Golem_Ranged" parent="." instance=ExtResource("11_kd5i1")]
 position = Vector2(256, 480)
+
+[node name="Boss_Golem" parent="." instance=ExtResource("12_f6e8c")]
+position = Vector2(544, 608)
