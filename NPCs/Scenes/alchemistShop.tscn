@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://b27ddpypl0xrm"]
+[gd_scene load_steps=7 format=3 uid="uid://b27ddpypl0xrm"]
 
 [ext_resource type="Script" path="res://NPCs/Scripts/healOption.gd" id="1_yl2xy"]
+[ext_resource type="Script" path="res://NPCs/Scripts/maxHP.gd" id="2_txy6q"]
 
 [sub_resource type="Animation" id="Animation_et75l"]
 length = 0.001
@@ -90,9 +91,28 @@ offset_right = 465.0
 offset_bottom = 30.0
 text = "10 Coins"
 
+[node name="maxHP" type="Node" parent="."]
+script = ExtResource("2_txy6q")
+
+[node name="add_Max_HP_Button" type="Button" parent="maxHP"]
+offset_left = 55.0
+offset_top = 89.0
+offset_right = 525.0
+offset_bottom = 124.0
+text = "Add Max HP"
+alignment = 0
+
+[node name="cost" type="Label" parent="maxHP/add_Max_HP_Button"]
+offset_left = 400.0
+offset_top = 7.0
+offset_right = 465.0
+offset_bottom = 30.0
+text = "10 Coins"
+
 [node name="anim" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_3l5tp")
 }
 
 [connection signal="pressed" from="healOption/heal_Button" to="healOption" method="_on_heal_button_pressed"]
+[connection signal="pressed" from="maxHP/add_Max_HP_Button" to="maxHP" method="_on_add_max_hp_button_pressed"]

@@ -4,23 +4,23 @@ const heart_row_size = 8
 const heart_offset = 16
 
 # Called when the node enters the scene tree for the first time.
+
 func _ready():
-	for i in player_data.life:
+	for i in player_data.max_life:
 		var new_heart = Sprite2D.new()
 		new_heart.texture = $playerLife.texture
 		new_heart.hframes = $playerLife.hframes
 		$playerLife.add_child(new_heart)
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	$coinNumber.text = var_to_str(player_data.coin)
-	display_heart()
+	display_heart(delta)
 	
 	if get_tree().current_scene.name == "horde":
 		$killCount.text = var_to_str(player_data.kills)
 
-func display_heart():
+func display_heart(delta):
 	for heart in $playerLife.get_children():
 		var index = heart.get_index()
 		var x = (index % heart_row_size) * heart_offset

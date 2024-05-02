@@ -1,8 +1,7 @@
-res://Scenes/Worlds/Scenes/Test_Area.tscn
+res://Scenes/Main_Menu/main_menu.tscn
 res://Player/player(script).gd
 res://Scenes/Worlds/Scripts/leftSpawn.gd
-res://Enemy/Boss Folder/boss_golem.gd
-res://Scenes/Main_Menu/main_menu.tscn
+res://Scenes/Worlds/Scenes/Test_Area.tscn
 res://Player/player(scene).tscn
 res://Scenes/Interactables/scenes/crate.tscn
 res://Scenes/Worlds/Scenes/town.tscn
@@ -12,3 +11,7 @@ res://Enemy/Boss Folder/boss_golem.tscn
 res://Enemy/Enemy_Scene/Mini_golem_enemy/demon_enemy.tscn
 res://Scenes/Worlds/Scenes/inside_building_1.tscn
 res://NPCs/Scenes/alchemistShop.tscn
+res://NPCs/Scripts/healOption.gd
+res://Player/GUI/player_data.gd
+res://Player/GUI/GUI.gd
+res://NPCs/Scripts/maxHP.gd
