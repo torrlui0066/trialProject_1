@@ -25,6 +25,7 @@ enum player_states {MOVE, SWORD, MAGIC, DEAD, DASH}
 
 # variables for life/ hp
 var health = 100.0
+var takeDamage = true
 var is_dead: bool = false
 
 # variable for attacking
@@ -224,6 +225,10 @@ func wall_collider():
 func reset_states():
 	current_state = player_states.MOVE
 
+func damageTimer():
+	takeDamage = false
+	await get_tree().create_timer(0.5).timeout
+	takeDamage = true
 
 func _on_hurtbox_body_entered(body : Node2D):
 	if body.is_in_group("Enemy"):
@@ -237,9 +242,20 @@ func _on_hurtbox_body_entered(body : Node2D):
 		get_tree().change_scene_to_file("res://Scenes/Main_Menu/main_menu.tscn")
 
 func _on_player_hitbox_area_entered(area):
-	if area.name == "darkblast_area":
+	if area.name == "darkblast_area" and takeDamage == true:
 		player_data.life -= 1
+		damageTimer()
 		print("hit by enemy 'darkblast' ranged attack")
+		
+		
+	if area.name == "beam_area" and takeDamage == true:
+		player_data.life -= 1
+		damageTimer()
+		print("hit by boss beam attack")
+	
+	if area.name == "golem_rock_area":
+		player_data.life -= 1
+		print("hit by boss rock attack")
 	
 	if area.name == "melee_area":
 		player_data.life -= 1
