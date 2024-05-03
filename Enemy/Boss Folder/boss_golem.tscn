@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://bwwjmhbmacgqx"]
+[gd_scene load_steps=54 format=3 uid="uid://bwwjmhbmacgqx"]
 
 [ext_resource type="Script" path="res://Enemy/Boss Folder/boss_golem.gd" id="1_tfkk3"]
 [ext_resource type="Texture2D" uid="uid://y6xhp3njpibo" path="res://Enemy/Assets/Mecha-stone Golem 0.1 (fliped copied)/Mecha-stone Golem 0.1 (fliped)/PNG sheet/Character_sheet.png" id="2_a07uf"]
@@ -284,7 +284,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_g2xyb")
 }],
-"loop": false,
+"loop": true,
 "name": &"melee",
 "speed": 10.0
 }, {
@@ -352,10 +352,13 @@ radius = 30.0
 height = 148.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7v46q"]
-radius = 123.976
+radius = 189.066
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yylt2"]
 radius = 78.0064
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l8cgg"]
+radius = 134.093
 
 [node name="Boss_Golem" type="CharacterBody2D" groups=["Enemy"]]
 position = Vector2(0, -75)
@@ -366,8 +369,9 @@ script = ExtResource("1_tfkk3")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(3.12, 3.21)
 sprite_frames = SubResource("SpriteFrames_ikoyp")
-animation = &"idle"
+animation = &"melee"
 autoplay = "idle"
+frame_progress = 0.667601
 
 [node name="Boss_collision" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_1yok0")
@@ -392,12 +396,22 @@ shape = SubResource("CircleShape2D_yylt2")
 debug_color = Color(0.913725, 0.223529, 0.482353, 0.419608)
 
 [node name="beam_marker" type="Marker2D" parent="."]
-position = Vector2(0, -54)
+position = Vector2(-6, -55)
 
 [node name="knife_marker" type="Marker2D" parent="."]
 
+[node name="melee_area" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 5
+
+[node name="melee_hitbox" type="CollisionShape2D" parent="melee_area"]
+shape = SubResource("CircleShape2D_l8cgg")
+debug_color = Color(0.815686, 0.403922, 0.184314, 0.419608)
+
 [node name="attack_timer" type="Timer" parent="."]
+wait_time = 10.0
 
 [connection signal="body_entered" from="detection_Area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="detection_Area" to="." method="_on_detection_area_body_exited"]
 [connection signal="area_entered" from="golem_Hitbox_Area" to="." method="_on_golem_hitbox_area_area_entered"]
+[connection signal="timeout" from="attack_timer" to="." method="_on_attack_timer_timeout"]

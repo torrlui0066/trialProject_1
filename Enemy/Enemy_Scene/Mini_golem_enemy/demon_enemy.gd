@@ -31,7 +31,6 @@ func _physics_process(delta):
 		if $shoot_cooldown.is_stopped():
 			$shoot_cooldown.start()
 	else:
-		
 		if not $shoot_cooldown.is_stopped():
 			$shoot_cooldown.stop()
 

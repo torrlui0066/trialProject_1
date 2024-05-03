@@ -1,14 +1,14 @@
+CollisionShape2D
+Area2D
+Timer
 Label
 Button
 Node
 AnimationPlayer
 Panel
 CanvasLayer
-CollisionShape2D
-Area2D
 AnimatedSprite2D
 StaticBody2D
 AnimationTree
 CharacterBody2D
 Sprite2D
-Timer

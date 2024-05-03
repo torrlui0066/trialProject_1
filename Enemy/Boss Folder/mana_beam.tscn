@@ -124,13 +124,14 @@ _data = {
 
 [node name="beam_area" type="Area2D" parent="."]
 position = Vector2(0, -45)
+collision_layer = 4
 script = ExtResource("1_m02lr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="beam_area"]
 position = Vector2(98, 62)
 sprite_frames = SubResource("SpriteFrames_ctmlv")
-frame = 8
-frame_progress = 0.0963423
+frame = 10
+frame_progress = 0.0364449
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="beam_area"]
 position = Vector2(121, 46)

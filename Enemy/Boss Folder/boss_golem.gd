@@ -3,7 +3,7 @@ extends CharacterBody2D
 var health = 20
 var speed = 0
 var direction = 0
-var attack_cooldown = 2.0
+var attack_cooldown = 10.0
 
 var current_state = boss_states.IDLE
 enum boss_states {IDLE, SHOOT, SHOOT2, MELEE, DEATH}
@@ -42,6 +42,8 @@ func _on_detection_area_body_entered(body):
 		player_chase = true
 		player_inattack_zone = true
 		print("Player in detection range")
+		'if can_attack:
+			randomAttack()'
 
 func _on_detection_area_body_exited(body):
 	if body.name == "player":
@@ -50,8 +52,23 @@ func _on_detection_area_body_exited(body):
 		player_inattack_zone = false
 		print("Player left detection range")
 
-func randomAttack():
-	pass
+'func randomAttack():
+	var rand_attack = randi() % 3
+	match rand_attack:
+			0:
+				current_state = boss_states.SHOOT
+			1:
+				current_state = boss_states.SHOOT2
+			2:
+				current_state = boss_states.MELEE
+	#can_attack = false
+	ranged_cooldown.wait_time = attack_cooldown  # Update the timer duration
+	ranged_cooldown.start()  # Restart the timer with the new cooldown duration'
+	
+func _on_attack_timer_timeout():
+	can_attack = false
+	#current_state = boss_states.IDLE
+	
 
 func checkDirection():
 	if player_chase:
@@ -84,6 +101,10 @@ func shoot(delta):
 			projectile.set("direction", direction)
 			anim.play("ranged")
 			await anim.animation_finished
+			#can_shoot = false
+			ranged_cooldown.start(3)
+			print("IDK")
+			#ranged_cooldown.stop()
 			print("ranged attack shot")
 		elif direction == 1:
 			var projectile = projectile_scene1.instantiate() as Node2D
@@ -93,6 +114,9 @@ func shoot(delta):
 			projectile.set("direction", direction)
 			anim.play("ranged")
 			await anim.animation_finished
+			#can_shoot = false
+			ranged_cooldown.start()
+			#ranged_cooldown.stop()
 		current_state = boss_states.IDLE
 
 func shoot2(delta):
@@ -138,3 +162,4 @@ func _on_golem_hitbox_area_area_entered(area):
 	if area.name == "fireball_area":
 		print("Enemyhas taken fireball damage, health is: ", health)
 		health -= player_data.fireball_damage
+

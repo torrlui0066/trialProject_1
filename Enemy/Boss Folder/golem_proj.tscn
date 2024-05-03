@@ -67,6 +67,7 @@ _data = {
 [node name="Golem_proj" type="Node2D"]
 
 [node name="golem_rock_area" type="Area2D" parent="."]
+collision_layer = 4
 script = ExtResource("1_022hk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="golem_rock_area"]

@@ -3736,7 +3736,7 @@ scale = Vector2(3, 3)
 text = "0"
 
 [node name="Boss_Golem" parent="." instance=ExtResource("12_h0l4l")]
-position = Vector2(226, 605)
+position = Vector2(378, 623)
 
 [connection signal="area_entered" from="townToDungeon" to="townToDungeon" method="_on_area_entered"]
 [connection signal="area_entered" from="townToHorde" to="townToHorde" method="_on_area_entered"]
