@@ -255,6 +255,7 @@ func _on_player_hitbox_area_entered(area):
 	
 	if area.name == "golem_rock_area":
 		player_data.life -= 1
+		damageTimer()
 		print("hit by boss rock attack")
 	
 	if area.name == "melee_area":
