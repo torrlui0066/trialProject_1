@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://Player/GUI/GUI.gd" id="9_7lm6k"]
 [ext_resource type="Texture2D" uid="uid://qjvseyldet5q" path="res://Assets/metroid_asset_1_2/Sprites/UI/HeartSpriteSheet.png" id="10_fyebc"]
 [ext_resource type="Texture2D" uid="uid://c5v8puena60n2" path="res://Assets/metroid_asset_1_2/Sprites/Interactables/coin.png" id="11_ppp54"]
-[ext_resource type="PackedScene" uid="uid://blucnqv6000jg" path="res://Enemy/Enemy_Scene/Slime_enemy/slime_enemy.tscn" id="12_kl2qk"]
+[ext_resource type="PackedScene" uid="uid://bwwjmhbmacgqx" path="res://Enemy/Boss Folder/boss_golem.tscn" id="12_h0l4l"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fci3i"]
 
@@ -3735,8 +3735,8 @@ offset_bottom = 75.0
 scale = Vector2(3, 3)
 text = "0"
 
-[node name="Slime enemy" parent="." instance=ExtResource("12_kl2qk")]
-position = Vector2(198, 675)
+[node name="Boss_Golem" parent="." instance=ExtResource("12_h0l4l")]
+position = Vector2(226, 605)
 
 [connection signal="area_entered" from="townToDungeon" to="townToDungeon" method="_on_area_entered"]
 [connection signal="area_entered" from="townToHorde" to="townToHorde" method="_on_area_entered"]

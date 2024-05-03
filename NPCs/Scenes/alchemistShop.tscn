@@ -103,6 +103,7 @@ text = "Add Max HP"
 alignment = 0
 
 [node name="cost" type="Label" parent="maxHP/add_Max_HP_Button"]
+layout_mode = 0
 offset_left = 400.0
 offset_top = 7.0
 offset_right = 465.0

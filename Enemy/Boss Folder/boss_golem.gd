@@ -5,6 +5,9 @@ var speed = 0
 var direction = 0
 var attack_cooldown = 2.0
 
+var current_state = boss_states.IDLE
+enum boss_states {IDLE, SHOOT, SHOOT2, MELEE, DEATH}
+
 var player = null
 var can_shoot = true
 var can_attack = true
@@ -15,136 +18,123 @@ var player_inattack_zone = false
 var projectile_scene1 = preload("res://Enemy/Boss Folder/mana_beam.tscn") # Path to your first projectile scene
 var projectile_scene2 = preload("res://Enemy/Boss Folder/golem_proj.tscn") # Path to your second projectile scene
 
-@onready var Beam_marker : Marker2D = $Beam_marker
+@onready var anim = $AnimatedSprite2D
+@onready var Beam_marker : Marker2D = $beam_marker
 @onready var knife_marker : Marker2D = $knife_marker
-@onready var ranged_cooldown : Timer = $ranged_cooldown
+@onready var ranged_cooldown : Timer = $attack_timer
 
 func _physics_process(delta):
-	if player_inattack_zone and can_take_damage:
-		#take_damage()
-		'blah blah blah'
-			
-	if player_inattack_zone and player_chase:
-		if ranged_cooldown and ranged_cooldown.is_stopped():
-			ranged_cooldown.start()
-	else:
-		if ranged_cooldown and not ranged_cooldown.is_stopped():
-			ranged_cooldown.stop()
-	
-	if player_chase:
-		position += (player.position - position) / speed
+	match current_state:
+		boss_states.IDLE:
+			idle(delta)
+		boss_states.SHOOT:
+			shoot(delta)
+		boss_states.SHOOT2:
+			shoot2(delta)
+		boss_states.MELEE:
+			melee(delta)
+		boss_states.DEATH:
+			death(delta)
 
-		$AnimatedSprite2D.play("idle")
-
-		if player.position.x - position.x < 0:
-			$AnimatedSprite2D.flip_h = false
-			direction = -1
-		else:
-			$AnimatedSprite2D.flip_h = true
-			direction = 1
-	else:
-		$AnimatedSprite2D.play("idle")
-		
-func take_damage():
-	player_data.life -= 1
-	$take_damage_cooldown.start()
-	can_take_damage = false
-	print("Boss health =", health)
-	if health <= 0:
-		$AnimatedSprite2D.play("death")
-		self.queue_free()
-
-func _on_boss_detection_body_entered(body):
+func _on_detection_area_body_entered(body):
 	if body.name == "player":
 		player = body
 		player_chase = true
 		player_inattack_zone = true
-		print("Player entered detection area")
-	
+		print("Player in detection range")
 
-func _on_boss_detection_body_exited(body):
+func _on_detection_area_body_exited(body):
 	if body.name == "player":
 		player = null
 		player_chase = false
 		player_inattack_zone = false
-		print("Player exited detection area")
+		print("Player left detection range")
 
-func _process(delta):
-	if can_attack:
-		var rand_attack = randi() % 3
-		match rand_attack:
-			0:
-				rangedAttack1()
-			1:
-				rangedAttack2()
-			2:
-				meleeAttack()
-		can_attack = false
-		$Timer.start(attack_cooldown)
+func randomAttack():
+	pass
 
-func meleeAttack():
+func checkDirection():
+	if player_chase:
+		if player.position.x - position.x < 0:
+			anim.flip_h = false
+			direction = -1
+		elif player.position.x - position.x > 0:
+			anim.flip_h = true
+			direction = 1
+			
+func idle(delta):
+	anim.play("idle")
+	checkDirection()
+	
+	if player_inattack_zone and can_shoot and health >= 0:
+		current_state = boss_states.SHOOT
+	#if player_inattack_zone and can_shoot and health >= 0:
+	#	current_state = boss_states.SHOOT2
+	if health <= 0:
+		current_state = boss_states.DEATH
+
+func shoot(delta):
+	checkDirection()
+	if player_inattack_zone and can_shoot:
+		if direction == -1:
+			var projectile = projectile_scene1.instantiate() as Node2D
+			get_parent().add_child(projectile)
+			projectile.global_position = $beam_marker.global_position
+			projectile.scale.x = -1
+			projectile.set("direction", direction)
+			anim.play("ranged")
+			await anim.animation_finished
+			print("ranged attack shot")
+		elif direction == 1:
+			var projectile = projectile_scene1.instantiate() as Node2D
+			get_parent().add_child(projectile)
+			projectile.global_position = $beam_marker.global_position
+			projectile.scale.x = 1
+			projectile.set("direction", direction)
+			anim.play("ranged")
+			await anim.animation_finished
+		current_state = boss_states.IDLE
+
+func shoot2(delta):
+	checkDirection()
+	if player_inattack_zone and can_shoot:
+		if direction == -1:
+			var projectile = projectile_scene2.instantiate() as Node2D
+			get_parent().add_child(projectile)
+			projectile.global_position = $knife_marker.global_position
+			projectile.scale.x = -1
+			projectile.set("direction", direction)
+			anim.play("ranged_2")
+			await anim.animation_finished
+		elif direction == 1:
+			var projectile = projectile_scene2.instantiate() as Node2D
+			get_parent().add_child(projectile)
+			projectile.global_position = $knife_marker.global_position
+			projectile.scale.x = 1
+			projectile.set("direction", direction)
+			anim.play("ranged_2")
+			await anim.animation_finished
+	current_state = boss_states.IDLE
+
+func melee(delta):
+	checkDirection()
 	if player and player.global_position:
 		if player.global_position.distance_to(global_position) < 100: # Melee range
-			player.takeDamage(10) # Adjust the damage value as needed
-			$AnimatedSprite2D.play("melee")
-	#else:
-		# Move towards the player for melee attack
+			player.takeDamage(1) # Adjust the damage value as needed
+			anim.play("melee")
+			await anim.animation_finished
 
-func rangedAttack1():
-	if player_inattack_zone and can_shoot:
-		if direction == -1:
-			var projectile = projectile_scene1.instance()
-			get_parent().add_child(projectile)
-			projectile.global_position = $Beam_marker.global_position
-			projectile.scale.x = -1
-			projectile.set("direction", direction)
-			$AnimatedSprite2D.play("ranged")
-			await $AnimatedSprite2D.animation_finished
-		elif direction == 1:
-			var projectile = projectile_scene1.instance()
-			get_parent().add_child(projectile)
-			projectile.global_position = $Beam_marker.global_position
-			projectile.scale.x = 1
-			projectile.set("direction", direction)
-			$AnimatedSprite2D.play("ranged")
-			await $AnimatedSprite2D.animation_finished
+func death(delta):
+	checkDirection()
+	anim.play("death")
+	await anim.animation_finished
+	print("Enemy has been destroyed")
+	queue_free()
 
-func rangedAttack2():
-	if player_inattack_zone and can_shoot:
-		if direction == -1:
-			var projectile = projectile_scene2.instantiate() as Node2D
-			get_parent().add_child(projectile)
-			projectile.global_position = $knife_marker.global_position
-			projectile.scale.x = -1
-			projectile.set("direction", direction)
-			$AnimatedSprite2D.play("ranged_2")
-			await $AnimatedSprite2D.animation_finished
-		elif direction == 1:
-			var projectile = projectile_scene2.instantiate() as Node2D
-			get_parent().add_child(projectile)
-			projectile.global_position = $knife_marker.global_position
-			projectile.scale.x = 1
-			projectile.set("direction", direction)
-			$AnimatedSprite2D.play("ranged_2")
-			await $AnimatedSprite2D.animation_finished
-		
-'func _on_timer_timeout():
-	can_attack = true
-	rangedAttack1()'
-
-func _on_boss_hitbox_body_entered(body):
-	if body.has_method("player"):
-		player_inattack_zone = true
-
-
-func _on_boss_hitbox_body_exited(body):
-	if body.has_method("player"):
-		player_inattack_zone = false
-
-func _on_boss_hitbox_area_entered(area):
-	if area.name == "sword" || area.name == "fireball_area":
-		print("Enemy has been attacked")
-		health -= 1
-	if health == 0:
-		$AnimatedSprite2D.play("death")
-		queue_free()
+func _on_golem_hitbox_area_area_entered(area):
+	if area.name == "sword":
+		print("Enemy has taken melee damage, health is: ", health)
+		health -= player_data.sword_damage
+	if area.name == "fireball_area":
+		print("Enemyhas taken fireball damage, health is: ", health)
+		health -= player_data.fireball_damage

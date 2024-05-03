@@ -54,7 +54,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_siue8"]
-size = Vector2(33, 11)
+size = Vector2(104.5, 27)
 
 [sub_resource type="Animation" id="Animation_0dohu"]
 resource_name = "blade_animation"
@@ -65,21 +65,19 @@ _data = {
 }
 
 [node name="Golem_proj" type="Node2D"]
-position = Vector2(0, -4)
 
 [node name="golem_rock_area" type="Area2D" parent="."]
 script = ExtResource("1_022hk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="golem_rock_area"]
-position = Vector2(95, -95.5)
+position = Vector2(-1.19209e-07, -9.09495e-13)
 scale = Vector2(2.9, 2.91)
 sprite_frames = SubResource("SpriteFrames_lw1yh")
 animation = &"shoot_blade"
 frame_progress = 0.16848
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="golem_rock_area"]
-visible = false
-position = Vector2(27.5, -12.5)
+position = Vector2(78.75, -37.5)
 shape = SubResource("RectangleShape2D_siue8")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

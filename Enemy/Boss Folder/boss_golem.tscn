@@ -229,7 +229,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3ih6i")
 }],
-"loop": true,
+"loop": false,
 "name": &"death",
 "speed": 10.0
 }, {
@@ -284,7 +284,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_g2xyb")
 }],
-"loop": true,
+"loop": false,
 "name": &"melee",
 "speed": 10.0
 }, {
@@ -310,7 +310,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_s4epj")
 }],
-"loop": true,
+"loop": false,
 "name": &"ranged",
 "speed": 10.0
 }, {
@@ -342,70 +342,62 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_58wpv")
 }],
-"loop": true,
+"loop": false,
 "name": &"ranged_2",
 "speed": 10.0
 }]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_7v46q"]
-radius = 642.175
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1yok0"]
 radius = 30.0
 height = 148.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_7v46q"]
+radius = 123.976
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_yylt2"]
 radius = 78.0064
 
 [node name="Boss_Golem" type="CharacterBody2D" groups=["Enemy"]]
+position = Vector2(0, -75)
 collision_layer = 5
 collision_mask = 2
 script = ExtResource("1_tfkk3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(156, -160.5)
 scale = Vector2(3.12, 3.21)
 sprite_frames = SubResource("SpriteFrames_ikoyp")
-animation = &"ranged_2"
-frame_progress = 0.51353
-
-[node name="Boss_detection" type="Area2D" parent="."]
-light_mask = 3
-visibility_layer = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boss_detection"]
-position = Vector2(155, -174)
-shape = SubResource("CircleShape2D_7v46q")
+animation = &"idle"
+autoplay = "idle"
 
 [node name="Boss_collision" type="CollisionShape2D" parent="."]
-position = Vector2(156, -170)
 shape = SubResource("CapsuleShape2D_1yok0")
 debug_color = Color(0.0862745, 0.34902, 0.729412, 0.419608)
-
-[node name="Boss_hitbox" type="Area2D" parent="."]
-position = Vector2(154, -166)
-collision_layer = 5
-collision_mask = 5
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boss_hitbox"]
-position = Vector2(2, 4)
-shape = SubResource("CircleShape2D_yylt2")
-debug_color = Color(0.913725, 0.223529, 0.482353, 0.419608)
-
-[node name="Timer" type="Timer" parent="."]
-
-[node name="Beam_marker" type="Marker2D" parent="."]
-position = Vector2(150, -215)
-
-[node name="knife_marker" type="Marker2D" parent="."]
-position = Vector2(43, -200)
 
 [node name="golem_grav" type="Node" parent="."]
 script = ExtResource("3_8g70g")
 
-[connection signal="body_entered" from="Boss_detection" to="." method="_on_boss_detection_body_entered"]
-[connection signal="body_exited" from="Boss_detection" to="." method="_on_boss_detection_body_exited"]
-[connection signal="area_entered" from="Boss_hitbox" to="." method="_on_boss_hitbox_area_entered"]
-[connection signal="body_entered" from="Boss_hitbox" to="." method="_on_boss_hitbox_body_entered"]
-[connection signal="body_exited" from="Boss_hitbox" to="." method="_on_boss_hitbox_body_exited"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="detection_Area" type="Area2D" parent="."]
+light_mask = 3
+visibility_layer = 3
+
+[node name="detection_hitbox" type="CollisionShape2D" parent="detection_Area"]
+shape = SubResource("CircleShape2D_7v46q")
+
+[node name="golem_Hitbox_Area" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 5
+
+[node name="golem_hitbox" type="CollisionShape2D" parent="golem_Hitbox_Area"]
+shape = SubResource("CircleShape2D_yylt2")
+debug_color = Color(0.913725, 0.223529, 0.482353, 0.419608)
+
+[node name="beam_marker" type="Marker2D" parent="."]
+position = Vector2(0, -54)
+
+[node name="knife_marker" type="Marker2D" parent="."]
+
+[node name="attack_timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="detection_Area" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="detection_Area" to="." method="_on_detection_area_body_exited"]
+[connection signal="area_entered" from="golem_Hitbox_Area" to="." method="_on_golem_hitbox_area_area_entered"]
