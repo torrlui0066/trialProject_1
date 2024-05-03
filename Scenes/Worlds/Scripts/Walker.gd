@@ -70,7 +70,7 @@ func create_room(position):
 				step_history.append(new_step)
 
 func create_startroom(position):
-	var size = Vector2(20,8)
+	var size = Vector2(8,4)
 	var top_left_corner = (position - size/2).ceil()
 	for y in size.y:
 		for x in size.x:
