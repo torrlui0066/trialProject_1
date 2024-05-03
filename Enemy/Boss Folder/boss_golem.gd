@@ -154,6 +154,7 @@ func death(delta):
 	anim.play("death")
 	await anim.animation_finished
 	print("Enemy has been destroyed")
+	player_data.boss = player_data.boss + 1
 	queue_free()
 
 func _on_golem_hitbox_area_area_entered(area):

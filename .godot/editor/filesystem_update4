@@ -1,9 +1,9 @@
-res://Scenes/Worlds/Scenes/Test_Area.tscn
 res://Player/player(script).gd
 res://Scenes/Worlds/Scripts/leftSpawn.gd
-res://Scenes/Worlds/Scripts/Walker.gd
 res://Scenes/Main_Menu/main_menu.tscn
+res://Scenes/Worlds/Scenes/Test_Area.tscn
 res://Scenes/Worlds/Scenes/town.tscn
+res://Scenes/Worlds/Scenes/boss_room.tscn
 res://Player/player(scene).tscn
 res://Enemy/Boss Folder/boss_golem.tscn
 res://Enemy/Boss Folder/mana_beam.tscn
@@ -11,4 +11,14 @@ res://Enemy/Enemy_Scene/Mini_golem_enemy/demon_enemy.tscn
 res://Enemy/Enemy_Scene/Mini_golem_enemy/darkblast.tscn
 res://Enemy/Boss Folder/golem_proj.tscn
 res://Scenes/Interactables/scenes/crate.tscn
-res://Scenes/Worlds/Scripts/WorldCave.gd
+res://Scenes/Worlds/Scenes/house_2.tscn
+res://Scenes/Worlds/Scripts/horde.gd
+res://Scenes/Worlds/Scenes/horde.tscn
+res://Scenes/Worlds/Scripts/dungeonToTown.gd
+res://Player/GUI/player_data.gd
+res://Enemy/Boss Folder/boss_golem.gd
+res://Scenes/Worlds/Scenes/house_1.tscn
+res://Scenes/Worlds/Scenes/victory.tscn
+res://Scenes/Worlds/Scripts/victory.gd
+res://Scenes/Main_Menu/main_menu.gd
+res://Scenes/Worlds/Scenes/CaveExit.tscn

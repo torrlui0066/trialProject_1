@@ -1,3 +1,4 @@
+res://Scenes/Worlds/Scenes
 res://Assets/PNG
 res://Enemy/Boss Folder/Mecha-stone Golem 0.1/weapon PNG
 res://Enemy/Assets/Mecha-stone Golem 0.1 (fliped copied)/Mecha-stone Golem 0.1 (fliped)/PNG sheet
@@ -9,7 +10,6 @@ res://Enemy/Assets/Skeleton enemy
 res://Player/GUI
 res://Enemy/Enemy_Scene/yellowSlime
 res://Enemy/Boss Folder
-res://Scenes/Worlds/Scenes
 res://Enemy/Assets/Bat
 res://Enemy/Enemy_Scene/Wolf_enemy (dup)/Canines
 res://Enemy/Enemy_Scene/Wolf_enemy (dup)

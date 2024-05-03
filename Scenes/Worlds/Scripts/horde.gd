@@ -11,4 +11,4 @@ func _process(delta):
 func _on_horde_exit_area_entered(area):
 	print("Leaving horde mode")
 	if area.name == "player_hitbox":
-		get_tree().change_scene_to_file("res://Scenes/Worlds/Scenes/town.tscn")
+		get_tree().change_scene_to_file("res://Scenes/Worlds/Scenes/boss_room.tscn")

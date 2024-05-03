@@ -3575,6 +3575,7 @@ collision_layer = 8
 script = ExtResource("5_sot78")
 
 [node name="door_collider" type="CollisionShape2D" parent="Background/door"]
+visible = false
 position = Vector2(-15.5, 27)
 shape = SubResource("RectangleShape2D_2d4ha")
 
