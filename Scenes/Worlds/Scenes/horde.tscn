@@ -5124,7 +5124,7 @@ scale = Vector2(10, 10)
 shape = SubResource("CircleShape2D_7hnu0")
 
 [node name="player" parent="." instance=ExtResource("4_2ggre")]
-position = Vector2(2394, -321)
+position = Vector2(322, -335)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("14_eivk1")

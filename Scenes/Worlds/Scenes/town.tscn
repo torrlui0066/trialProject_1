@@ -3686,14 +3686,14 @@ layer_0/tile_data = PackedInt32Array(2883588, 655363, 6, 2883589, 655363, 6, 281
 layer_1/name = "Sky"
 layer_1/tile_data = PackedInt32Array()
 
-[node name="player" parent="." instance=ExtResource("4_qr47u")]
-position = Vector2(13, 659)
-
 [node name="basic_house" parent="." instance=ExtResource("5_nu5dq")]
 position = Vector2(608, 640)
 
 [node name="basic_house2" parent="." instance=ExtResource("6_awuca")]
 position = Vector2(1080, 641)
+
+[node name="player" parent="." instance=ExtResource("4_qr47u")]
+position = Vector2(13, 659)
 
 [node name="townToDungeon" type="Area2D" parent="."]
 position = Vector2(-385, 112)
