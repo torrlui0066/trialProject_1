@@ -1,14 +1,3 @@
-res://Scenes/Worlds/Scenes/Test_Area.tscn
+res://Player/player(scene).tscn
 res://Player/player(script).gd
 res://Scenes/Worlds/Scripts/leftSpawn.gd
-res://Scenes/Worlds/Scripts/Walker.gd
-res://Scenes/Main_Menu/main_menu.tscn
-res://Scenes/Worlds/Scenes/town.tscn
-res://Player/player(scene).tscn
-res://Enemy/Boss Folder/boss_golem.tscn
-res://Enemy/Boss Folder/mana_beam.tscn
-res://Enemy/Enemy_Scene/Mini_golem_enemy/demon_enemy.tscn
-res://Enemy/Enemy_Scene/Mini_golem_enemy/darkblast.tscn
-res://Enemy/Boss Folder/golem_proj.tscn
-res://Scenes/Interactables/scenes/crate.tscn
-res://Scenes/Worlds/Scripts/WorldCave.gd

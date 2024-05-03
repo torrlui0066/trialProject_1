@@ -1,11 +1,17 @@
-[gd_scene load_steps=9 format=3 uid="uid://cstk21xgcta57"]
+[gd_scene load_steps=15 format=3 uid="uid://cstk21xgcta57"]
 
 [ext_resource type="Script" path="res://Scenes/Worlds/Scripts/WorldCave.gd" id="1_q085o"]
 [ext_resource type="Texture2D" uid="uid://jfqqjvxhmwh7" path="res://Scenes/Worlds/RandomLevelGenTileset.png" id="2_r81ia"]
 [ext_resource type="PackedScene" uid="uid://dmy6rxghroiwn" path="res://Player/player(scene).tscn" id="3_k6ile"]
+[ext_resource type="PackedScene" uid="uid://d1tqy1r7klfrt" path="res://Scenes/Interactables/scenes/crate.tscn" id="4_b88ij"]
+[ext_resource type="PackedScene" uid="uid://blucnqv6000jg" path="res://Enemy/Enemy_Scene/Slime_enemy/slime_enemy.tscn" id="5_qpqld"]
 [ext_resource type="Script" path="res://Player/GUI/GUI.gd" id="7_xli5e"]
 [ext_resource type="Texture2D" uid="uid://qjvseyldet5q" path="res://Assets/metroid_asset_1_2/Sprites/UI/HeartSpriteSheet.png" id="7_yx42v"]
 [ext_resource type="Texture2D" uid="uid://c5v8puena60n2" path="res://Assets/metroid_asset_1_2/Sprites/Interactables/coin.png" id="8_mxdey"]
+[ext_resource type="PackedScene" uid="uid://d3l8m0nrt342j" path="res://Scenes/Interactables/scenes/coin.tscn" id="9_6vslh"]
+[ext_resource type="PackedScene" uid="uid://dfe7gionqf3o2" path="res://Enemy/Enemy_Scene/Skeleton_enemy/Skeleton_enemy.tscn" id="11_5wsgb"]
+[ext_resource type="PackedScene" uid="uid://q72e6o7lj2ix" path="res://Enemy/Enemy_Scene/Mini_golem_enemy/demon_enemy.tscn" id="11_kd5i1"]
+[ext_resource type="PackedScene" uid="uid://bwwjmhbmacgqx" path="res://Enemy/Boss Folder/boss_golem.tscn" id="12_f6e8c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q4pt1"]
 texture = ExtResource("2_r81ia")
@@ -536,6 +542,12 @@ tile_set = SubResource("TileSet_1iuso")
 format = 2
 
 [node name="player" parent="." instance=ExtResource("3_k6ile")]
+position = Vector2(32, 448)
+
+[node name="crate" parent="." instance=ExtResource("4_b88ij")]
+position = Vector2(128, 448)
+
+[node name="Slime enemy" parent="." instance=ExtResource("5_qpqld")]
 position = Vector2(160, 448)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -560,3 +572,15 @@ offset_right = 123.0
 offset_bottom = 75.0
 scale = Vector2(3, 3)
 text = "0"
+
+[node name="coin" parent="." instance=ExtResource("9_6vslh")]
+position = Vector2(96, 448)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("11_5wsgb")]
+position = Vector2(96, 416)
+
+[node name="Golem_Ranged" parent="." instance=ExtResource("11_kd5i1")]
+position = Vector2(256, 480)
+
+[node name="Boss_Golem" parent="." instance=ExtResource("12_f6e8c")]
+position = Vector2(544, 608)

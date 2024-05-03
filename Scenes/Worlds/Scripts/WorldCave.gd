@@ -4,7 +4,7 @@ extends Node2D
 const Crate = preload("res://Scenes/Interactables/scenes/crate.tscn")
 const Coin = preload("res://Scenes/Interactables/scenes/coin.tscn")
 const Exit = preload("res://Scenes/Worlds/Scenes/CaveExit.tscn")
-const Bat = preload("res://Enemy/Enemy_Scene/Skeleton_enemy/Skeleton_enemy.tscn")
+const Wolf = preload("res://Enemy/Enemy_Scene/Wolf_enemy (dup)/wolve_enemy.tscn")
 
 var rect = Rect2(-64, -256, 300,600)
 var borders = rect.abs()
@@ -28,7 +28,7 @@ func generate_level():
 	for pos in unique_room_positions:
 		if pos == unique_room_positions[-1]:
 			var exit_instance = Exit.instantiate()
-			exit_instance.position = pos * 32 
+			exit_instance.position = pos * 32 # Assuming grid size of 64
 			add_child(exit_instance)
 		else:
 			var random_chance = randf()
@@ -36,23 +36,21 @@ func generate_level():
 				var crate = Coin.instantiate()
 				crate.position = pos * 32 # Adjust position as necessary
 				add_child(crate)
-			elif random_chance < 0.23: # 8% chance after 15%
-				var bat = Bat.instantiate()
-				bat.position = pos * 32 # Adjust position as necessary
-				add_child(bat)
+			elif random_chance < 0.23: # 8% chance after 15% for crates
+				var wolf = Wolf.instantiate()
+				wolf.position = pos * 32 # Adjust position as necessary
+				add_child(wolf)
 			else:
 				var coin = Coin.instantiate()
 				coin.position = pos * 32 # Adjust position as necessary
 				add_child(coin)
 	
 	"for room in walker.rooms:
-		var coin = Coin.instantiate()
+		var coin = Wolf.instantiate()
 		add_child(coin)
 		coin.position = room.position *32"
 	
 	walker.queue_free()
-	
-	
 	var cells =[]
 	for location in map:
 		#location = [0,0]
