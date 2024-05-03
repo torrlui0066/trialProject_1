@@ -1,10 +1,10 @@
+AnimationPlayer
 CollisionShape2D
 Area2D
 Timer
 Label
 Button
 Node
-AnimationPlayer
 Panel
 CanvasLayer
 AnimatedSprite2D

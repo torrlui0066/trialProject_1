@@ -1,15 +1,15 @@
-res://Scenes/Main_Menu/main_menu.tscn
+res://Player/player(scene).tscn
 res://Player/player(script).gd
 res://Scenes/Worlds/Scripts/leftSpawn.gd
+res://Enemy/Boss Folder/boss_golem.gd
+res://Scenes/Main_Menu/main_menu.tscn
 res://Scenes/Worlds/Scenes/Test_Area.tscn
 res://Scenes/Worlds/Scenes/town.tscn
-res://Player/player(scene).tscn
 res://Enemy/Boss Folder/boss_golem.tscn
 res://Enemy/Enemy_Scene/Mini_golem_enemy/demon_enemy.tscn
-res://Enemy/Enemy_Scene/Slime_enemy/slime_enemy.tscn
-res://Scenes/Interactables/scenes/crate.tscn
+res://Enemy/Enemy_Scene/Mini_golem_enemy/darkblast.tscn
 res://Enemy/Boss Folder/mana_beam.tscn
 res://Enemy/Boss Folder/golem_proj.tscn
-res://Enemy/Boss Folder/boss_golem.gd
-res://Enemy/Enemy_Scene/Mini_golem_enemy/darkblast.tscn
-res://Enemy/Enemy_Scene/Mini_golem_enemy/demon_enemy.gd
+res://Scenes/Interactables/scenes/crate.tscn
+res://Enemy/Boss Folder/beam_area.gd
+res://Scenes/Worlds/Scripts/rightSpawn.gd

@@ -1,8 +1,11 @@
 extends Node2D
 
 var travelled_distance = 0
+@onready var anim = $AnimationPlayer
 
-func _physics_process(delta):
+func beam():
+	anim.play("Beam_attack")
+	'''
 	const SPEED = 1000
 	const RANGE = 600
 	
@@ -12,3 +15,4 @@ func _physics_process(delta):
 	travelled_distance += SPEED * delta
 	if travelled_distance > RANGE:
 		queue_free()
+	'''

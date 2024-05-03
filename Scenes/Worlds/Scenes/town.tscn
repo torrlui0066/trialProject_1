@@ -3678,6 +3678,7 @@ size = Vector2(44, 113)
 [node name="town" type="Node2D"]
 
 [node name="Ground" type="TileMap" parent="."]
+z_index = 3
 tile_set = SubResource("TileSet_d6td1")
 format = 2
 layer_0/name = "Ground"
@@ -3687,7 +3688,6 @@ layer_1/name = "Sky"
 layer_1/tile_data = PackedInt32Array()
 
 [node name="player" parent="." instance=ExtResource("4_qr47u")]
-z_index = 3
 position = Vector2(13, 554)
 
 [node name="basic_house" parent="." instance=ExtResource("5_nu5dq")]

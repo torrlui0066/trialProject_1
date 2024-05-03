@@ -14,7 +14,7 @@ func _on_body_entered(body):
 	if body.name == "player":
 		print("Now in spawn area")
 		while player_data.kills < 15:
-			for loopCounter in 5:
+			for loopCounter in 1:
 				await get_tree().create_timer(3).timeout
 				beginSpawn()
 	

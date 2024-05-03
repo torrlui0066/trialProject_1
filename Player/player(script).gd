@@ -7,6 +7,7 @@ var direction : Vector2 = Vector2.ZERO
 @export var speed = 100.0
 @export var atk_mov_spd = 50
 @export var dash_distance = 4000
+@export var knock_back = 40
 
 # variables for jumping
 @export var gravity = 10
@@ -230,7 +231,7 @@ func _on_hurtbox_body_entered(body : Node2D):
 		print("in enemy collision zone")
 	
 	if player_data.life <= 0:
-		print("melee death")
+		print("got too close to enemy body, death")
 		#add animations for death or scene change
 		queue_free()
 		get_tree().change_scene_to_file("res://Scenes/Main_Menu/main_menu.tscn")
@@ -240,8 +241,18 @@ func _on_player_hitbox_area_entered(area):
 		player_data.life -= 1
 		print("hit by enemy 'darkblast' ranged attack")
 	
+	if area.name == "melee_area":
+		player_data.life -= 1
+		if velocity.x > 0:
+			velocity.x -= 40
+		elif velocity.x < 0:
+			self.position.x += 40
+		else:
+			self.position.y -= 40
+		print("hit by boss melee attack")
+	
 	if player_data.life <= 0:
-		print("ranged death")
+		print("death")
 		#add animations for death or scene change
 		queue_free()
 		get_tree().change_scene_to_file("res://Scenes/Main_Menu/main_menu.tscn")

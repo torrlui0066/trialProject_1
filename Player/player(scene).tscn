@@ -561,6 +561,7 @@ _data = {
 height = 36.0
 
 [node name="player" type="CharacterBody2D" groups=["Player"]]
+z_index = 1
 scale = Vector2(0.7, 0.7)
 collision_mask = 18
 script = ExtResource("1_tif46")
@@ -613,6 +614,5 @@ position = Vector2(2, 16)
 shape = SubResource("CapsuleShape2D_urgha")
 debug_color = Color(0.976471, 0, 0.407843, 0.419608)
 
-[connection signal="area_entered" from="sword" to="." method="_on_sword_swing_area_entered"]
 [connection signal="area_entered" from="player_hitbox" to="." method="_on_player_hitbox_area_entered"]
 [connection signal="body_entered" from="player_hitbox" to="." method="_on_hurtbox_body_entered"]

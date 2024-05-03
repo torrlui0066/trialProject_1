@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://bwwjmhbmacgqx"]
+[gd_scene load_steps=58 format=3 uid="uid://bwwjmhbmacgqx"]
 
 [ext_resource type="Script" path="res://Enemy/Boss Folder/boss_golem.gd" id="1_tfkk3"]
 [ext_resource type="Texture2D" uid="uid://y6xhp3njpibo" path="res://Enemy/Assets/Mecha-stone Golem 0.1 (fliped copied)/Mecha-stone Golem 0.1 (fliped)/PNG sheet/Character_sheet.png" id="2_a07uf"]
@@ -284,7 +284,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_g2xyb")
 }],
-"loop": true,
+"loop": false,
 "name": &"melee",
 "speed": 10.0
 }, {
@@ -352,13 +352,150 @@ radius = 30.0
 height = 148.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7v46q"]
-radius = 189.066
+radius = 239.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yylt2"]
-radius = 78.0064
+radius = 83.006
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l8cgg"]
-radius = 134.093
+radius = 126.016
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0nl76"]
+radius = 7.76962
+height = 34.514
+
+[sub_resource type="Animation" id="Animation_ijjdh"]
+resource_name = "meleeAttack"
+length = 0.65
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("melee_hurtbox:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-16.6667, -3.73832), Vector2(-15.7051, -6.23053), Vector2(-14.4231, -8.09969), Vector2(-13.141, -11.5265), Vector2(-14.4231, -11.838), Vector2(-23.3974, 0.934578)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("melee_hurtbox:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.181287, 0.271024, 0.411463, 0.442222, 0.334352, 0.586334]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("melee_hurtbox:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.0396435, 0.606488, 0.639383),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [true, false, false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../AnimatedSprite2D:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"melee"]
+}
+
+[sub_resource type="Animation" id="Animation_m7mar"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("melee_hurtbox:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-16.6667, -3.73832)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("melee_hurtbox:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.181287]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("melee_hurtbox:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../AnimatedSprite2D:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"melee"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lhbb0"]
+_data = {
+"RESET": SubResource("Animation_m7mar"),
+"meleeAttack": SubResource("Animation_ijjdh")
+}
 
 [node name="Boss_Golem" type="CharacterBody2D" groups=["Enemy"]]
 position = Vector2(0, -75)
@@ -371,7 +508,6 @@ scale = Vector2(3.12, 3.21)
 sprite_frames = SubResource("SpriteFrames_ikoyp")
 animation = &"melee"
 autoplay = "idle"
-frame_progress = 0.667601
 
 [node name="Boss_collision" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_1yok0")
@@ -395,23 +531,39 @@ collision_mask = 5
 shape = SubResource("CircleShape2D_yylt2")
 debug_color = Color(0.913725, 0.223529, 0.482353, 0.419608)
 
-[node name="beam_marker" type="Marker2D" parent="."]
-position = Vector2(-6, -55)
-
-[node name="knife_marker" type="Marker2D" parent="."]
-
-[node name="melee_area" type="Area2D" parent="."]
+[node name="melee_detection_area" type="Area2D" parent="."]
 collision_layer = 4
 collision_mask = 5
 
-[node name="melee_hitbox" type="CollisionShape2D" parent="melee_area"]
+[node name="melee_detection_hitbox" type="CollisionShape2D" parent="melee_detection_area"]
 shape = SubResource("CircleShape2D_l8cgg")
 debug_color = Color(0.815686, 0.403922, 0.184314, 0.419608)
 
+[node name="melee_area" type="Area2D" parent="."]
+scale = Vector2(3.12, 3.21)
+collision_layer = 4
+
+[node name="melee_hurtbox" type="CollisionShape2D" parent="melee_area"]
+position = Vector2(-16.6667, -3.73832)
+rotation = 0.181287
+shape = SubResource("CapsuleShape2D_0nl76")
+disabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../melee_area")
+libraries = {
+"": SubResource("AnimationLibrary_lhbb0")
+}
+
+[node name="beam_marker" type="Marker2D" parent="."]
+
+[node name="knife_marker" type="Marker2D" parent="."]
+
 [node name="attack_timer" type="Timer" parent="."]
-wait_time = 10.0
 
 [connection signal="body_entered" from="detection_Area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="detection_Area" to="." method="_on_detection_area_body_exited"]
 [connection signal="area_entered" from="golem_Hitbox_Area" to="." method="_on_golem_hitbox_area_area_entered"]
+[connection signal="area_entered" from="melee_detection_area" to="." method="_on_melee_area_area_entered"]
+[connection signal="area_exited" from="melee_detection_area" to="." method="_on_melee_area_area_exited"]
 [connection signal="timeout" from="attack_timer" to="." method="_on_attack_timer_timeout"]

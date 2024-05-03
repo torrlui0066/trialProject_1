@@ -1,7 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://hpsoqwnl0ryl"]
+[gd_scene load_steps=24 format=3 uid="uid://hpsoqwnl0ryl"]
 
 [ext_resource type="Script" path="res://Enemy/Boss Folder/beam_area.gd" id="1_m02lr"]
 [ext_resource type="Texture2D" uid="uid://bqthpk5lcc725" path="res://Enemy/Assets/Mecha-stone Golem 0.1/weapon PNG/Laser_sheet.png" id="2_2e6s7"]
+[ext_resource type="Texture2D" uid="uid://d4arkqlam660d" path="res://Enemy/Boss Folder/Mecha-stone Golem 0.1/weapon PNG/Laser_sheet.png" id="3_562bj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uhehp"]
 atlas = ExtResource("2_2e6s7")
@@ -59,6 +60,10 @@ region = Rect2(0, 1300, 300, 100)
 atlas = ExtResource("2_2e6s7")
 region = Rect2(0, 1400, 300, 100)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_mp0tr"]
+atlas = ExtResource("3_562bj")
+region = Rect2(0, 0, 300, 100)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_ctmlv"]
 animations = [{
 "frames": [{
@@ -103,9 +108,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mcyvo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mp0tr")
 }],
-"loop": true,
-"name": &"default",
+"loop": false,
+"name": &"beam",
 "speed": 10.0
 }]
 
@@ -114,13 +122,67 @@ size = Vector2(257, 20)
 
 [sub_resource type="Animation" id="Animation_2rwjb"]
 resource_name = "Beam_attack"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("beam_area/AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [14, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("beam_area/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.46221),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+
+[sub_resource type="Animation" id="Animation_mjdel"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("beam_area/AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("beam_area/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dnv8h"]
 _data = {
-"Beam_attack": SubResource("Animation_2rwjb")
+"Beam_attack": SubResource("Animation_2rwjb"),
+"RESET": SubResource("Animation_mjdel")
 }
 
 [node name="Mana_beam" type="Node2D"]
+z_index = 2
 
 [node name="beam_area" type="Area2D" parent="."]
 position = Vector2(0, -45)
@@ -128,16 +190,20 @@ collision_layer = 4
 script = ExtResource("1_m02lr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="beam_area"]
-position = Vector2(98, 62)
+position = Vector2(75.6374, 47.3151)
+rotation = 0.669724
 sprite_frames = SubResource("SpriteFrames_ctmlv")
-frame = 10
-frame_progress = 0.0364449
+animation = &"beam"
+frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="beam_area"]
-position = Vector2(121, 46)
+position = Vector2(98.6374, 31.3151)
+rotation = 0.669724
 shape = SubResource("RectangleShape2D_tcnrf")
+disabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_dnv8h")
 }
+autoplay = "Beam_attack"

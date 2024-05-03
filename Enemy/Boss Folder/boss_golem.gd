@@ -3,7 +3,6 @@ extends CharacterBody2D
 var health = 20
 var speed = 0
 var direction = 0
-var attack_cooldown = 10.0
 
 var current_state = boss_states.IDLE
 enum boss_states {IDLE, SHOOT, SHOOT2, MELEE, DEATH}
@@ -14,14 +13,16 @@ var can_attack = true
 var player_chase = false
 var can_take_damage = true
 var player_inattack_zone = false
+var player_in_melee_atk_zone = false
 
 var projectile_scene1 = preload("res://Enemy/Boss Folder/mana_beam.tscn") # Path to your first projectile scene
 var projectile_scene2 = preload("res://Enemy/Boss Folder/golem_proj.tscn") # Path to your second projectile scene
 
 @onready var anim = $AnimatedSprite2D
+@onready var animPlay = $AnimationPlayer
 @onready var Beam_marker : Marker2D = $beam_marker
 @onready var knife_marker : Marker2D = $knife_marker
-@onready var ranged_cooldown : Timer = $attack_timer
+#@onready var timer : Timer = $attack_timer
 
 func _physics_process(delta):
 	match current_state:
@@ -42,8 +43,6 @@ func _on_detection_area_body_entered(body):
 		player_chase = true
 		player_inattack_zone = true
 		print("Player in detection range")
-		'if can_attack:
-			randomAttack()'
 
 func _on_detection_area_body_exited(body):
 	if body.name == "player":
@@ -64,31 +63,35 @@ func _on_detection_area_body_exited(body):
 	#can_attack = false
 	ranged_cooldown.wait_time = attack_cooldown  # Update the timer duration
 	ranged_cooldown.start()  # Restart the timer with the new cooldown duration'
-	
-func _on_attack_timer_timeout():
-	can_attack = false
-	#current_state = boss_states.IDLE
-	
 
 func checkDirection():
 	if player_chase:
 		if player.position.x - position.x < 0:
 			anim.flip_h = false
+			$melee_area.scale.x = 3.12
 			direction = -1
 		elif player.position.x - position.x > 0:
 			anim.flip_h = true
+			$melee_area.scale.x = -3.12
 			direction = 1
 			
 func idle(delta):
 	anim.play("idle")
 	checkDirection()
 	
-	if player_inattack_zone and can_shoot and health >= 0:
+	if player_inattack_zone and can_shoot and health >= 0 and player_in_melee_atk_zone != true:
 		current_state = boss_states.SHOOT
 	#if player_inattack_zone and can_shoot and health >= 0:
 	#	current_state = boss_states.SHOOT2
+	if player_inattack_zone and can_shoot and health >= 0 and player_in_melee_atk_zone == true:
+		current_state = boss_states.MELEE
 	if health <= 0:
 		current_state = boss_states.DEATH
+
+func shootTimer():
+	can_shoot = false
+	await get_tree().create_timer(3).timeout
+	can_shoot = true
 
 func shoot(delta):
 	checkDirection()
@@ -101,11 +104,8 @@ func shoot(delta):
 			projectile.set("direction", direction)
 			anim.play("ranged")
 			await anim.animation_finished
-			#can_shoot = false
-			ranged_cooldown.start(3)
-			print("IDK")
-			#ranged_cooldown.stop()
-			print("ranged attack shot")
+			shootTimer()
+			#print("ranged attack shot")
 		elif direction == 1:
 			var projectile = projectile_scene1.instantiate() as Node2D
 			get_parent().add_child(projectile)
@@ -114,9 +114,7 @@ func shoot(delta):
 			projectile.set("direction", direction)
 			anim.play("ranged")
 			await anim.animation_finished
-			#can_shoot = false
-			ranged_cooldown.start()
-			#ranged_cooldown.stop()
+			shootTimer()
 		current_state = boss_states.IDLE
 
 func shoot2(delta):
@@ -142,11 +140,14 @@ func shoot2(delta):
 
 func melee(delta):
 	checkDirection()
-	if player and player.global_position:
-		if player.global_position.distance_to(global_position) < 100: # Melee range
-			player.takeDamage(1) # Adjust the damage value as needed
-			anim.play("melee")
-			await anim.animation_finished
+	if player and player.global_position and player_in_melee_atk_zone:
+		if direction == 1:
+			animPlay.play("meleeAttack")
+		if direction == -1:
+			animPlay.play("meleeAttack")
+	else:
+		current_state = boss_states.IDLE
+
 
 func death(delta):
 	checkDirection()
@@ -163,3 +164,11 @@ func _on_golem_hitbox_area_area_entered(area):
 		print("Enemyhas taken fireball damage, health is: ", health)
 		health -= player_data.fireball_damage
 
+
+
+func _on_melee_area_area_entered(area):
+	player_in_melee_atk_zone = true
+
+
+func _on_melee_area_area_exited(area):
+	player_in_melee_atk_zone = false
