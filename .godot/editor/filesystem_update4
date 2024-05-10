@@ -1,13 +1,3 @@
-res://Scenes/Main_Menu/main_menu.tscn
+res://Scenes/Worlds/Scenes/town.tscn
 res://Player/player(script).gd
 res://Scenes/Worlds/Scripts/leftSpawn.gd
-res://Scenes/Worlds/Scenes/Test_Area.tscn
-res://Scenes/Worlds/Scenes/town.tscn
-res://Scenes/Worlds/Scenes/house_1.tscn
-res://Scenes/Worlds/Scenes/boss_room.tscn
-res://Player/player(scene).tscn
-res://Scenes/Worlds/Scenes/horde.tscn
-res://Scenes/Worlds/Scenes/victory.tscn
-res://Scenes/Worlds/Scenes/CaveExit.tscn
-res://Player/GUI/player_data.gd
-res://NPCs/Scenes/alchemistShop.tscn
